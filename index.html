@@ -1,0 +1,594 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Data Views</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+	<style>
+	td {
+		word-wrap: break-word;
+		overflow-wrap: break-word;
+		white-space: nowrap;
+		overflow: hidden;
+		text-overflow: ellipsis;
+		max-width: 200px;
+	}
+	</style>
+</head>
+<body> %%[ /*SET @cap = 1000000*/ SET @Submit = RequestParameter("Submit") IF @Submit != "Success" THEN ]%% <div class="container">
+		<form role="form" action="%%=RequestParameter('PAGEURL')=%%" method="GET">
+			<div class="form-group">
+				<label for="data-view">Data View:</label>
+				<select id="data-view" name="data-view" class="form-control" required>
+					<option value="" disabled selected>Select a view</option>
+					<option value="_AutomationInstance">Automation Instance</option>
+					<option value="_AutomationActivityInstance">Automation Activity Instance</option>
+					<option value="_Bounce">Bounce</option>
+					<option value="_BusinessUnitUnsubscribes">BusinessUnitUnsubscribes</option>
+					<option value="_Click">Click</option>
+					<option value="_Complaint">Complaint</option>
+					<option value="_FTAF">FTAF</option>
+					<option value="_Job">Job</option>
+					<option value="_Open">Open</option>
+					<option value="_Sent">Sent</option>
+					<option value="_SMSMessageTracking">SMSMessageTracking</option>
+					<option value="_Unsubscribe">Unsubscribe</option>
+				</select>
+			</div>
+			<input type="hidden" name="Submit" id="Submit" value="Success">
+		</form>
+	</div> %%[ ELSE set @mid = memberid set @dv = RequestParameter("data-view") if @dv == "_AutomationInstance" then set @ai = "selected" elseif @dv == "_AutomationActivityInstance" then set @aai = "selected" elseif @dv == "_Bounce" then set @b = "selected" elseif @dv == "_BusinessUnitUnsubscribes" then set @buu = "selected" elseif @dv == "_Click" then set @c = "selected" elseif @dv == "_Complaint" then set @cp = "selected" elseif @dv == "_FTAF" then set @f = "selected" elseif @dv == "_Job" then set @j = "selected" elseif @dv == "_Open" then set @o = "selected" elseif @dv == "_Sent" then set @s = "selected" elseif @dv == "_SMSMessageTracking" then set @sms = "selected" elseif @dv == "_Unsubscribe" then set @u = "selected" endif ]%% <div class="container">
+		<form role="form" action="%%=RequestParameter('PAGEURL')=%%" method="GET">
+			<div class="form-group">
+				<label for="data-view">Data View:</label>
+				<select id="data-view" name="data-view" class="form-control" required>
+					<option value="" disabled selected>Select a view</option>
+					<option value="_AutomationInstance" %%=v(@ai)=%%>Automation Instance</option>
+					<option value="_AutomationActivityInstance" %%=v(@aai)=%%>Automation Activity Instance</option>
+					<option value="_Bounce" %%=v(@b)=%%>Bounce</option>
+					<option value="_BusinessUnitUnsubscribes" %%=v(@buu)=%%>BusinessUnitUnsubscribes</option>
+					<option value="_Click" %%=v(@c)=%%>Click</option>
+					<option value="_Complaint" %%=v(@cp)=%%>Complaint</option>
+					<option value="_FTAF" %%=v(@f)=%%>FTAF</option>
+					<option value="_Job" %%=v(@j)=%%>Job</option>
+					<option value="_Open" %%=v(@o)=%%>Open</option>
+					<option value="_Sent" %%=v(@s)=%%>Sent</option>
+					<option value="_SMSMessageTracking" %%=v(@sms)=%%>SMSMessageTracking</option>
+					<option value="_Unsubscribe" %%=v(@u)=%%>Unsubscribe</option>
+				</select>
+			</div>
+			<input type="hidden" name="Submit" id="Submit" value="Success">
+		</form>
+	</div>
+	<br><br> %%[ if @dv == "_AutomationInstance" then set @rows = LookupRows(@dv,"MemberID", @mid) set @rowCount = rowcount(@rows) ]%% <div class="table-responsive">
+		<table class="table">
+			<thead>
+				<tr>
+					<th>#</th>
+					<th>MemberID</th>
+					<th>AutomationName</th>
+					<th>AutomationDescription</th>
+					<th>AutomationCustomerKey</th>
+					<th>AutomationType</th>
+					<th>AutomationNotificationRecipient_Complete</th>
+					<th>AutomationNotificationRecipient_Error</th>
+					<th>AutomationNotificationRecipient_Skip</th>
+					<th>AutomationStepCount</th>
+					<th>AutomationInstanceID</th>
+					<th>AutomationInstanceIsRunOnce</th>
+					<th>FilenameFromTrigger</th>
+					<th>AutomationInstanceScheduledTime_UTC</th>
+					<th>AutomationInstanceStartTime_UTC</th>
+					<th>AutomationInstanceEndTime_UTC</th>
+					<th>AutomationInstanceStatus</th>
+					<th>AutomationInstanceActivityErrorDetails</th>
+				</tr>
+			</thead> %%[if @rowCount > 0 then for @i = 1 to Iif(not Empty(@cap), @cap, @rowCount) do set @row = row(@rows, @i) set @MemberID = field(@row,"MemberID") set @AutomationName = field(@row,"AutomationName") set @AutomationDescription = field(@row,"AutomationDescription") set @AutomationCustomerKey = field(@row,"AutomationCustomerKey") set @AutomationType = field(@row,"AutomationType") set @AutomationNotificationRecipient_Complete = field(@row,"AutomationNotificationRecipient_Complete") set @AutomationNotificationRecipient_Error = field(@row,"AutomationNotificationRecipient_Error") set @AutomationNotificationRecipient_Skip = field(@row,"AutomationNotificationRecipient_Skip") set @AutomationStepCount = field(@row,"AutomationStepCount") set @AutomationInstanceID = field(@row,"AutomationInstanceID") set @AutomationInstanceIsRunOnce = field(@row,"AutomationInstanceIsRunOnce") set @FilenameFromTrigger = field(@row,"FilenameFromTrigger") set @AutomationInstanceScheduledTime_UTC = field(@row,"AutomationInstanceScheduledTime_UTC") set @AutomationInstanceStartTime_UTC = field(@row,"AutomationInstanceStartTime_UTC") set @AutomationInstanceEndTime_UTC = field(@row,"AutomationInstanceEndTime_UTC") set @AutomationInstanceStatus = field(@row,"AutomationInstanceStatus") set @AutomationInstanceActivityErrorDetails = field(@row,"AutomationInstanceActivityErrorDetails") ]%% <tr>
+				<td>%%=v(@i)=%%</td>
+				<td>%%=v(@MemberID)=%%</td>
+				<td>%%=v(@AutomationName)=%%</td>
+				<td>%%=v(@AutomationDescription)=%%</td>
+				<td>%%=v(@AutomationCustomerKey)=%%</td>
+				<td>%%=v(@AutomationType)=%%</td>
+				<td>%%=v(@AutomationNotificationRecipient_Complete)=%%</td>
+				<td>%%=v(@AutomationNotificationRecipient_Error)=%%</td>
+				<td>%%=v(@AutomationNotificationRecipient_Skip)=%%</td>
+				<td>%%=v(@AutomationStepCount)=%%</td>
+				<td>%%=v(@AutomationInstanceID)=%%</td>
+				<td>%%=v(@AutomationInstanceIsRunOnce)=%%</td>
+				<td>%%=v(@FilenameFromTrigger)=%%</td>
+				<td>%%=v(@AutomationInstanceScheduledTime_UTC)=%%</td>
+				<td>%%=v(@AutomationInstanceStartTime_UTC)=%%</td>
+				<td>%%=v(@AutomationInstanceEndTime_UTC)=%%</td>
+				<td>%%=v(@AutomationInstanceStatus)=%%</td>
+				<td>%%=v(@AutomationInstanceActivityErrorDetails)=%%</td>
+			</tr> %%[next @i endif elseif @dv == "_AutomationActivityInstance" then set @rows = LookupRows(@dv,"MemberID", @mid) set @rowCount = rowcount(@rows) ]%% <div class="table-responsive">
+				<table class="table">
+					<thead>
+						<tr>
+							<th>#</th>
+							<th>MemberID</th>
+							<th>AutomationName</th>
+							<th>AutomationCustomerKey</th>
+							<th>AutomationInstanceID</th>
+							<th>ActivityType</th>
+							<th>ActivityName</th>
+							<th>ActivityDescription</th>
+							<th>ActivityCustomerKey</th>
+							<th>ActivityInstanceStep</th>
+							<th>ActivityInstanceID</th>
+							<th>ActivityInstanceStartTime_UTC</th>
+							<th>ActivityInstanceEndTime_UTC</th>
+							<th>ActivityInstanceStatus</th>
+							<th>ActivityInstanceStatusDetails</th>
+						</tr>
+					</thead> %%[if @rowCount > 0 then for @i = 1 to Iif(not Empty(@cap), @cap, @rowCount) do set @row = row(@rows, @i) set @MemberID = field(@row,"MemberID") set @AutomationName = field(@row,"AutomationName") set @AutomationCustomerKey = field(@row,"AutomationCustomerKey") set @AutomationInstanceID = field(@row,"AutomationInstanceID") set @ActivityType = field(@row,"ActivityType") set @ActivityName = field(@row,"ActivityName") set @ActivityDescription = field(@row,"ActivityDescription") set @ActivityCustomerKey = field(@row,"ActivityCustomerKey") set @ActivityInstanceStep = field(@row,"ActivityInstanceStep") set @ActivityInstanceID = field(@row,"ActivityInstanceID") set @ActivityInstanceStartTime_UTC = field(@row,"ActivityInstanceStartTime_UTC") set @ActivityInstanceEndTime_UTC = field(@row,"ActivityInstanceEndTime_UTC") set @ActivityInstanceStatus = field(@row,"ActivityInstanceStatus") set @ActivityInstanceStatusDetails = field(@row,"ActivityInstanceStatusDetails") ]%% <tr>
+						<td>%%=v(@i)=%%</td>
+						<td>%%=v(@MemberID)=%%</td>
+						<td>%%=v(@AutomationName)=%%</td>
+						<td>%%=v(@AutomationCustomerKey)=%%</td>
+						<td>%%=v(@AutomationInstanceID)=%%</td>
+						<td>%%=v(@ActivityType)=%%</td>
+						<td>%%=v(@ActivityName)=%%</td>
+						<td>%%=v(@ActivityDescription)=%%</td>
+						<td>%%=v(@ActivityCustomerKey)=%%</td>
+						<td>%%=v(@ActivityInstanceStep)=%%</td>
+						<td>%%=v(@ActivityInstanceID)=%%</td>
+						<td>%%=v(@ActivityInstanceStartTime_UTC)=%%</td>
+						<td>%%=v(@ActivityInstanceEndTime_UTC)=%%</td>
+						<td>%%=v(@ActivityInstanceStatus)=%%</td>
+						<td>%%=v(@ActivityInstanceStatusDetails)=%%</td>
+					</tr> %%[next @i endif elseif @dv == "_Bounce" then set @rows = LookupRows(@dv,"AccountID", @mid) set @rowCount = rowcount(@rows) ]%% <div class="table-responsive">
+						<table class="table">
+							<thead>
+								<tr>
+									<th>#</th>
+									<th>AccountID</th>
+									<th>OYBAccountID</th>
+									<th>JobID</th>
+									<th>ListID</th>
+									<th>BatchID</th>
+									<th>SubscriberID</th>
+									<th>SubscriberKey</th>
+									<th>EventDate</th>
+									<th>Domain</th>
+									<th>IsUnique</th>
+									<th>BounceCategoryID</th>
+									<th>BounceCategory</th>
+									<th>BounceSubcategoryID</th>
+									<th>BounceSubcategory</th>
+									<th>BounceTypeID</th>
+									<th>BounceType</th>
+									<th>SMTPBounceReason</th>
+									<th>SMTPMessage</th>
+									<th>SMTPCode</th>
+								</tr>
+							</thead> %%[if @rowCount > 0 then for @i = 1 to Iif(not Empty(@cap), @cap, @rowCount) do set @row = row(@rows, @i) set @AccountID = field(@row,"AccountID") set @OYBAccountID = field(@row,"OYBAccountID") set @JobID = field(@row,"JobID") set @ListID = field(@row,"ListID") set @BatchID = field(@row,"BatchID") set @SubscriberID = field(@row,"SubscriberID") set @SubscriberKey = field(@row,"SubscriberKey") set @EventDate = field(@row,"EventDate") set @Domain = field(@row,"Domain") set @IsUnique = field(@row,"IsUnique") set @BounceCategoryID = field(@row,"BounceCategoryID") set @BounceCategory = field(@row,"BounceCategory") set @BounceSubcategoryID = field(@row,"BounceSubcategoryID") set @BounceSubcategory = field(@row,"BounceSubcategory") set @BounceTypeID = field(@row,"BounceTypeID") set @BounceType = field(@row,"BounceType") set @SMTPBounceReason = field(@row,"SMTPBounceReason") set @SMTPMessage = field(@row,"SMTPMessage") set @SMTPCode = field(@row,"SMTPCode") ]%% <tr>
+								<td>%%=v(@i)=%%</td>
+								<td>%%=v(@AccountID)=%%</td>
+								<td>%%=v(@OYBAccountID)=%%</td>
+								<td>%%=v(@JobID)=%%</td>
+								<td>%%=v(@ListID)=%%</td>
+								<td>%%=v(@BatchID)=%%</td>
+								<td>%%=v(@SubscriberID)=%%</td>
+								<td>%%=v(@SubscriberKey)=%%</td>
+								<td>%%=v(@EventDate)=%%</td>
+								<td>%%=v(@Domain)=%%</td>
+								<td>%%=v(@IsUnique)=%%</td>
+								<td>%%=v(@BounceCategoryID)=%%</td>
+								<td>%%=v(@BounceCategory)=%%</td>
+								<td>%%=v(@BounceSubcategoryID)=%%</td>
+								<td>%%=v(@BounceSubcategory)=%%</td>
+								<td>%%=v(@BounceTypeID)=%%</td>
+								<td>%%=v(@BounceType)=%%</td>
+								<td>%%=v(@SMTPBounceReason)=%%</td>
+								<td>%%=v(@SMTPMessage)=%%</td>
+								<td>%%=v(@SMTPCode)=%%</td>
+							</tr> %%[next @i endif elseif @dv == "_BusinessUnitUnsubscribes" then set @rows = LookupRows(@dv,"BusinessUnitID", @mid) set @rowCount = rowcount(@rows) ]%% <div class="table-responsive">
+								<table class="table">
+									<thead>
+										<tr>
+											<th>#</th>
+											<th>BusinessUnitID</th>
+											<th>SubscriberID</th>
+											<th>SubscriberKey</th>
+											<th>UnsubDateUTC</th>
+											<th>UnsubReason</th>
+										</tr>
+									</thead> %%[if @rowCount > 0 then for @i = 1 to Iif(not Empty(@cap), @cap, @rowCount) do set @row = row(@rows, @i) set @SubscriberID = field(@row,"SubscriberID") set @SubscriberKey = field(@row,"SubscriberKey") set @BusinessUnitID = field(@row,"BusinessUnitID") set @UnsubDateUTC = field(@row,"UnsubDateUTC") set @UnsubReason = field(@row,"UnsubReason") ]%% <tr>
+										<td>%%=v(@i)=%%</td>
+										<td>%%=v(@BusinessUnitID)=%%</td>
+										<td>%%=v(@SubscriberID)=%%</td>
+										<td>%%=v(@SubscriberKey)=%%</td>
+										<td>%%=v(@UnsubDateUTC)=%%</td>
+										<td>%%=v(@UnsubReason)=%%</td>
+									</tr> %%[next @i endif elseif @dv == "_Click" then set @rows = LookupRows(@dv,"AccountID", @mid) set @rowCount = rowcount(@rows) ]%% <div class="table-responsive">
+										<table class="table">
+											<thead>
+												<tr>
+													<th>#</th>
+													<th>AccountID</th>
+													<th>OYBAccountID</th>
+													<th>JobID</th>
+													<th>ListID</th>
+													<th>BatchID</th>
+													<th>SubscriberID</th>
+													<th>SubscriberKey</th>
+													<th>EventDate</th>
+													<th>Domain</th>
+													<th>TriggererSendDefinitionObjectID</th>
+													<th>IsUnique</th>
+													<th>TriggeredSendCustomerKey</th>
+													<th>URL</th>
+													<th>LinkName</th>
+													<th>LinkContent</th>
+												</tr>
+											</thead> %%[if @rowCount > 0 then for @i = 1 to Iif(not Empty(@cap), @cap, @rowCount) do set @row = row(@rows, @i) set @AccountID = field(@row,"AccountID") set @OYBAccountID = field(@row,"OYBAccountID") set @JobID = field(@row,"JobID") set @ListID = field(@row,"ListID") set @BatchID = field(@row,"BatchID") set @SubscriberID = field(@row,"SubscriberID") set @SubscriberKey = field(@row,"SubscriberKey") set @EventDate = field(@row,"EventDate") set @Domain = field(@row,"Domain") set @TriggererSendDefinitionObjectID = field(@row,"TriggererSendDefinitionObjectID") set @IsUnique = field(@row,"IsUnique") set @TriggeredSendCustomerKey = field(@row,"TriggeredSendCustomerKey") set @URL = field(@row,"URL") set @LinkName = field(@row,"LinkName") set @LinkContent = field(@row,"LinkContent") ]%% <tr>
+												<td>%%=v(@i)=%%</td>
+												<td>%%=v(@AccountID)=%%</td>
+												<td>%%=v(@OYBAccountID)=%%</td>
+												<td>%%=v(@JobID)=%%</td>
+												<td>%%=v(@ListID)=%%</td>
+												<td>%%=v(@BatchID)=%%</td>
+												<td>%%=v(@SubscriberID)=%%</td>
+												<td>%%=v(@SubscriberKey)=%%</td>
+												<td>%%=v(@EventDate)=%%</td>
+												<td>%%=v(@Domain)=%%</td>
+												<td>%%=v(@TriggererSendDefinitionObjectID)=%%</td>
+												<td>%%=v(@IsUnique)=%%</td>
+												<td>%%=v(@TriggeredSendCustomerKey)=%%</td>
+												<td>%%=v(@URL)=%%</td>
+												<td>%%=v(@LinkName)=%%</td>
+												<td>%%=v(@LinkContent)=%%</td>
+											</tr> %%[next @i endif elseif @dv == "_Complaint" then set @rows = LookupRows(@dv,"AccountID", @mid) set @rowCount = rowcount(@rows) ]%% <div class="table-responsive">
+												<table class="table">
+													<thead>
+														<tr>
+															<th>#</th>
+															<th>AccountID</th>
+															<th>OYBAccountID</th>
+															<th>JobID</th>
+															<th>ListID</th>
+															<th>BatchID</th>
+															<th>SubscriberID</th>
+															<th>SubscriberKey</th>
+															<th>EventDate</th>
+															<th>Domain</th>
+															<th>IsUnique</th>
+														</tr>
+													</thead> %%[if @rowCount > 0 then for @i = 1 to Iif(not Empty(@cap), @cap, @rowCount) do set @row = row(@rows, @i) set @AccountID = field(@row,"AccountID") set @OYBAccountID = field(@row,"OYBAccountID") set @JobID = field(@row,"JobID") set @ListID = field(@row,"ListID") set @BatchID = field(@row,"BatchID") set @SubscriberID = field(@row,"SubscriberID") set @SubscriberKey = field(@row,"SubscriberKey") set @EventDate = field(@row,"EventDate") set @Domain = field(@row,"Domain") set @IsUnique = field(@row,"IsUnique") ]%% <tr>
+														<td>%%=v(@i)=%%</td>
+														<td>%%=v(@AccountID)=%%</td>
+														<td>%%=v(@OYBAccountID)=%%</td>
+														<td>%%=v(@JobID)=%%</td>
+														<td>%%=v(@ListID)=%%</td>
+														<td>%%=v(@BatchID)=%%</td>
+														<td>%%=v(@SubscriberID)=%%</td>
+														<td>%%=v(@SubscriberKey)=%%</td>
+														<td>%%=v(@EventDate)=%%</td>
+														<td>%%=v(@Domain)=%%</td>
+														<td>%%=v(@IsUnique)=%%</td>
+													</tr> %%[next @i endif elseif @dv == "_FTAF" then set @rows = LookupRows(@dv,"AccountID", @mid) set @rowCount = rowcount(@rows) ]%% <div class="table-responsive">
+														<table class="table">
+															<thead>
+																<tr>
+																	<th>#</th>
+																	<th>AccountID</th>
+																	<th>OYBAccountID</th>
+																	<th>JobID</th>
+																	<th>ListID</th>
+																	<th>BatchID</th>
+																	<th>SubscriberID</th>
+																	<th>SubscriberKey</th>
+																	<th>TransactionTime</th>
+																	<th>Domain</th>
+																	<th>TriggererSendDefinitionObjectID</th>
+																	<th>IsUnique</th>
+																	<th>TriggeredSendCustomerKey</th>
+																</tr>
+															</thead> %%[if @rowCount > 0 then for @i = 1 to Iif(not Empty(@cap), @cap, @rowCount) do set @row = row(@rows, @i) set @AccountID = field(@row,"AccountID") set @OYBAccountID = field(@row,"OYBAccountID") set @JobID = field(@row,"JobID") set @ListID = field(@row,"ListID") set @BatchID = field(@row,"BatchID") set @SubscriberID = field(@row,"SubscriberID") set @SubscriberKey = field(@row,"SubscriberKey") set @TransactionTime = field(@row,"TransactionTime") set @Domain = field(@row,"Domain") set @TriggererSendDefinitionObjectID = field(@row,"TriggererSendDefinitionObjectID") set @IsUnique = field(@row,"IsUnique") set @TriggeredSendCustomerKey = field(@row,"TriggeredSendCustomerKey") ]%% <tr>
+																<td>%%=v(@i)=%%</td>
+																<td>%%=v(@AccountID)=%%</td>
+																<td>%%=v(@OYBAccountID)=%%</td>
+																<td>%%=v(@JobID)=%%</td>
+																<td>%%=v(@ListID)=%%</td>
+																<td>%%=v(@BatchID)=%%</td>
+																<td>%%=v(@SubscriberID)=%%</td>
+																<td>%%=v(@SubscriberKey)=%%</td>
+																<td>%%=v(@TransactionTime)=%%</td>
+																<td>%%=v(@Domain)=%%</td>
+																<td>%%=v(@TriggererSendDefinitionObjectID)=%%</td>
+																<td>%%=v(@IsUnique)=%%</td>
+																<td>%%=v(@TriggeredSendCustomerKey)=%%</td>
+															</tr> %%[next @i endif elseif @dv == "_Job" then set @rows = LookupRows(@dv,"AccountID", @mid) set @rowCount = rowcount(@rows) ]%% <div class="table-responsive">
+																<table class="table">
+																	<thead>
+																		<tr>
+																			<th>#</th>
+																			<th>AccountID</th>
+																			<th>JobID</th>
+																			<th>EmailID</th>
+																			<th>AccountID</th>
+																			<th>AccountUserID</th>
+																			<th>FromName</th>
+																			<th>FromEmail</th>
+																			<th>SchedTime</th>
+																			<th>PickupTime</th>
+																			<th>DeliveredTime</th>
+																			<th>EventID</th>
+																			<th>TriggererSendDefinitionObjectID</th>
+																			<th>TriggeredSendCustomerKey</th>
+																			<th>IsMultipart</th>
+																			<th>JobType</th>
+																			<th>JobStatus</th>
+																			<th>ModifiedBy</th>
+																			<th>ModifiedDate</th>
+																			<th>EmailName</th>
+																			<th>EmailSubject</th>
+																			<th>IsWrapped</th>
+																			<th>TestEmailAddr</th>
+																			<th>Category</th>
+																			<th>BccEmail</th>
+																			<th>OriginalSchedTime</th>
+																			<th>CreatedDate</th>
+																			<th>CharacterSet</th>
+																			<th>IPAddress</th>
+																			<th>SalesForceTotalSubscriberCount</th>
+																			<th>SalesForceErrorSubscriberCount</th>
+																			<th>SendType</th>
+																			<th>DynamicEmailSubject</th>
+																			<th>SuppressTracking</th>
+																			<th>SendClassificationType</th>
+																			<th>SendClassification</th>
+																			<th>ResolveLinksWithCurrentData</th>
+																			<th>EmailSendDefinition</th>
+																		</tr>
+																	</thead> %%[if @rowCount > 0 then for @i = 1 to Iif(not Empty(@cap), @cap, @rowCount) do set @row = row(@rows, @i) set @JobID = field(@row,"JobID") set @EmailID = field(@row,"EmailID") set @AccountID = field(@row,"AccountID") set @AccountUserID = field(@row,"AccountUserID") set @FromName = field(@row,"FromName") set @FromEmail = field(@row,"FromEmail") set @SchedTime = field(@row,"SchedTime") set @PickupTime = field(@row,"PickupTime") set @DeliveredTime = field(@row,"DeliveredTime") set @EventID = field(@row,"EventID") set @TriggererSendDefinitionObjectID = field(@row,"TriggererSendDefinitionObjectID") set @TriggeredSendCustomerKey = field(@row,"TriggeredSendCustomerKey") set @IsMultipart = field(@row,"IsMultipart") set @JobType = field(@row,"JobType") set @JobStatus = field(@row,"JobStatus") set @ModifiedBy = field(@row,"ModifiedBy") set @ModifiedDate = field(@row,"ModifiedDate") set @EmailName = field(@row,"EmailName") set @EmailSubject = field(@row,"EmailSubject") set @IsWrapped = field(@row,"IsWrapped") set @TestEmailAddr = field(@row,"TestEmailAddr") set @Category = field(@row,"Category") set @BccEmail = field(@row,"BccEmail") set @OriginalSchedTime = field(@row,"OriginalSchedTime") set @CreatedDate = field(@row,"CreatedDate") set @CharacterSet = field(@row,"CharacterSet") set @IPAddress = field(@row,"IPAddress") set @SalesForceTotalSubscriberCount = field(@row,"SalesForceTotalSubscriberCount") set @SalesForceErrorSubscriberCount = field(@row,"SalesForceErrorSubscriberCount") set @SendType = field(@row,"SendType") set @DynamicEmailSubject = field(@row,"DynamicEmailSubject") set @SuppressTracking = field(@row,"SuppressTracking") set @SendClassificationType = field(@row,"SendClassificationType") set @SendClassification = field(@row,"SendClassification") set @ResolveLinksWithCurrentData = field(@row,"ResolveLinksWithCurrentData") set @EmailSendDefinition = field(@row,"EmailSendDefinition") ]%% <tr>
+																		<td>%%=v(@i)=%%</td>
+																		<td>%%=v(@AccountID)=%%</td>
+																		<td>%%=v(@JobID)=%%</td>
+																		<td>%%=v(@EmailID)=%%</td>
+																		<td>%%=v(@AccountID)=%%</td>
+																		<td>%%=v(@AccountUserID)=%%</td>
+																		<td>%%=v(@FromName)=%%</td>
+																		<td>%%=v(@FromEmail)=%%</td>
+																		<td>%%=v(@SchedTime)=%%</td>
+																		<td>%%=v(@PickupTime)=%%</td>
+																		<td>%%=v(@DeliveredTime)=%%</td>
+																		<td>%%=v(@EventID)=%%</td>
+																		<td>%%=v(@TriggererSendDefinitionObjectID)=%%</td>
+																		<td>%%=v(@TriggeredSendCustomerKey)=%%</td>
+																		<td>%%=v(@IsMultipart)=%%</td>
+																		<td>%%=v(@JobType)=%%</td>
+																		<td>%%=v(@JobStatus)=%%</td>
+																		<td>%%=v(@ModifiedBy)=%%</td>
+																		<td>%%=v(@ModifiedDate)=%%</td>
+																		<td>%%=v(@EmailName)=%%</td>
+																		<td>%%=v(@EmailSubject)=%%</td>
+																		<td>%%=v(@IsWrapped)=%%</td>
+																		<td>%%=v(@TestEmailAddr)=%%</td>
+																		<td>%%=v(@Category)=%%</td>
+																		<td>%%=v(@BccEmail)=%%</td>
+																		<td>%%=v(@OriginalSchedTime)=%%</td>
+																		<td>%%=v(@CreatedDate)=%%</td>
+																		<td>%%=v(@CharacterSet)=%%</td>
+																		<td>%%=v(@IPAddress)=%%</td>
+																		<td>%%=v(@SalesForceTotalSubscriberCount)=%%</td>
+																		<td>%%=v(@SalesForceErrorSubscriberCount)=%%</td>
+																		<td>%%=v(@SendType)=%%</td>
+																		<td>%%=v(@DynamicEmailSubject)=%%</td>
+																		<td>%%=v(@SuppressTracking)=%%</td>
+																		<td>%%=v(@SendClassificationType)=%%</td>
+																		<td>%%=v(@SendClassification)=%%</td>
+																		<td>%%=v(@ResolveLinksWithCurrentData)=%%</td>
+																		<td>%%=v(@EmailSendDefinition)=%%</td>
+																	</tr> %%[next @i endif elseif @dv == "_Open" then set @rows = LookupRows(@dv,"AccountID", @mid) set @rowCount = rowcount(@rows) ]%% <div class="table-responsive">
+																		<table class="table">
+																			<thead>
+																				<tr>
+																					<th>#</th>
+																					<th>AccountID</th>
+																					<th>OYBAccountID</th>
+																					<th>JobID</th>
+																					<th>ListID</th>
+																					<th>BatchID</th>
+																					<th>SubscriberID</th>
+																					<th>SubscriberKey</th>
+																					<th>EventDate</th>
+																					<th>Domain</th>
+																					<th>TriggererSendDefinitionObjectID</th>
+																					<th>IsUnique</th>
+																					<th>TriggeredSendCustomerKey</th>
+																				</tr>
+																			</thead> %%[if @rowCount > 0 then for @i = 1 to Iif(not Empty(@cap), @cap, @rowCount) do set @row = row(@rows, @i) set @AccountID = field(@row,"AccountID") set @OYBAccountID = field(@row,"OYBAccountID") set @JobID = field(@row,"JobID") set @ListID = field(@row,"ListID") set @BatchID = field(@row,"BatchID") set @SubscriberID = field(@row,"SubscriberID") set @SubscriberKey = field(@row,"SubscriberKey") set @EventDate = field(@row,"EventDate") set @Domain = field(@row,"Domain") set @TriggererSendDefinitionObjectID = field(@row,"TriggererSendDefinitionObjectID") set @IsUnique = field(@row,"IsUnique") set @TriggeredSendCustomerKey = field(@row,"TriggeredSendCustomerKey") ]%% <tr>
+																				<td>%%=v(@i)=%%</td>
+																				<td>%%=v(@AccountID)=%%</td>
+																				<td>%%=v(@OYBAccountID)=%%</td>
+																				<td>%%=v(@JobID)=%%</td>
+																				<td>%%=v(@ListID)=%%</td>
+																				<td>%%=v(@BatchID)=%%</td>
+																				<td>%%=v(@SubscriberID)=%%</td>
+																				<td>%%=v(@SubscriberKey)=%%</td>
+																				<td>%%=v(@EventDate)=%%</td>
+																				<td>%%=v(@Domain)=%%</td>
+																				<td>%%=v(@TriggererSendDefinitionObjectID)=%%</td>
+																				<td>%%=v(@IsUnique)=%%</td>
+																				<td>%%=v(@TriggeredSendCustomerKey)=%%</td>
+																			</tr> %%[next @i endif elseif @dv == "_Sent" then set @rows = LookupRows(@dv,"AccountID", @mid) set @rowCount = rowcount(@rows) ]%% <div class="table-responsive">
+																				<table class="table">
+																					<thead>
+																						<tr>
+																							<th>#</th>
+																							<th>AccountID</th>
+																							<th>OYBAccountID</th>
+																							<th>JobID</th>
+																							<th>ListID</th>
+																							<th>BatchID</th>
+																							<th>SubscriberID</th>
+																							<th>SubscriberKey</th>
+																							<th>EventDate</th>
+																							<th>Domain</th>
+																							<th>TriggererSendDefinitionObjectID</th>
+																							<th>TriggeredSendCustomerKey</th>
+																						</tr>
+																					</thead> %%[if @rowCount > 0 then for @i = 1 to Iif(not Empty(@cap), @cap, @rowCount) do set @row = row(@rows, @i) set @AccountID = field(@row,"AccountID") set @OYBAccountID = field(@row,"OYBAccountID") set @JobID = field(@row,"JobID") set @ListID = field(@row,"ListID") set @BatchID = field(@row,"BatchID") set @SubscriberID = field(@row,"SubscriberID") set @SubscriberKey = field(@row,"SubscriberKey") set @EventDate = field(@row,"EventDate") set @Domain = field(@row,"Domain") set @TriggererSendDefinitionObjectID = field(@row,"TriggererSendDefinitionObjectID") set @TriggeredSendCustomerKey = field(@row,"TriggeredSendCustomerKey") ]%% <tr>
+																						<td>%%=v(@i)=%%</td>
+																						<td>%%=v(@AccountID)=%%</td>
+																						<td>%%=v(@OYBAccountID)=%%</td>
+																						<td>%%=v(@JobID)=%%</td>
+																						<td>%%=v(@ListID)=%%</td>
+																						<td>%%=v(@BatchID)=%%</td>
+																						<td>%%=v(@SubscriberID)=%%</td>
+																						<td>%%=v(@SubscriberKey)=%%</td>
+																						<td>%%=v(@EventDate)=%%</td>
+																						<td>%%=v(@Domain)=%%</td>
+																						<td>%%=v(@TriggererSendDefinitionObjectID)=%%</td>
+																						<td>%%=v(@TriggeredSendCustomerKey)=%%</td>
+																					</tr> %%[next @i endif elseif @dv == "_SMSMessageTracking" then set @rows = LookupRows(@dv,"MID", @mid) set @rowCount = rowcount(@rows) ]%% <div class="table-responsive">
+																						<table class="table">
+																							<thead>
+																								<tr>
+																									<th>#</th>
+																									<th>SubscriberID</th>
+																									<th>MobileMessageTrackingID</th>
+																									<th>Mobile</th>
+																									<th>EID</th>
+																									<th>MID</th>
+																									<th>MessageID</th>
+																									<th>KeywordID</th>
+																									<th>CodeID</th>
+																									<th>ConversationID</th>
+																									<th>CampaignID</th>
+																									<th>Sent</th>
+																									<th>Delivered</th>
+																									<th>Undelivered</th>
+																									<th>Unsub</th>
+																									<th>OptIn</th>
+																									<th>OptOut</th>
+																									<th>Outbound</th>
+																									<th>Inbound</th>
+																									<th>CreateDateTime</th>
+																									<th>ModifiedDateTime</th>
+																									<th>ActionDateTime</th>
+																									<th>MessageText</th>
+																									<th>IsTest</th>
+																									<th>MobileMessageRecurrenceID</th>
+																									<th>ResponseToMobileMessageTrackingID</th>
+																									<th>IsValid</th>
+																									<th>InvalidationCode</th>
+																									<th>SendID</th>
+																									<th>SendSplitID</th>
+																									<th>SendSegmentID</th>
+																									<th>SendJobID</th>
+																									<th>SendGroupID</th>
+																									<th>SendPersonID</th>
+																									<th>SubscriberKey</th>
+																									<th>SMSStandardStatusCodeId</th>
+																									<th>Description</th>
+																									<th>ShortCode</th>
+																									<th>SharedKeyword</th>
+																									<th>Ordinal</th>
+																									<th>FromName</th>
+																									<th>JBActivityID</th>
+																									<th>JBDefinitionID</th>
+																									<th>SMSJobID</th>
+																								</tr>
+																							</thead> %%[if @rowCount > 0 then for @i = 1 to Iif(not Empty(@cap), @cap, @rowCount) do set @row = row(@rows, @i) set @SubscriberID = field(@row,"SubscriberID") set @MobileMessageTrackingID = field(@row,"MobileMessageTrackingID") set @Mobile = field(@row,"Mobile") set @EID = field(@row,"EID") set @MID = field(@row,"MID") set @MessageID = field(@row,"MessageID") set @KeywordID = field(@row,"KeywordID") set @CodeID = field(@row,"CodeID") set @ConversationID = field(@row,"ConversationID") set @CampaignID = field(@row,"CampaignID") set @Sent = field(@row,"Sent") set @Delivered = field(@row,"Delivered") set @Undelivered = field(@row,"Undelivered") set @Unsub = field(@row,"Unsub") set @OptIn = field(@row,"OptIn") set @OptOut = field(@row,"OptOut") set @Outbound = field(@row,"Outbound") set @Inbound = field(@row,"Inbound") set @CreateDateTime = field(@row,"CreateDateTime") set @ModifiedDateTime = field(@row,"ModifiedDateTime") set @ActionDateTime = field(@row,"ActionDateTime") set @MessageText = field(@row,"MessageText") set @IsTest = field(@row,"IsTest") set @MobileMessageRecurrenceID = field(@row,"MobileMessageRecurrenceID") set @ResponseToMobileMessageTrackingID = field(@row,"ResponseToMobileMessageTrackingID") set @IsValid = field(@row,"IsValid") set @InvalidationCode = field(@row,"InvalidationCode") set @SendID = field(@row,"SendID") set @SendSplitID = field(@row,"SendSplitID") set @SendSegmentID = field(@row,"SendSegmentID") set @SendJobID = field(@row,"SendJobID") set @SendGroupID = field(@row,"SendGroupID") set @SendPersonID = field(@row,"SendPersonID") set @SubscriberKey = field(@row,"SubscriberKey") set @SMSStandardStatusCodeId = field(@row,"SMSStandardStatusCodeId") set @Description = field(@row,"Description") set @ShortCode = field(@row,"ShortCode") set @SharedKeyword = field(@row,"SharedKeyword") set @Ordinal = field(@row,"Ordinal") set @FromName = field(@row,"FromName") set @JBActivityID = field(@row,"JBActivityID") set @JBDefinitionID = field(@row,"JBDefinitionID") set @SMSJobID = field(@row,"SMSJobID") ]%% <tr>
+																								<td>%%=v(@i)=%%</td>
+																								<td>%%=v(@SubscriberID)=%%</td>
+																								<td>%%=v(@MobileMessageTrackingID)=%%</td>
+																								<td>%%=v(@Mobile)=%%</td>
+																								<td>%%=v(@EID)=%%</td>
+																								<td>%%=v(@MID)=%%</td>
+																								<td>%%=v(@MessageID)=%%</td>
+																								<td>%%=v(@KeywordID)=%%</td>
+																								<td>%%=v(@CodeID)=%%</td>
+																								<td>%%=v(@ConversationID)=%%</td>
+																								<td>%%=v(@CampaignID)=%%</td>
+																								<td>%%=v(@Sent)=%%</td>
+																								<td>%%=v(@Delivered)=%%</td>
+																								<td>%%=v(@Undelivered)=%%</td>
+																								<td>%%=v(@Unsub)=%%</td>
+																								<td>%%=v(@OptIn)=%%</td>
+																								<td>%%=v(@OptOut)=%%</td>
+																								<td>%%=v(@Outbound)=%%</td>
+																								<td>%%=v(@Inbound)=%%</td>
+																								<td>%%=v(@CreateDateTime)=%%</td>
+																								<td>%%=v(@ModifiedDateTime)=%%</td>
+																								<td>%%=v(@ActionDateTime)=%%</td>
+																								<td>%%=v(@MessageText)=%%</td>
+																								<td>%%=v(@IsTest)=%%</td>
+																								<td>%%=v(@MobileMessageRecurrenceID)=%%</td>
+																								<td>%%=v(@ResponseToMobileMessageTrackingID)=%%</td>
+																								<td>%%=v(@IsValid)=%%</td>
+																								<td>%%=v(@InvalidationCode)=%%</td>
+																								<td>%%=v(@SendID)=%%</td>
+																								<td>%%=v(@SendSplitID)=%%</td>
+																								<td>%%=v(@SendSegmentID)=%%</td>
+																								<td>%%=v(@SendJobID)=%%</td>
+																								<td>%%=v(@SendGroupID)=%%</td>
+																								<td>%%=v(@SendPersonID)=%%</td>
+																								<td>%%=v(@SubscriberKey)=%%</td>
+																								<td>%%=v(@SMSStandardStatusCodeId)=%%</td>
+																								<td>%%=v(@Description)=%%</td>
+																								<td>%%=v(@ShortCode)=%%</td>
+																								<td>%%=v(@SharedKeyword)=%%</td>
+																								<td>%%=v(@Ordinal)=%%</td>
+																								<td>%%=v(@FromName)=%%</td>
+																								<td>%%=v(@JBActivityID)=%%</td>
+																								<td>%%=v(@JBDefinitionID)=%%</td>
+																								<td>%%=v(@SMSJobID)=%%</td>
+																							</tr> %%[next @i endif elseif @dv == "_Unsubscribe" then set @rows = LookupRows(@dv,"AccountID", @mid) set @rowCount = rowcount(@rows) ]%% <div class="table-responsive">
+																								<table class="table">
+																									<thead>
+																										<tr>
+																											<th>#</th>
+																											<th>AccountID</th>
+																											<th>OYBAccountID</th>
+																											<th>JobID</th>
+																											<th>ListID</th>
+																											<th>BatchID</th>
+																											<th>SubscriberID</th>
+																											<th>SubscriberKey</th>
+																											<th>EventDate</th>
+																											<th>Domain</th>
+																											<th>IsUnique</th>
+																										</tr>
+																									</thead> %%[if @rowCount > 0 then for @i = 1 to Iif(not Empty(@cap), @cap, @rowCount) do set @row = row(@rows, @i) set @AccountID = field(@row,"AccountID") set @OYBAccountID = field(@row,"OYBAccountID") set @JobID = field(@row,"JobID") set @ListID = field(@row,"ListID") set @BatchID = field(@row,"BatchID") set @SubscriberID = field(@row,"SubscriberID") set @SubscriberKey = field(@row,"SubscriberKey") set @EventDate = field(@row,"EventDate") set @Domain = field(@row,"Domain") set @IsUnique = field(@row,"IsUnique") ]%% <tr>
+																										<td>%%=v(@i)=%%</td>
+																										<td>%%=v(@AccountID)=%%</td>
+																										<td>%%=v(@OYBAccountID)=%%</td>
+																										<td>%%=v(@JobID)=%%</td>
+																										<td>%%=v(@ListID)=%%</td>
+																										<td>%%=v(@BatchID)=%%</td>
+																										<td>%%=v(@SubscriberID)=%%</td>
+																										<td>%%=v(@SubscriberKey)=%%</td>
+																										<td>%%=v(@EventDate)=%%</td>
+																										<td>%%=v(@Domain)=%%</td>
+																										<td>%%=v(@IsUnique)=%%</td>
+																									</tr> %%[next @i endif endif %%[ ENDIF ]%%
+																								</table>
+																							</div>
+																							<script>
+																							$(function() {
+																								$('td').each(function() {
+																									var cellContent = $(this).text();
+																									$(this).attr('data-toggle', 'tooltip');
+																									$(this).attr('data-placement', 'top');
+																									$(this).attr('title', cellContent);
+																								});
+																								$('[data-toggle="tooltip"]').tooltip({
+																									container: 'body'
+																								});
+																							});
+																							$(function() {
+																								$('#data-view').on('change', function() {
+																									$(this).closest('form').submit();
+																								});
+																							});
+																							</script>
+</body>
+
+</html>

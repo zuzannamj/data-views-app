@@ -18,7 +18,7 @@
  </style>
 </head>
 
-<body> %%[ SET @cap = 1000000 /* limit the number of rows to retrieve */ SET @Submit = RequestParameter("Submit") IF @Submit != "Success" THEN ]%% <div class="container">
+<body> %%[ SET @cap = 100000 /* limit the number of rows to retrieve */ SET @Submit = RequestParameter("Submit") IF @Submit != "Success" THEN ]%% <div class="container">
   <form role="form" action="%%=RequestParameter('PAGEURL')=%%" method="GET">
    <div class="form-group">
     <label for="data-view">Data View:</label>

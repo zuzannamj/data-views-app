@@ -177,7 +177,364 @@
       "description": "The domain associated with the subscriber's email address."
     },
     {
-      "field": "Bounce
+      "field": "BounceCategoryID",
+      "type": "number",
+      "description": "The ID number for the bounce category."
+    },
+    {
+      "field": "BounceCategory",
+      "type": "text",
+      "description": "The category of the bounce."
+    },
+    {
+      "field": "BounceSubcategoryID",
+      "type": "number",
+      "description": "The ID number for the bounce subcategory."
+    },
+    {
+      "field": "BounceSubcategory",
+      "type": "text",
+      "description": "The subcategory of the bounce."
+    },
+    {
+      "field": "BounceTypeID",
+      "type": "number",
+      "description": "The ID number for the bounce type."
+    },
+    {
+      "field": "BounceType",
+      "type": "text",
+      "description": "The type of bounce that occurred."
+    },
+    {
+      "field": "SMTPBounceReason",
+      "type": "text",
+      "description": "The reason for the bounce relayed by the mail system."
+    },
+    {
+      "field": "SMTPMessage",
+      "type": "text",
+      "description": "The message regarding the bounce from the mail system."
+    },
+    {
+      "field": "SMTPCode",
+      "type": "number",
+      "description": "The error code for the bounce from the mail system."
+    },
+    {
+      "field": "TriggererSendDefinitionObjectID",
+      "type": "text",
+      "description": "The object ID for the triggered send definition."
+    },
+    {
+      "field": "TriggeredSendCustomerKey",
+      "type": "text",
+      "description": "The customer key for the triggered send."
+    }
+  ]
+},
+{
+  "family": "email",
+  "name": "_Click",
+  "fields": [
+    {
+      "field": "AccountID",
+      "type": "number",
+      "description": "The account ID number of the Marketing Cloud account."
+    },
+    {
+      "field": "OYBAccountID",
+      "type": "number",
+      "description": "The account ID number for any related On-Your-Behalf (OYB) accounts. This field applies to enterprise accounts only."
+    },
+    {
+      "field": "JobID",
+      "type": "number",
+      "description": "The job ID number for the email send."
+    },
+    {
+      "field": "ListID",
+      "type": "number",
+      "description": "The list ID number for the list used in the send."
+    },
+    {
+      "field": "BatchID",
+      "type": "number",
+      "description": "The batch ID number for any batches used in the send."
+    },
+    {
+      "field": "SubscriberID",
+      "type": "number",
+      "description": "The subscriber ID for the affected subscriber. This number represents the unique ID for each subscriber record."
+    },
+    {
+      "field": "SubscriberKey",
+      "type": "text",
+      "description": "The subscriber key for the affected subscriber."
+    },
+    {
+      "field": "EventDate",
+      "type": "date",
+      "description": "The date the click took place."
+    },
+    {
+      "field": "Domain",
+      "type": "text",
+      "description": "The domain at which the click occurred."
+    },
+    {
+      "field": "URL",
+      "type": "text",
+      "description": "The URL for the link clicked. No AMPscript or variables are populated in this column, for example, www.example.com?%%attribute%%."
+    },
+    {
+      "field": "LinkName",
+      "type": "text",
+      "description": "The link name assigned in the email send."
+    },
+    {
+      "field": "LinkContent",
+      "type": "text",
+      "description": "The link content assigned in the email send. AMPscript and variables are populated in this column, such as www.example.com?12345."
+    },
+    {
+      "field": "IsUnique",
+      "type": "boolean",
+      "description": "Whether the event is unique or repeated."
+    },
+    {
+      "field": "TriggererSendDefinitionObjectID",
+      "type": "text",
+      "description": "The object ID for the triggered send definition."
+    },
+    {
+      "field": "TriggeredSendCustomerKey",
+      "type": "text",
+      "description": "The customer key for the triggered send."
+    }
+  ]
+},
+{
+  "family": "email",
+  "name": "_FTAT",
+  "fields": [
+    {
+      "field": "AccountID",
+      "type": "number",
+      "description": "Your account ID number."
+    },
+    {
+      "field": "OYBAccountID",
+      "type": "number",
+      "description": "The account ID number for any related On-Your-Behalf accounts and applies to enterprise accounts only."
+    },
+    {
+      "field": "JobID",
+      "type": "number",
+      "description": "The job ID number for the email send."
+    },
+    {
+      "field": "ListID",
+      "type": "number",
+      "description": "The list ID number for the list used in the send."
+    },
+    {
+      "field": "BatchID",
+      "type": "number",
+      "description": "The batch ID number for any batches used in the send."
+    },
+    {
+      "field": "SubscriberID",
+      "type": "number",
+      "description": "The subscriber ID for the affected subscriber. This number represents the unique ID for each subscriber record."
+    },
+    {
+      "field": "SubscriberKey",
+      "type": "text",
+      "description": "The subscriber key for the affected subscriber."
+    },
+    {
+      "field": "TransactionTime",
+      "type": "date",
+      "description": "The date the forward took place."
+    },
+    {
+      "field": "Domain",
+      "type": "text",
+      "description": "The domain at which the forward occurred."
+    },
+    {
+      "field": "IsUnique",
+      "type": "boolean",
+      "description": "Whether the event is unique or repeated."
+    },
+    {
+      "field": "TriggererSendDefinitionObjectID",
+      "type": "text",
+      "description": "The object ID for the triggered send definition."
+    },
+    {
+      "field": "TriggeredSendCustomerKey",
+      "type": "text",
+      "description": "The customer key for the triggered send."
+    }
+  ]
+},
+{
+  "family": "email",
+  "name": "_Unsubscribe",
+  "fields": [
+    {
+      "field": "AccountID",
+      "type": "number",
+      "description": "Your account ID number."
+    },
+    {
+      "field": "OYBAccountID",
+      "type": "number",
+      "description": "The account ID number for any related On-Your-Behalf accounts. This field applies to enterprise accounts only."
+    },
+    {
+      "field": "JobID",
+      "type": "number",
+      "description": "The job ID number for the email send."
+    },
+    {
+      "field": "ListID",
+      "type": "number",
+      "description": "The list ID number for the list used in the send."
+    },
+    {
+      "field": "BatchID",
+      "type": "number",
+      "description": "The batch ID number for any batches used in the send."
+    },
+    {
+      "field": "SubscriberID",
+      "type": "number",
+      "description": "The subscriber ID for the affected subscriber. This number represents the unique ID for each subscriber record."
+    },
+    {
+      "field": "SubscriberKey",
+      "type": "text",
+      "description": "The subscriber key for the affected subscriber."
+    },
+    {
+      "field": "EventDate",
+      "type": "date",
+      "description": "The date the unsubscribe took place."
+    },
+    {
+      "field": "IsUnique",
+      "type": "boolean",
+      "description": "Whether the event is unique or repeated."
+    },
+    {
+      "field": "Domain",
+      "type": "text",
+      "description": "The domain at which the unsubscribe occurred."
+    }
+  ]
+},
+{
+  "family": "email",
+  "name": "_Complaint",
+  "fields": [
+    {
+      "field": "AccountID",
+      "type": "number",
+      "description": "Your account ID number."
+    },
+    {
+      "field": "OYBAccountID",
+      "type": "number",
+      "description": "The account ID number for any related On-Your-Behalf (OYB) accounts. This field applies to enterprise accounts only."
+    },
+    {
+      "field": "JobID",
+      "type": "number",
+      "description": "The job ID number for the email send."
+    },
+    {
+      "field": "ListID",
+      "type": "number",
+      "description": "The list ID number for the list used in the send."
+    },
+    {
+      "field": "BatchID",
+      "type": "number",
+      "description": "The batch ID number for any batches used in the send."
+    },
+    {
+      "field": "SubscriberID",
+      "type": "number",
+      "description": "The subscriber ID for the affected subscriber. This number represents the unique ID for each subscriber record."
+    },
+    {
+      "field": "SubscriberKey",
+      "type": "text",
+      "description": "The subscriber key for the affected subscriber."
+    },
+    {
+      "field": "EventDate",
+      "type": "date",
+      "description": "The date the complaint took place."
+    },
+    {
+      "field": "IsUnique",
+      "type": "boolean",
+      "description": "Whether the event is unique or repeated."
+    },
+    {
+      "field": "Domain",
+      "type": "text",
+      "description": "The domain at which the complaint occurred."
+    }
+  ]
+},
+{
+  "family": "email",
+  "name": "_BusinessUnitUnsubscribes",
+  "fields": [
+    {
+      "field": "BusinessUnitID",
+      "type": "number",
+      "description": "The Account ID for the Business Unit (BU)."
+    },
+    {
+      "field": "SubscriberID",
+      "type": "number",
+      "description": "The subscriber ID for the affected subscriber. This number represents the unique ID for each subscriber record."
+    },
+    {
+      "field": "SubscriberKey",
+      "type": "text",
+      "description": "A potential alternate identifier for subscribers. Defaults to the value of Email Address."
+    },
+    {
+      "field": "UnsubDateUTC",
+      "type": "date",
+      "description": "The date the subscriber unsubscribed from messages sent by BU."
+    },
+    {
+      "field": "UnsubReason",
+      "type": "text",
+      "description": "The reason listed is a custom value configured by your administrator."
+    }
+  ]
+},
+{
+  "family": "subscribers",
+  "name": "_EnterpriseAttribute",
+  "fields": [
+    {
+      "field": "_SubscriberID",
+      "type": "number",
+      "description": "The subscriber ID for the affected subscriber. This number represents the unique ID for each subscriber record stored."
+    }
+  ]
+},
+
 
   ]
 }

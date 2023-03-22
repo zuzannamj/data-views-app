@@ -60,6 +60,124 @@
           "description": "The unique identifier for the triggered send definition."
         }
       ]
+    },
+    {
+  "family": "email",
+  "name": "_Open",
+  "fields": [
+    {
+      "field": "AccountID",
+      "type": "number",
+      "description": "Unique identifier for the Marketing Cloud account."
+    },
+    {
+      "field": "OYBAccountID",
+      "type": "number",
+      "description": "Unique identifier for the parent Marketing Cloud account."
+    },
+    {
+      "field": "JobID",
+      "type": "number",
+      "description": "A unique identifier for a specific send job. This value is unique across all accounts."
+    },
+    {
+      "field": "ListID",
+      "type": "number",
+      "description": "The identifier of the list used for the send."
+    },
+    {
+      "field": "BatchID",
+      "type": "number",
+      "description": "The identifier of the batch in which the subscriber resides."
+    },
+    {
+      "field": "SubscriberID",
+      "type": "number",
+      "description": "A system-generated unique identifier for the subscriber."
+    },
+    {
+      "field": "SubscriberKey",
+      "type": "text",
+      "description": "The subscriber's external unique identifier."
+    },
+    {
+      "field": "EventDate",
+      "type": "date",
+      "description": "The date the email was opened."
+    },
+    {
+      "field": "Domain",
+      "type": "text",
+      "description": "The domain associated with the subscriber's email address."
+    },
+    {
+      "field": "IsUnique",
+      "type": "boolean",
+      "description": "Indicates whether the email open event is unique."
+    },
+    {
+      "field": "URL",
+      "type": "text",
+      "description": "URL of the link clicked if the click event is associated with the open event."
+    },
+    {
+      "field": "Alias",
+      "type": "text",
+      "description": "Alias of the link clicked if the click event is associated with the open event."
     }
+  ]
+},
+{
+  "family": "email",
+  "name": "_Bounce",
+  "fields": [
+    {
+      "field": "AccountID",
+      "type": "number",
+      "description": "Unique identifier for the Marketing Cloud account."
+    },
+    {
+      "field": "OYBAccountID",
+      "type": "number",
+      "description": "Unique identifier for the parent Marketing Cloud account."
+    },
+    {
+      "field": "JobID",
+      "type": "number",
+      "description": "A unique identifier for a specific send job. This value is unique across all accounts."
+    },
+    {
+      "field": "ListID",
+      "type": "number",
+      "description": "The identifier of the list used for the send."
+    },
+    {
+      "field": "BatchID",
+      "type": "number",
+      "description": "The identifier of the batch in which the subscriber resides."
+    },
+    {
+      "field": "SubscriberID",
+      "type": "number",
+      "description": "A system-generated unique identifier for the subscriber."
+    },
+    {
+      "field": "SubscriberKey",
+      "type": "text",
+      "description": "The subscriber's external unique identifier."
+    },
+    {
+      "field": "EventDate",
+      "type": "date",
+      "description": "The date the email was sent."
+    },
+    {
+      "field": "Domain",
+      "type": "text",
+      "description": "The domain associated with the subscriber's email address."
+    },
+    {
+      "field": "Bounce
+
   ]
 }

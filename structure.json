@@ -1116,6 +1116,138 @@
     }
   ]
 },
+{
+  "family": "email",
+  "name": "_SurveyResponse",
+  "fields": [
+    {
+      "field": "AccountID",
+      "type": "Number",
+      "description": "Your account ID number"
+    },
+    {
+      "field": "OYBAccountID",
+      "type": "Number",
+      "description": "The account ID number for any related On-Your-Behalf accounts. This field applies to enterprise accounts only."
+    },
+    {
+      "field": "JobID",
+      "type": "Number",
+      "description": "The job ID number for the email send"
+    },
+    {
+      "field": "ListID",
+      "type": "Number",
+      "description": "The list ID number for the list used in the send"
+    },
+    {
+      "field": "BatchID",
+      "type": "Number",
+      "description": "The batch ID number for any batches used in the send"
+    },
+    {
+      "field": "SubscriberID",
+      "type": "Number",
+      "description": "The subscriber ID for the affected subscriber. This number represents the unique ID for each subscriber record."
+    },
+    {
+      "field": "SubscriberKey",
+      "type": "Text",
+      "description": "The subscriber key for the affected subscriber"
+    },
+    {
+      "field": "EventDate",
+      "type": "Date",
+      "description": "The date the survey response took place"
+    },
+    {
+      "field": "Domain",
+      "type": "Text",
+      "description": "The domain at which the survey response occurred"
+    },
+    {
+      "field": "SurveyID",
+      "type": "Number",
+      "description": "The ID of the survey"
+    },
+    {
+      "field": "SurveyName",
+      "type": "Text",
+      "description": "The name of the survey"
+    },
+    {
+      "field": "IsUnique",
+      "type": "Number",
+      "description": "Whether the response is unique or not"
+    },
+    {
+      "field": "QuestionID",
+      "type": "Number",
+      "description": "The ID of the survey question"
+    },
+    {
+      "field": "QuestionName",
+      "type": "Text",
+      "description": "The name of the survey question"
+    },
+    {
+      "field": "Question",
+      "type": "Text",
+      "description": "The survey question"
+    },
+    {
+      "field": "AnswerID",
+      "type": "Number",
+      "description": "The ID of the answer"
+    },
+    {
+      "field": "AnswerName",
+      "type": "Text",
+      "description": "The name of the answer"
+    },
+    {
+      "field": "Answer",
+      "type": "Text",
+      "description": "The Boolean answer to the survey question"
+    },
+    {
+      "field": "AnswerData",
+      "type": "Text",
+      "description": "The text content of the survey answer"
+    }
+  ]
+},
+{
+  "family": "email",
+  "name": "_Coupon",
+  "fields": [
+    {
+      "field": "Name",
+      "type": "Text",
+      "description": "Name of your coupon"
+    },
+    {
+      "field": "ExternalKey",
+      "type": "Text",
+      "description": "The external key used to refer to your coupon via the API"
+    },
+    {
+      "field": "Description",
+      "type": "Text",
+      "description": "Description of your coupon"
+    },
+    {
+      "field": "BeginDate",
+      "type": "Date",
+      "description": "The date the coupon becomes valid"
+    },
+    {
+      "field": "ExpirationDate",
+      "type": "Date",
+      "description": "The date the coupon becomes invalid"
+    }
+  ]
+},
 
 
 

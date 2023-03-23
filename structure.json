@@ -1,7 +1,7 @@
 {
 	"data": [
 		{
-			"family": "email",
+			"family": "Email",
 			"name": "_Sent",
 			"fields": [
 				{
@@ -62,7 +62,7 @@
 			]
 		},
 		{
-			"family": "email",
+			"family": "Email",
 			"name": "_Open",
 			"fields": [
 				{
@@ -128,7 +128,7 @@
 			]
 		},
 		{
-			"family": "email",
+			"family": "Email",
 			"name": "_Bounce",
 			"fields": [
 				{
@@ -234,7 +234,7 @@
 			]
 		},
 		{
-			"family": "email",
+			"family": "Email",
 			"name": "_Click",
 			"fields": [
 				{
@@ -315,7 +315,7 @@
 			]
 		},
 		{
-			"family": "email",
+			"family": "Email",
 			"name": "_FTAT",
 			"fields": [
 				{
@@ -381,7 +381,7 @@
 			]
 		},
 		{
-			"family": "email",
+			"family": "Email",
 			"name": "_Unsubscribe",
 			"fields": [
 				{
@@ -437,7 +437,7 @@
 			]
 		},
 		{
-			"family": "email",
+			"family": "Email",
 			"name": "_Complaint",
 			"fields": [
 				{
@@ -493,7 +493,7 @@
 			]
 		},
 		{
-			"family": "email",
+			"family": "Email",
 			"name": "_BusinessUnitUnsubscribes",
 			"fields": [
 				{
@@ -744,7 +744,7 @@
 			]
 		},
 		{
-			"family": "email",
+			"family": "Email",
 			"name": "_Job",
 			"fields": [
 				{
@@ -935,7 +935,7 @@
 			]
 		},
 		{
-			"family": "email",
+			"family": "Email",
 			"name": "_SocialNetworkImpressions",
 			"fields": [
 				{
@@ -1016,7 +1016,7 @@
 			]
 		},
 		{
-			"family": "email",
+			"family": "Email",
 			"name": "_SocialNetworkTracking",
 			"fields": [
 				{
@@ -1117,7 +1117,7 @@
 			]
 		},
 		{
-			"family": "email",
+			"family": "Email",
 			"name": "_SurveyResponse",
 			"fields": [
 				{
@@ -1218,7 +1218,7 @@
 			]
 		},
 		{
-			"family": "email",
+			"family": "Email",
 			"name": "_Coupon",
 			"fields": [
 				{

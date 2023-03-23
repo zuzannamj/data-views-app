@@ -1248,6 +1248,457 @@
     }
   ]
 },
+{
+  "family": "Group Connect",
+  "name": "_MobileLineAddressContactSubscriptionView",
+  "fields": [
+    {
+      "field": "ChannelID",
+      "type": "Text",
+      "description": "Channel ID of LINE account"
+    },
+    {
+      "field": "ContactID",
+      "type": "Number",
+      "description": "Marketing Cloud ContactId (system generated) linked to LINE UID"
+    },
+    {
+      "field": "ContactKey",
+      "type": "Text",
+      "description": "Marketing Cloud contact key (system generated) linked to LINE UID"
+    },
+    {
+      "field": "AddressID",
+      "type": "Text",
+      "description": "LINE UID"
+    },
+    {
+      "field": "IsActive",
+      "type": "Number",
+      "description": "Active flag: (1 = true, 0 = false)"
+    },
+    {
+      "field": "CreatedDate",
+      "type": "Date",
+      "description": "Date and time record created in Central Standard Time. Date the customer started following LINE account."
+    },
+    {
+      "field": "ModifiedDate",
+      "type": "Date",
+      "description": "Date and time record modified in Central Standard Time"
+    }
+  ]
+},
+{
+  "family": "Group Connect",
+  "name": "_MobileLineOrphanContactView",
+  "fields": [
+    {
+      "field": "ContactID",
+      "type": "Number",
+      "description": "Marketing Cloud ContactId (system generated) linked to LINE UID"
+    },
+    {
+      "field": "ContactKey",
+      "type": "Text",
+      "description": "ContactKey is either system-generated or provided by user during import. Linked to LINE UID"
+    },
+    {
+      "field": "AddressID",
+      "type": "Text",
+      "description": "LINE UID"
+    },
+    {
+      "field": "CreatedDate",
+      "type": "Date",
+      "description": "Date and time record created (in Central Standard Time). Date the customer started following LINE account."
+    }
+  ]
+},
+{
+  "family": "Automation Studio",
+  "name": "_AutomationInstance",
+  "fields": [
+    {
+      "field": "MemberID",
+      "type": "Number",
+      "description": "The unique ID of the business unit."
+    },
+    {
+      "field": "AutomationName",
+      "type": "Text",
+      "description": "The automation name."
+    },
+    {
+      "field": "AutomationDescription",
+      "type": "Text",
+      "description": "The automation description."
+    },
+    {
+      "field": "AutomationCustomerKey",
+      "type": "Text",
+      "description": "The unique ID of the automation."
+    },
+    {
+      "field": "AutomationType",
+      "type": "Text",
+      "description": "The automation’s starting source. Possible values are Schedule, File Drop, or Trigger."
+    },
+    {
+      "field": "AutomationNotificationRecipient_Complete",
+      "type": "Text",
+      "description": "The email address where notifications about completed automations are sent."
+    },
+    {
+      "field": "AutomationNotificationRecipient_Error",
+      "type": "Text",
+      "description": "The email address where notifications about automation errors are sent."
+    },
+    {
+      "field": "AutomationNotificationRecipient_Skip",
+      "type": "Text",
+      "description": "The email address where notifications about skipped automations are sent."
+    },
+    {
+      "field": "AutomationStepCount",
+      "type": "Number",
+      "description": "The number of steps in the automation."
+    },
+    {
+      "field": "AutomationInstanceID",
+      "type": "Text",
+      "description": "The unique ID of the automation run."
+    },
+    {
+      "field": "AutomationInstanceIsRunOnce",
+      "type": "Boolean",
+      "description": "Whether the automation was set to run once. 1 = true, 0 = false."
+    },
+    {
+      "field": "FilenameFromTrigger",
+      "type": "Text",
+      "description": "For file drop and trigger automations, the file that started the automation."
+    },
+    {
+      "field": "AutomationInstanceScheduledTime_UTC",
+      "type": "Date",
+      "description": "For scheduled automations, the time that the run was scheduled to begin."
+    },
+    {
+      "field": "AutomationInstanceStartTime_UTC",
+      "type": "Date",
+      "description": "The time that the automation run started. This value is null if the automation was skipped."
+    },
+    {
+      "field": "AutomationInstanceEndTime_UTC",
+      "type": "Date",
+      "description": "The time that the automation run ended. This value is null if the automation was skipped or is still running."
+    },
+    {
+      "field": "AutomationInstanceStatus",
+      "type": "Text",
+      "description": "The status of the automation run when the data view is queried. Possible values are QueuedFile, Initialized, Executing, Stopped, Complete, or Error."
+    },
+    {
+      "field": "AutomationInstanceActivityErrorDetails",
+      "type": "Text",
+      "description": "The message from the error log, if applicable. If a system or unclassified error occurs, the value is System Error. If multiple errors occur, only the first message is displayed. To get details on multiple errors, use the _AutomationActivityInstance view."
+    }
+  ]
+},
+{
+  "family": "Automation Studio",
+  "name": "_AutomationActivityInstance",
+  "fields": [
+    {
+      "field": "MemberID",
+      "type": "Number",
+      "description": "The unique ID of the business unit."
+    },
+    {
+      "field": "AutomationName",
+      "type": "Text",
+      "description": "The automation name."
+    },
+    {
+      "field": "AutomationCustomerKey",
+      "type": "Text",
+      "description": "The unique ID of the automation."
+    },
+    {
+      "field": "AutomationInstanceID",
+      "type": "Text",
+      "description": "The unique ID of the automation run."
+    },
+    {
+      "field": "ActivityType",
+      "type": "Number",
+      "description": "The activity type. Possible values are listed in the Activity Type IDs table."
+    },
+    {
+      "field": "ActivityName",
+      "type": "Text",
+      "description": "The activity name."
+    },
+    {
+      "field": "ActivityDescription",
+      "type": "Text",
+      "description": "The activity description."
+    },
+    {
+      "field": "ActivityCustomerKey",
+      "type": "Text",
+      "description": "The unique ID of the activity."
+    },
+    {
+      "field": "ActivityInstanceStep",
+      "type": "Text",
+      "description": "Where the activity occurs in the automation. For example, 3.2 is step 3, activity 2."
+    },
+    {
+      "field": "ActivityInstanceID",
+      "type": "Text",
+      "description": "The unique ID of the activity run."
+    },
+    {
+      "field": "ActivityInstanceStartTime_UTC",
+      "type": "Date",
+      "description": "The time that the activity run started. This value is null if the automation was skipped."
+    },
+    {
+      "field": "ActivityInstanceEndTime_UTC",
+      "type": "Date",
+      "description": "The time that the activity run ended. This value is null if the automation was skipped, is still running, or wasn’t selected as part of an Advanced Run Once."
+    },
+    {
+      "field": "ActivityInstanceStatus",
+      "type": "Text",
+      "description": "The status of the activity run when the data view is queried. Possible values are Initialized, Executing, Complete, Error, or NotSelected."
+    },
+    {
+      "field": "ActivityInstanceStatusDetails",
+      "type": "Text",
+      "description": "The message from the error log, if applicable. If a system or unclassified error occurs, the value is System Error."
+    }
+  ]
+},
+{
+  "family": "Mobile Connect",
+  "name": "_SMSMessageTracking",
+  "fields": [
+    {
+      "field": "MobileMessageTrackingID",
+      "type": "Number",
+      "description": "Unique ID for tracking information related to the sent message"
+    },
+    {
+      "field": "EID",
+      "type": "Number",
+      "description": "Enterprise ID number for the sender"
+    },
+    {
+      "field": "MID",
+      "type": "Number",
+      "description": "Member ID"
+    },
+    {
+      "field": "Mobile",
+      "type": "Phone",
+      "description": "Mobile number for the subscriber"
+    },
+    {
+      "field": "MessageID",
+      "type": "Number",
+      "description": "Mobile message ID"
+    },
+    {
+      "field": "KeywordID",
+      "type": "Text",
+      "description": "Unique identifier for the keyword"
+    },
+    {
+      "field": "CodeID",
+      "type": "Text",
+      "description": "Unique identifier for the SMS code"
+    },
+    {
+      "field": "ConversationID",
+      "type": "Text",
+      "description": "Unique identifier for the SMS conversation"
+    },
+    {
+      "field": "CampaignID",
+      "type": "Number",
+      "description": "The SMS campaign tied to the record"
+    },
+    {
+      "field": "Sent",
+      "type": "Boolean",
+      "description": "If the message was sent (1 = true, 0 = false)"
+    },
+    {
+      "field": "Delivered",
+      "type": "Boolean",
+      "description": "If the message was delivered (1 = true, 0 = false)"
+    },
+    {
+      "field": "Undelivered",
+      "type": "Boolean",
+      "description": "Whether the message was delivered successfully or not (1 = true, 0 = false)"
+    },
+    {
+      "field": "Outbound",
+      "type": "Boolean",
+      "description": "If the message was outgoing (1 = true, 0 = false)"
+    },
+    {
+      "field": "Inbound",
+      "type": "Boolean",
+      "description": "If the message was incoming (1 = true, 0 = false)"
+    },
+    {
+      "field": "CreateDateTime",
+      "type": "Date and time",
+      "description": "The date and time the tracking record was created"
+    },
+    {
+      "field": "ModifiedDateTime",
+      "type": "Date and time",
+      "description": "The date and time (in Central Standard Time) the tracking record was modified"
+    },
+    {
+      "field": "ActionDateTime",
+      "type": "Date and Time",
+      "description": "The actual date and time a delivery or non-delivery event was received by the Marketing Cloud."
+    },
+    {
+      "field": "MessageText",
+      "type": "Text",
+      "description": "The text of the message"
+    },
+    {
+      "field": "IsTest",
+      "type": "Boolean",
+      "description": "If the message was a test message"
+    },
+    {
+      "field": "MobileMessageRecurrenceID",
+      "type": "Number",
+      "description": "The ID of the recurrence schedule for the message. Can be used for troubleshooting send issues."
+    },
+    {
+      "field": "ResponseToMobileMessageTrackingID",
+      "type": "Number",
+      "description": "The tracking ID of the response to the message"
+},
+{
+  "field": "IsValid",
+  "type": "Boolean",
+  "description": "If the message is valid"
+},
+{
+  "field": "InvalidationCode",
+  "type": "Number",
+  "description": "Invalidation code for the message"
+},
+{
+  "field": "SendID",
+  "type": "Number",
+  "description": "The send ID number for the SMS send"
+},
+{
+  "field": "SendSplitID",
+  "type": "Number",
+  "description": "If the message was split, the ID of the split"
+},
+{
+  "field": "SendSegmentID",
+  "type": "Number",
+  "description": "The ID of the segment tied to the message"
+},
+{
+  "field": "SendJobID",
+  "type": "Number",
+  "description": "The job ID for the SMS send"
+},
+{
+  "field": "SendGroupID",
+  "type": "Number",
+  "description": "The group ID for the SMS send"
+},
+{
+  "field": "SendPersonID",
+  "type": "Number",
+  "description": "The sendperson ID for the SMS send"
+},
+{
+  "field": "SubscriberID",
+  "type": "Number",
+  "description": "The subscriber ID for the affected subscriber. This number represents the unique ID for each subscriber record"
+},
+{
+  "field": "SubscriberKey",
+  "type": "Text",
+  "description": "The subscriber key for the affected subscriber"
+},
+{
+  "field": "SMSStandardStatusCodeId",
+  "type": "Number",
+  "description": "SFMC delivery status code"
+},
+{
+  "field": "Description",
+  "type": "Text",
+  "description": "Detailed description of the status code"
+},
+{
+  "field": "Name",
+  "type": "Text",
+  "description": "The name of your message"
+},
+{
+  "field": "ShortCode",
+  "type": "Text",
+  "description": "The short code or long code used to send your message"
+},
+{
+  "field": "SharedKeyword",
+  "type": "Text",
+  "description": "The keyword used in your message"
+},
+{
+  "field": "Ordinal",
+  "type": "Number",
+  "description": "Represents the parts in a multi-part message. Represented in ascending order starting at 0."
+},
+{
+  "field": "FromName",
+  "type": "Text",
+  "description": "From Name that an individual message was deployed with. Maximum length: 11 characters"
+},
+{
+  "field": "JBActivityID",
+  "type": "Text",
+  "description": "Unique identifier for the journey activity the message was deployed from"
+},
+{
+  "field": "JBDefinitionID",
+  "type": "Text",
+  "description": "Unique identifier for the journey a message was deployed from"
+},
+{
+  "field": "SMSJobID",
+  "type": "Text",
+  "description": "Unique identifier for each SMS job triggered in MobileConnect"
+},
+{
+  "field": "BatchID",
+      "type": "Number",
+      "description": "Identifies a batch associated with an SMS send"
+    }
+  ]
+},
+
 
 
 

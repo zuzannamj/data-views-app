@@ -1698,9 +1698,112 @@
     }
   ]
 },
-
-
-
-
+{
+  "family": "Mobile Connect",
+  "name": "_SMSSubscriptionLog",
+  "fields": [
+    {
+      "field": "LogDate",
+      "type": "Date",
+      "description": "The date the subscription is logged"
+    },
+    {
+      "field": "SubscriberKey",
+      "type": "Text",
+      "description": "The subscriber key for the affected subscriber"
+    },
+    {
+      "field": "MobileSubscriptionID",
+      "type": "Number",
+      "description": "The unique ID of the subscription record"
+    },
+    {
+      "field": "SubscriptionDefinitionID",
+      "type": "Text",
+      "description": "The unique keyword ID"
+    },
+    {
+      "field": "MobileNumber",
+      "type": "Phone",
+      "description": "Mobile number for the subscriber"
+    },
+    {
+      "field": "OptOutStatusID",
+      "type": "Number",
+      "description": "Whether the subscriber has opted out of SMS messages. See key for values."
+    },
+    {
+      "field": "OptOutMethodID",
+      "type": "Number",
+      "description": "Method the subscriber used to opt out of SMS messages. See key for values."
+    },
+    {
+      "field": "OptOutDate",
+      "type": "Date",
+      "description": "Date the subscriber opted out of SMS messages"
+    },
+    {
+      "field": "OptInStatusID",
+      "type": "Number",
+      "description": "Whether the subscriber has opted in to SMS message. See key for values."
+    },
+       {
+      "field": "OptInMethodID",
+      "type": "Number",
+      "description": "Method the subscriber used to opt in to SMS messages. See key for values."
+    },
+    {
+      "field": "OptInDate",
+      "type": "Date",
+      "description": "Date the subscriber opted in to SMS messages"
+    },
+    {
+      "field": "Source",
+      "type": "Number",
+      "description": "The subscription source"
+    },
+    {
+      "field": "CreatedDate",
+      "type": "Date",
+      "description": "Date the message was created"
+    },
+    {
+      "field": "ModifiedDate",
+      "type": "Date",
+      "description": "Date the message was modified"
+    }
+  ]
+},
+{
+  "family": "Mobile Connect",
+  "name": "_UndeliverableSms",
+  "fields": [
+    {
+      "field": "MobileNumber",
+      "type": "Phone",
+      "description": "Mobile number for the subscriber"
+    },
+    {
+      "field": "Undeliverable",
+      "type": "Boolean",
+      "description": "Indicates that the number is Held and that MobileConnect discontinued sending messages to the subscriber"
+    },
+    {
+      "field": "BounceCount",
+      "type": "Number",
+      "description": "Number of bounced SMS messages for subscriber"
+    },
+    {
+      "field": "FirstBounceDate",
+      "type": "Date",
+      "description": "The date when the first bounce occurred"
+    },
+    {
+      "field": "HoldDate",
+      "type": "Date",
+      "description": "The date when MobileConnect discontinued sending messages to the subscriber"
+    }
+  ]
+}
   ]
 }

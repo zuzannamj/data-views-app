@@ -1804,6 +1804,411 @@
 					"description": "The date when MobileConnect discontinued sending messages to the subscriber"
 				}
 			]
-		}
+		},
+		{
+  "family": "Mobile Connect",
+  "name": "_MobileAddress",
+  "fields": [
+    {
+      "field": "_ContactID",
+      "type": "Text",
+      "description": ""
+    },
+    {
+      "field": "_MobileNumber",
+      "type": "Text",
+      "description": ""
+    },
+    {
+      "field": "_Status",
+      "type": "Text",
+      "description": ""
+    },
+    {
+      "field": "_Source",
+      "type": "Text",
+      "description": ""
+    },
+    {
+      "field": "_SourceObjectId",
+      "type": "Text",
+      "description": ""
+    },
+    {
+      "field": "_Priority",
+      "type": "Text",
+      "description": ""
+    },
+    {
+      "field": "_Channel",
+      "type": "Text",
+      "description": ""
+    },
+    {
+      "field": "_CarrierID",
+      "type": "Text",
+      "description": ""
+    },
+    {
+      "field": "_CountryCode",
+      "type": "Text",
+      "description": ""
+    },
+    {
+      "field": "_CreatedDate",
+      "type": "Date",
+      "description": ""
+    },
+    {
+      "field": "_CreatedBy",
+      "type": "Text",
+      "description": ""
+    },
+    {
+      "field": "_ModifiedDate",
+      "type": "Date",
+      "description": ""
+    },
+	    {
+      "field": "_ModifiedBy",
+      "type": "Text",
+      "description": ""
+    },
+    {
+      "field": "_City",
+      "type": "Text",
+      "description": ""
+    },
+    {
+      "field": "_State",
+      "type": "Text",
+      "description": ""
+    },
+    {
+      "field": "_ZipCode",
+      "type": "Text",
+      "description": ""
+    },
+    {
+      "field": "_FirstName",
+      "type": "Text",
+      "description": ""
+    },
+    {
+      "field": "_LastName",
+      "type": "Text",
+      "description": ""
+    },
+    {
+      "field": "_UTCOffset",
+      "type": "Number",
+      "description": ""
+    },
+    {
+      "field": "_IsHonorDST",
+      "type": "Boolean",
+      "description": ""
+    }
+  ]
+},
+{
+  "family": "Mobile Connect",
+  "name": "_MobileSubscription",
+  "fields": [
+    {
+      "field": "_SubscriptionDefinitionID",
+      "type": "Text",
+      "description": ""
+    },
+    {
+      "field": "_MobileNumber",
+      "type": "Text",
+      "description": ""
+    },
+    {
+      "field": "_OptOutStatusID",
+      "type": "Text",
+      "description": ""
+    },
+    {
+      "field": "_OptOutMethodID",
+      "type": "Text",
+      "description": ""
+    },
+    {
+      "field": "_OptOutDate",
+      "type": "Date",
+      "description": ""
+    },
+    {
+      "field": "_OptInStatusID",
+      "type": "Text",
+      "description": ""
+    },
+    {
+      "field": "_OptInMethodID",
+      "type": "Text",
+      "description": ""
+    },
+    {
+      "field": "_OptInDate",
+      "type": "Date",
+      "description": ""
+    },
+    {
+      "field": "_Source",
+      "type": "Text",
+      "description": ""
+    },
+    {
+      "field": "_CreatedDate",
+      "type": "Date",
+      "description": ""
+    },
+    {
+      "field": "_CreatedBy",
+      "type": "Text",
+      "description": ""
+    },
+    {
+      "field": "_ModifiedDate",
+      "type": "Date",
+      "description": ""
+    },
+    {
+      "field": "_ModifiedBy",
+      "type": "Text",
+      "description": ""
+    }
+  ]
+},
+{
+  "family": "Mobile Push",
+  "name": "_PushAddress",
+  "fields": [
+    {
+      "field": "_ContactID",
+      "type": "Text",
+      "description": ""
+    },
+    {
+      "field": "_DeviceID",
+      "type": "Text",
+      "description": ""
+    },
+    {
+      "field": "_APID",
+      "type": "Text",
+      "description": ""
+    },
+    {
+      "field": "_Status",
+      "type": "Text",
+      "description": ""
+    },
+    {
+      "field": "_Source",
+      "type": "Text",
+      "description": ""
+    },
+    {
+      "field": "_SourceObjectId",
+      "type": "Text",
+      "description": ""
+    },
+    {
+      "field": "_Platform",
+      "type": "Text",
+      "description": ""
+    },
+    {
+      "field": "_PlatformVersion",
+      "type": "Text",
+      "description": ""
+    },
+    {
+      "field": "_Alias",
+      "type": "Text",
+      "description": ""
+    },
+    {
+      "field": "_OptOutStatusID",
+      "type": "Text",
+      "description": ""
+    },
+    {
+      "field": "_OptOutMethodID",
+      "type": "Text",
+      "description": ""
+    },
+    {
+      "field": "_OptOutDate",
+      "type": "Date",
+      "description": ""
+    },
+        {
+      "field": "_OptInStatusID",
+      "type": "Text",
+      "description": ""
+    },
+    {
+      "field": "_OptInMethodID",
+      "type": "Text",
+      "description": ""
+    },
+    {
+      "field": "_OptInDate",
+      "type": "Date",
+      "description": ""
+    },
+    {
+      "field": "_Channel",
+      "type": "Text",
+      "description": ""
+    },
+    {
+      "field": "_CreatedDate",
+      "type": "Date",
+      "description": ""
+    },
+    {
+      "field": "_CreatedBy",
+      "type": "Text",
+      "description": ""
+    },
+    {
+      "field": "_ModifiedDate",
+      "type": "Date",
+      "description": ""
+    },
+    {
+      "field": "_ModifiedBy",
+      "type": "Text",
+      "description": ""
+    },
+    {
+      "field": "_City",
+      "type": "Text",
+      "description": ""
+    },
+    {
+      "field": "_State",
+      "type": "Text",
+      "description": ""
+    },
+    {
+      "field": "_ZipCode",
+      "type": "Text",
+      "description": ""
+    },
+    {
+      "field": "_FirstName",
+      "type": "Text",
+      "description": ""
+    },
+    {
+      "field": "_LastName",
+      "type": "Text",
+      "description": ""
+    },
+    {
+      "field": "_UTCOffset",
+      "type": "Decimal",
+      "description": ""
+    },
+        {
+      "field": "_IsHonorDST",
+      "type": "Boolean",
+      "description": ""
+    },
+    {
+      "field": "_SystemToken",
+      "type": "Text",
+      "description": ""
+    },
+    {
+      "field": "_ProviderToken",
+      "type": "Text",
+      "description": ""
+    },
+    {
+      "field": "_Badge",
+      "type": "Number",
+      "description": ""
+    },
+    {
+      "field": "_LocationEnabled",
+      "type": "Boolean",
+      "description": ""
+    },
+    {
+      "field": "_TimeZone",
+      "type": "Text",
+      "description": ""
+    },
+    {
+      "field": "_Device",
+      "type": "Text",
+      "description": ""
+    },
+    {
+      "field": "_HardwareId",
+      "type": "Text",
+      "description": ""
+    },
+    {
+      "field": "_DeviceType",
+      "type": "Text",
+      "description": ""
+    }
+  ]
+},
+{
+  "family": "Mobile Push",
+  "name": "_PushTag",
+  "columns": [
+    {
+      "field": "_DeviceID",
+      "type": "Text",
+      "description": ""
+    },
+    {
+      "field": "_APID",
+      "type": "Text",
+      "description": ""
+    },
+    {
+      "field": "_Value",
+      "type": "Text",
+      "description": ""
+    },
+    {
+      "field": "_CreatedDate",
+      "type": "Date",
+      "description": ""
+    },
+    {
+      "field": "_CreatedBy",
+      "type": "Text",
+      "description": ""
+    },
+    {
+      "field": "_ModifiedDate",
+      "type": "Date",
+      "description": ""
+    },
+    {
+      "field": "_ModifiedBy",
+      "type": "Text",
+      "description": ""
+    }
+  ]
+}
+
+		
+		
+  
+   
+
 	]
 }

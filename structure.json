@@ -1,1809 +1,1809 @@
 {
-  "data": [
-    {
-      "family": "email",
-      "name": "_Sent",
-      "fields": [
-        {
-          "field": "AccountID",
-          "type": "number",
-          "description": "Unique identifier for the Marketing Cloud account."
-        },
-        {
-          "field": "OYBAccountID",
-          "type": "number",
-          "description": "Unique identifier for the parent Marketing Cloud account."
-        },
-        {
-          "field": "JobID",
-          "type": "number",
-          "description": "A unique identifier for a specific send job. This value is unique across all accounts."
-        },
-        {
-          "field": "ListID",
-          "type": "number",
-          "description": "The identifier of the list used for the send."
-        },
-        {
-          "field": "BatchID",
-          "type": "number",
-          "description": "The identifier of the batch in which the subscriber resides."
-        },
-        {
-          "field": "SubscriberID",
-          "type": "number",
-          "description": "A system-generated unique identifier for the subscriber."
-        },
-        {
-          "field": "SubscriberKey",
-          "type": "text",
-          "description": "The subscriber's external unique identifier."
-        },
-        {
-          "field": "EventDate",
-          "type": "date",
-          "description": "The date the send was initiated."
-        },
-        {
-          "field": "Domain",
-          "type": "text",
-          "description": "The domain associated with the subscriber's email address."
-        },
-        {
-          "field": "TriggeredSendDefinitionObjectID",
-          "type": "text",
-          "description": "Identifies the triggered send definition associated with the send."
-        },
-        {
-          "field": "TriggeredSendCustomerKey",
-          "type": "text",
-          "description": "The unique identifier for the triggered send definition."
-        }
-      ]
-    },
-    {
-  "family": "email",
-  "name": "_Open",
-  "fields": [
-    {
-      "field": "AccountID",
-      "type": "number",
-      "description": "Unique identifier for the Marketing Cloud account."
-    },
-    {
-      "field": "OYBAccountID",
-      "type": "number",
-      "description": "Unique identifier for the parent Marketing Cloud account."
-    },
-    {
-      "field": "JobID",
-      "type": "number",
-      "description": "A unique identifier for a specific send job. This value is unique across all accounts."
-    },
-    {
-      "field": "ListID",
-      "type": "number",
-      "description": "The identifier of the list used for the send."
-    },
-    {
-      "field": "BatchID",
-      "type": "number",
-      "description": "The identifier of the batch in which the subscriber resides."
-    },
-    {
-      "field": "SubscriberID",
-      "type": "number",
-      "description": "A system-generated unique identifier for the subscriber."
-    },
-    {
-      "field": "SubscriberKey",
-      "type": "text",
-      "description": "The subscriber's external unique identifier."
-    },
-    {
-      "field": "EventDate",
-      "type": "date",
-      "description": "The date the email was opened."
-    },
-    {
-      "field": "Domain",
-      "type": "text",
-      "description": "The domain associated with the subscriber's email address."
-    },
-    {
-      "field": "IsUnique",
-      "type": "boolean",
-      "description": "Indicates whether the email open event is unique."
-    },
-    {
-      "field": "URL",
-      "type": "text",
-      "description": "URL of the link clicked if the click event is associated with the open event."
-    },
-    {
-      "field": "Alias",
-      "type": "text",
-      "description": "Alias of the link clicked if the click event is associated with the open event."
-    }
-  ]
-},
-{
-  "family": "email",
-  "name": "_Bounce",
-  "fields": [
-    {
-      "field": "AccountID",
-      "type": "number",
-      "description": "Unique identifier for the Marketing Cloud account."
-    },
-    {
-      "field": "OYBAccountID",
-      "type": "number",
-      "description": "Unique identifier for the parent Marketing Cloud account."
-    },
-    {
-      "field": "JobID",
-      "type": "number",
-      "description": "A unique identifier for a specific send job. This value is unique across all accounts."
-    },
-    {
-      "field": "ListID",
-      "type": "number",
-      "description": "The identifier of the list used for the send."
-    },
-    {
-      "field": "BatchID",
-      "type": "number",
-      "description": "The identifier of the batch in which the subscriber resides."
-    },
-    {
-      "field": "SubscriberID",
-      "type": "number",
-      "description": "A system-generated unique identifier for the subscriber."
-    },
-    {
-      "field": "SubscriberKey",
-      "type": "text",
-      "description": "The subscriber's external unique identifier."
-    },
-    {
-      "field": "EventDate",
-      "type": "date",
-      "description": "The date the email was sent."
-    },
-    {
-      "field": "Domain",
-      "type": "text",
-      "description": "The domain associated with the subscriber's email address."
-    },
-    {
-      "field": "BounceCategoryID",
-      "type": "number",
-      "description": "The ID number for the bounce category."
-    },
-    {
-      "field": "BounceCategory",
-      "type": "text",
-      "description": "The category of the bounce."
-    },
-    {
-      "field": "BounceSubcategoryID",
-      "type": "number",
-      "description": "The ID number for the bounce subcategory."
-    },
-    {
-      "field": "BounceSubcategory",
-      "type": "text",
-      "description": "The subcategory of the bounce."
-    },
-    {
-      "field": "BounceTypeID",
-      "type": "number",
-      "description": "The ID number for the bounce type."
-    },
-    {
-      "field": "BounceType",
-      "type": "text",
-      "description": "The type of bounce that occurred."
-    },
-    {
-      "field": "SMTPBounceReason",
-      "type": "text",
-      "description": "The reason for the bounce relayed by the mail system."
-    },
-    {
-      "field": "SMTPMessage",
-      "type": "text",
-      "description": "The message regarding the bounce from the mail system."
-    },
-    {
-      "field": "SMTPCode",
-      "type": "number",
-      "description": "The error code for the bounce from the mail system."
-    },
-    {
-      "field": "TriggererSendDefinitionObjectID",
-      "type": "text",
-      "description": "The object ID for the triggered send definition."
-    },
-    {
-      "field": "TriggeredSendCustomerKey",
-      "type": "text",
-      "description": "The customer key for the triggered send."
-    }
-  ]
-},
-{
-  "family": "email",
-  "name": "_Click",
-  "fields": [
-    {
-      "field": "AccountID",
-      "type": "number",
-      "description": "The account ID number of the Marketing Cloud account."
-    },
-    {
-      "field": "OYBAccountID",
-      "type": "number",
-      "description": "The account ID number for any related On-Your-Behalf (OYB) accounts. This field applies to enterprise accounts only."
-    },
-    {
-      "field": "JobID",
-      "type": "number",
-      "description": "The job ID number for the email send."
-    },
-    {
-      "field": "ListID",
-      "type": "number",
-      "description": "The list ID number for the list used in the send."
-    },
-    {
-      "field": "BatchID",
-      "type": "number",
-      "description": "The batch ID number for any batches used in the send."
-    },
-    {
-      "field": "SubscriberID",
-      "type": "number",
-      "description": "The subscriber ID for the affected subscriber. This number represents the unique ID for each subscriber record."
-    },
-    {
-      "field": "SubscriberKey",
-      "type": "text",
-      "description": "The subscriber key for the affected subscriber."
-    },
-    {
-      "field": "EventDate",
-      "type": "date",
-      "description": "The date the click took place."
-    },
-    {
-      "field": "Domain",
-      "type": "text",
-      "description": "The domain at which the click occurred."
-    },
-    {
-      "field": "URL",
-      "type": "text",
-      "description": "The URL for the link clicked. No AMPscript or variables are populated in this column, for example, www.example.com?%%attribute%%."
-    },
-    {
-      "field": "LinkName",
-      "type": "text",
-      "description": "The link name assigned in the email send."
-    },
-    {
-      "field": "LinkContent",
-      "type": "text",
-      "description": "The link content assigned in the email send. AMPscript and variables are populated in this column, such as www.example.com?12345."
-    },
-    {
-      "field": "IsUnique",
-      "type": "boolean",
-      "description": "Whether the event is unique or repeated."
-    },
-    {
-      "field": "TriggererSendDefinitionObjectID",
-      "type": "text",
-      "description": "The object ID for the triggered send definition."
-    },
-    {
-      "field": "TriggeredSendCustomerKey",
-      "type": "text",
-      "description": "The customer key for the triggered send."
-    }
-  ]
-},
-{
-  "family": "email",
-  "name": "_FTAT",
-  "fields": [
-    {
-      "field": "AccountID",
-      "type": "number",
-      "description": "Your account ID number."
-    },
-    {
-      "field": "OYBAccountID",
-      "type": "number",
-      "description": "The account ID number for any related On-Your-Behalf accounts and applies to enterprise accounts only."
-    },
-    {
-      "field": "JobID",
-      "type": "number",
-      "description": "The job ID number for the email send."
-    },
-    {
-      "field": "ListID",
-      "type": "number",
-      "description": "The list ID number for the list used in the send."
-    },
-    {
-      "field": "BatchID",
-      "type": "number",
-      "description": "The batch ID number for any batches used in the send."
-    },
-    {
-      "field": "SubscriberID",
-      "type": "number",
-      "description": "The subscriber ID for the affected subscriber. This number represents the unique ID for each subscriber record."
-    },
-    {
-      "field": "SubscriberKey",
-      "type": "text",
-      "description": "The subscriber key for the affected subscriber."
-    },
-    {
-      "field": "TransactionTime",
-      "type": "date",
-      "description": "The date the forward took place."
-    },
-    {
-      "field": "Domain",
-      "type": "text",
-      "description": "The domain at which the forward occurred."
-    },
-    {
-      "field": "IsUnique",
-      "type": "boolean",
-      "description": "Whether the event is unique or repeated."
-    },
-    {
-      "field": "TriggererSendDefinitionObjectID",
-      "type": "text",
-      "description": "The object ID for the triggered send definition."
-    },
-    {
-      "field": "TriggeredSendCustomerKey",
-      "type": "text",
-      "description": "The customer key for the triggered send."
-    }
-  ]
-},
-{
-  "family": "email",
-  "name": "_Unsubscribe",
-  "fields": [
-    {
-      "field": "AccountID",
-      "type": "number",
-      "description": "Your account ID number."
-    },
-    {
-      "field": "OYBAccountID",
-      "type": "number",
-      "description": "The account ID number for any related On-Your-Behalf accounts. This field applies to enterprise accounts only."
-    },
-    {
-      "field": "JobID",
-      "type": "number",
-      "description": "The job ID number for the email send."
-    },
-    {
-      "field": "ListID",
-      "type": "number",
-      "description": "The list ID number for the list used in the send."
-    },
-    {
-      "field": "BatchID",
-      "type": "number",
-      "description": "The batch ID number for any batches used in the send."
-    },
-    {
-      "field": "SubscriberID",
-      "type": "number",
-      "description": "The subscriber ID for the affected subscriber. This number represents the unique ID for each subscriber record."
-    },
-    {
-      "field": "SubscriberKey",
-      "type": "text",
-      "description": "The subscriber key for the affected subscriber."
-    },
-    {
-      "field": "EventDate",
-      "type": "date",
-      "description": "The date the unsubscribe took place."
-    },
-    {
-      "field": "IsUnique",
-      "type": "boolean",
-      "description": "Whether the event is unique or repeated."
-    },
-    {
-      "field": "Domain",
-      "type": "text",
-      "description": "The domain at which the unsubscribe occurred."
-    }
-  ]
-},
-{
-  "family": "email",
-  "name": "_Complaint",
-  "fields": [
-    {
-      "field": "AccountID",
-      "type": "number",
-      "description": "Your account ID number."
-    },
-    {
-      "field": "OYBAccountID",
-      "type": "number",
-      "description": "The account ID number for any related On-Your-Behalf (OYB) accounts. This field applies to enterprise accounts only."
-    },
-    {
-      "field": "JobID",
-      "type": "number",
-      "description": "The job ID number for the email send."
-    },
-    {
-      "field": "ListID",
-      "type": "number",
-      "description": "The list ID number for the list used in the send."
-    },
-    {
-      "field": "BatchID",
-      "type": "number",
-      "description": "The batch ID number for any batches used in the send."
-    },
-    {
-      "field": "SubscriberID",
-      "type": "number",
-      "description": "The subscriber ID for the affected subscriber. This number represents the unique ID for each subscriber record."
-    },
-    {
-      "field": "SubscriberKey",
-      "type": "text",
-      "description": "The subscriber key for the affected subscriber."
-    },
-    {
-      "field": "EventDate",
-      "type": "date",
-      "description": "The date the complaint took place."
-    },
-    {
-      "field": "IsUnique",
-      "type": "boolean",
-      "description": "Whether the event is unique or repeated."
-    },
-    {
-      "field": "Domain",
-      "type": "text",
-      "description": "The domain at which the complaint occurred."
-    }
-  ]
-},
-{
-  "family": "email",
-  "name": "_BusinessUnitUnsubscribes",
-  "fields": [
-    {
-      "field": "BusinessUnitID",
-      "type": "number",
-      "description": "The Account ID for the Business Unit (BU)."
-    },
-    {
-      "field": "SubscriberID",
-      "type": "number",
-      "description": "The subscriber ID for the affected subscriber. This number represents the unique ID for each subscriber record."
-    },
-    {
-      "field": "SubscriberKey",
-      "type": "text",
-      "description": "A potential alternate identifier for subscribers. Defaults to the value of Email Address."
-    },
-    {
-      "field": "UnsubDateUTC",
-      "type": "date",
-      "description": "The date the subscriber unsubscribed from messages sent by BU."
-    },
-    {
-      "field": "UnsubReason",
-      "type": "text",
-      "description": "The reason listed is a custom value configured by your administrator."
-    }
-  ]
-},
-{
-  "family": "subscribers",
-  "name": "_EnterpriseAttribute",
-  "fields": [
-    {
-      "field": "_SubscriberID",
-      "type": "number",
-      "description": "The subscriber ID for the affected subscriber. This number represents the unique ID for each subscriber record stored."
-    }
-  ]
-},
-{
-  "family": "subscribers",
-  "name": "_Subscribers",
-  "fields": [
-    {
-      "field": "SubscriberID",
-      "type": "number",
-      "description": "The subscriber ID for the affected subscriber. This number represents the unique ID for each subscriber record."
-    },
-    {
-      "field": "DateUndeliverable",
-      "type": "date",
-      "description": "The date an email for the subscriber was returned as undeliverable."
-    },
-    {
-      "field": "DateJoined",
-      "type": "date",
-      "description": "The date the subscriber joined your list."
-    },
-    {
-      "field": "DateUnsubscribed",
-      "type": "date",
-      "description": "The date the subscriber unsubscribed from your list."
-    },
-    {
-      "field": "Domain",
-      "type": "text",
-      "description": "The domain of the subscriber."
-    },
-    {
-      "field": "EmailAddress",
-      "type": "email",
-      "description": "The subscriber's email address."
-    },
-    {
-      "field": "BounceCount",
-      "type": "number",
-      "description": "The total number of bounces accrued by the subscriber."
-    },
-    {
-      "field": "SubscriberKey",
-      "type": "text",
-      "description": "A potential alternate identifier for subscribers. Defaults to the value of Email Address."
-    },
-    {
-      "field": "SubscriberType",
-      "type": "text",
-      "description": "The subscriber type for the affected subscriber."
-    },
-    {
-      "field": "Status",
-      "type": "text",
-      "description": "The status of the subscriber: active, held, unsubscribed, or bounced."
-    },
-    {
-      "field": "Locale",
-      "type": "locale",
-      "description": "The locale code for the subscriber."
-    }
-  ]
-},
-{
-  "family": "Subscribers",
-  "name": "_ListSubscribers",
-  "fields": [
-    {
-      "field": "AddedBy",
-      "type": "number",
-      "description": "The ID of the user who ran the process that added the subscriber"
-    },
-    {
-      "field": "AddMethod",
-      "type": "text",
-      "description": "The method by which the subscriber was added, including Unspecified, Webcollect, API, FTAF, Import, Move Copy, Application, Salesforce, Segmentation, Generic Extension, and Custom Object"
-    },
-    {
-      "field": "CreatedDate",
-      "type": "date",
-      "description": "The date the subscriber was added to the list"
-    },
-    {
-      "field": "DateUnsubscribed",
-      "type": "date",
-      "description": "The date the subscriber unsubscribed"
-    },
-    {
-      "field": "EmailAddress",
-      "type": "text",
-      "description": "The subscriber's email address"
-    },
-    {
-      "field": "ListID",
-      "type": "number",
-      "description": "The list ID number for the list used in the send"
-    },
-    {
-      "field": "ListName",
-      "type": "text",
-      "description": "The name of the list containing the subscribers"
-    },
-    {
-      "field": "ListType",
-      "type": "text",
-      "description": "Shows whether the type is list or group"
-    },
-    {
-      "field": "Status",
-      "type": "text",
-      "description": "The status of the subscriber"
-    },
-    {
-      "field": "SubscriberID",
-      "type": "number",
-      "description": "The subscriber ID for the affected subscriber. This number represents the unique ID for each subscriber record."
-    },
-    {
-      "field": "SubscriberKey",
-      "type": "text",
-      "description": "The subscriber key for the affected subscriber"
-    },
-    {
-      "field": "SubscriberType",
-      "type": "text",
-      "description": "The type of subscriber"
-    }
-  ]
-},
-{
-  "family": "Journey Builder",
-  "name": "_Journey",
-  "fields": [
-    {
-      "field": "VersionID",
-      "type": "text",
-      "description": "The unique identifier for the version of the journey"
-    },
-    {
-      "field": "JourneyID",
-      "type": "text",
-      "description": "The unique identifier for the journey. There are one or more VersionID’s associated to a JourneyID."
-    },
-    {
-      "field": "JourneyName",
-      "type": "text",
-      "description": "The name of the journey"
-    },
-    {
-      "field": "VersionNumber",
-      "type": "number",
-      "description": "The version number of the version of the journey"
-    },
-    {
-      "field": "CreatedDate",
-      "type": "date",
-      "description": "The date that the version of the journey was created"
-    },
-    {
-      "field": "LastPublishedDate",
-      "type": "date",
-      "description": "The date that the version of the journey was last published"
-    },
-    {
-      "field": "ModifiedDate",
-      "type": "date",
-      "description": "The date that the version of the journey was last edited"
-    },
-    {
-      "field": "JourneyStatus",
-      "type": "text",
-      "description": "The current running mode of the journey. Possible values are Draft, Running, Finishing, and Stopped."
-    }
-  ]
-},
-{
-  "family": "Journey Builder",
-  "name": "_JourneyActivity",
-  "fields": [
-    {
-      "field": "VersionID",
-      "type": "text",
-      "description": "The unique identifier for the version of the journey"
-    },
-    {
-      "field": "ActivityID",
-      "type": "text",
-      "description": "The unique identifier for the activity. There are one or more ActivityID’s associated to a VersionID."
-    },
-    {
-      "field": "ActivityName",
-      "type": "text",
-      "description": "The name of the activity"
-    },
-    {
-      "field": "ActivityExternalKey",
-      "type": "text",
-      "description": "The external key associated with the activity"
-    },
-    {
-      "field": "JourneyActivityObjectID",
-      "type": "text",
-      "description": "Use this unique identifier to join to email tracking system data views to identify a journey email’s Triggered Send Definition."
-    },
-    {
-      "field": "ActivityType",
-      "type": "text",
-      "description": "The type of activity"
-    }
-  ]
-},
-{
-  "family": "email",
-  "name": "_Job",
-  "fields": [
-    {
-      "field": "JobID",
-      "type": "number",
-      "description": "The job ID number for the email send"
-    },
-    {
-      "field": "EmailID",
-      "type": "number",
-      "description": "The email ID for the job"
-    },
-    {
-      "field": "AccountID",
-      "type": "number",
-      "description": "The ID number for the account that performed the job"
-    },
-    {
-      "field": "AccountUserID",
-      "type": "number",
-      "description": "The ID number for the account user that performed the job"
-    },
-    {
-      "field": "FromName",
-      "type": "text",
-      "description": "The from name in the email send"
-    },
-    {
-      "field": "FromEmail",
-      "type": "email",
-      "description": "The from email address in the email send"
-    },
-    {
-      "field": "SchedTime",
-      "type": "date",
-      "description": "The time the job was scheduled"
-    },
-    {
-      "field": "PickupTime",
-      "type": "date",
-      "description": "The time the Marketing Cloud application started the job"
-    },
-    {
-      "field": "DeliveredTime",
-      "type": "date",
-      "description": "The time the email was delivered"
-    },
-    {
-      "field": "EventID",
-      "type": "text",
-      "description": "The ID for the job event"
-    },
-    {
-      "field": "IsMultipart",
-      "type": "boolean",
-      "description": "Whether the job was sent as multipart MIME or not"
-    },
-    {
-      "field": "JobType",
-      "type": "text",
-      "description": "The type of job"
-    },
-    {
-      "field": "JobStatus",
-      "type": "text",
-      "description": "The status of the job"
-    },
-    {
-      "field": "ModifiedBy",
-      "type": "number",
-      "description": "If modified, the user who modified the job"
-    },
-    {
-      "field": "ModifiedDate",
-      "type": "date",
-      "description": "The date the job was modified"
-    },
-    {
-      "field": "EmailName",
-      "type": "text",
-      "description": "The name of the email sent by the job"
-    },
-    {
-      "field": "EmailSubject",
-      "type": "text",
-      "description": "The subject of the email send"
-    },
-    {
-      "field": "IsWrapped",
-      "type": "boolean",
-      "description": "Whether the links in the email were wrapped for tracking"
-    },
-    {
-      "field": "TestEmailAddr",
-      "type": "email",
-      "description": "The test email address used in the job"
-    },
-    {
-      "field": "Category",
-      "type": "text",
-      "description": "The job category"
-    },
-    {
-      "field": "BccEmail",
-      "type": "Email",
-      "description": "Any email address send in the BCC field"
-    },
-    {
-      "field": "OriginalSchedTime",
-      "type": "Date",
-      "description": "The original scheduled time for the job"
-    },
-    {
-      "field": "CreatedDate",
-      "type": "Date",
-      "description": "The date the job was created"
-    },
-    {
-      "field": "CharacterSet",
-      "type": "Text",
-      "description": "The character set used in the job"
-    },
-    {
-      "field": "IPAddress",
-      "type": "Text",
-      "description": "This value is always null."
-    },
-    {
-      "field": "SalesForceTotalSubscriberCount",
-      "type": "Number",
-      "description": "The total number of Salesforce subscribers included in the job"
-    },
-    {
-      "field": "SalesForceErrorSubscriberCount",
-      "type": "Number",
-      "description": "The total number of Salesforce subscribers included in the job that received errors"
-    },
-    {
-      "field": "SendType",
-      "type": "Text",
-      "description": "The type of send used in the job"
-    },
-    {
-      "field": "DynamicEmailSubject",
-      "type": "Text",
-      "description": "The dynamic email subject included in the job"
-    },
-    {
-      "field": "SuppressTracking",
-      "type": "Boolean",
-      "description": "If tracking information for this job was suppressed"
-    },
-    {
-      "field": "SendClassificationType",
-      "type": "Text",
-      "description": "The send classification type for the job"
-    },
-    {
-      "field": "SendClassification",
-      "type": "Text",
-      "description": "The send classification for the job"
-    },
-    {
-      "field": "ResolveLinksWithCurrentData",
-      "type": "Boolean",
-      "description": "If the job resolved links with current data"
-    },
-    {
-      "field": "EmailSendDefinition",
-      "type": "Text",
-      "description": "The email send definition used in the job"
-    },
-    {
-      "field": "DeduplicateByEmail",
-      "type": "Boolean",
-      "description": "Whether the email addresses in the job are used to deduplicate subscribers"
-    },
-    {
-      "field": "TriggererSendDefinitionObjectID",
-      "type": "Text",
-      "description": "The object ID for the triggered send definition"
-    },
-    {
-      "field": "TriggeredSendCustomerKey",
-      "type": "Text",
-      "description": "The customer key for the triggered send"
-    }
-  ]
-},
-{
-  "family": "email",
-  "name": "_SocialNetworkImpressions",
-  "fields": [
-    {
-      "field": "JobID",
-      "type": "Number",
-      "description": "The job ID number for the email send"
-    },
-    {
-      "field": "ListID",
-      "type": "Number",
-      "description": "The list ID number for the list used in the send"
-    },
-    {
-      "field": "RegionTitle",
-      "type": "Text",
-      "description": "The title of the region shared via Social Forward"
-    },
-    {
-      "field": "RegionDescription",
-      "type": "Text",
-      "description": "The description of the region shared via Social Forward"
-    },
-    {
-      "field": "RegionHTML",
-      "type": "Text",
-      "description": "The HTML associated with the social forward region"
-    },
-    {
-      "field": "ContentRegionID",
-      "type": "Number",
-      "description": "The ID of the shared content region"
-    },
-    {
-      "field": "SocialSharingSiteID",
-      "type": "Number",
-      "description": "The ID of the social network involved in the sharing of the content region"
-    },
-    {
-      "field": "SiteName",
-      "type": "Text",
-      "description": "The name of the social network involved in the sharing of the content region"
-    },
-    {
-      "field": "CountryCode",
-      "type": "Text",
-      "description": "The country code for the social network involved in the sharing of the content region"
-    },
-    {
-      "field": "ReferringURL",
-      "type": "Text",
-      "description": "The referring URL used in the Social Forward activity"
-    },
-    {
-      "field": "IPAddress",
-      "type": "Text",
-      "description": "The IP address for the URL from which the content region was shared."
-    },
-    {
-      "field": "TransactionTime",
-      "type": "Date",
-      "description": "The time at which the content area was shared"
-    },
-    {
-      "field": "PublishedSocialContentStatusID",
-      "type": "Text",
-      "description": "The status ID for the published social content"
-    },
-    {
-      "field": "ShortCode",
-      "type": "Text",
-      "description": "The short code for the published social content status, which is Active, Inactive, or Deleted"
-    },
-    {
-      "field": "PublishTime",
-      "type": "Date",
-      "description": "The time the social content area was published"
-    }
-  ]
-},
-{
-  "family": "email",
-  "name": "_SocialNetworkTracking",
-  "fields": [
-    {
-      "field": "SubscriberID",
-      "type": "Number",
-      "description": "The subscriber ID for the affected subscriber. This number represents the unique ID for each subscriber record."
-    },
-    {
-      "field": "SubscriberKey",
-      "type": "Email",
-      "description": "The subscriber key for the affected subscriber"
-    },
-    {
-      "field": "ListID",
-      "type": "Number",
-      "description": "The list ID number for the list used in the send"
-    },
-    {
-      "field": "BatchID",
-      "type": "Number",
-      "description": "The batch ID number for any batches used in the send"
-    },
-    {
-      "field": "SocialSharingSiteID",
-      "type": "Number",
-      "description": "The ID of the social network used to share the content region"
-    },
-    {
-      "field": "SiteName",
-      "type": "Text",
-      "description": "The name of the social network involved in the sharing of the content region"
-    },
-    {
-      "field": "CountryCode",
-      "type": "Text",
-      "description": "The country code for the social network involved in the sharing of the content region"
-    },
-    {
-      "field": "PublishedSocialContentID",
-      "type": "Text",
-      "description": "The ID number for the content area published via Social Forward"
-    },
-    {
-      "field": "RegionTitle",
-      "type": "Text",
-      "description": "The title of the region shared via Social Forward"
-    },
-    {
-      "field": "RegionDescription",
-      "type": "Text",
-      "description": "The description of the region shared via Social Forward"
-    },
-    {
-      "field": "RegionHTML",
-      "type": "Text",
-      "description": "The HTML associated with the social forward region"
-    },
-    {
-      "field": "ContentRegionID",
-      "type": "Text",
-      "description": "The ID of the shared content region"
-    },
-    {
-      "field": "OYBMemberID",
-      "type": "Number",
-      "description": "The ID number for any On-Your-Behalf (OYB) account involved in the sharing of the content area"
-    },
-    {
-      "field": "TransactionTime",
-      "type": "Date",
-      "description": "The time at which the content area was shared"
-    },
-    {
-      "field": "IsUnique",
-      "type": "Boolean",
-      "description": "Whether the event is unique or not"
-    },
-    {
-      "field": "Domain",
-      "type": "Text",
-      "description": "The domain from which the content was shared"
-    },
-    {
-      "field": "PublishedSocialContentStatusID",
-      "type": "Text",
-      "description": "The status ID for the published social content"
-    },
-    {
-      "field": "ShortCode",
-      "type": "Text",
-      "description": "The short code for the published social content status, which is Active, Inactive, or Deleted"
-    },
-    {
-      "field": "PublishTime",
-      "type": "Date",
-      "description": "The time the social content area was published"
-    }
-  ]
-},
-{
-  "family": "email",
-  "name": "_SurveyResponse",
-  "fields": [
-    {
-      "field": "AccountID",
-      "type": "Number",
-      "description": "Your account ID number"
-    },
-    {
-      "field": "OYBAccountID",
-      "type": "Number",
-      "description": "The account ID number for any related On-Your-Behalf accounts. This field applies to enterprise accounts only."
-    },
-    {
-      "field": "JobID",
-      "type": "Number",
-      "description": "The job ID number for the email send"
-    },
-    {
-      "field": "ListID",
-      "type": "Number",
-      "description": "The list ID number for the list used in the send"
-    },
-    {
-      "field": "BatchID",
-      "type": "Number",
-      "description": "The batch ID number for any batches used in the send"
-    },
-    {
-      "field": "SubscriberID",
-      "type": "Number",
-      "description": "The subscriber ID for the affected subscriber. This number represents the unique ID for each subscriber record."
-    },
-    {
-      "field": "SubscriberKey",
-      "type": "Text",
-      "description": "The subscriber key for the affected subscriber"
-    },
-    {
-      "field": "EventDate",
-      "type": "Date",
-      "description": "The date the survey response took place"
-    },
-    {
-      "field": "Domain",
-      "type": "Text",
-      "description": "The domain at which the survey response occurred"
-    },
-    {
-      "field": "SurveyID",
-      "type": "Number",
-      "description": "The ID of the survey"
-    },
-    {
-      "field": "SurveyName",
-      "type": "Text",
-      "description": "The name of the survey"
-    },
-    {
-      "field": "IsUnique",
-      "type": "Number",
-      "description": "Whether the response is unique or not"
-    },
-    {
-      "field": "QuestionID",
-      "type": "Number",
-      "description": "The ID of the survey question"
-    },
-    {
-      "field": "QuestionName",
-      "type": "Text",
-      "description": "The name of the survey question"
-    },
-    {
-      "field": "Question",
-      "type": "Text",
-      "description": "The survey question"
-    },
-    {
-      "field": "AnswerID",
-      "type": "Number",
-      "description": "The ID of the answer"
-    },
-    {
-      "field": "AnswerName",
-      "type": "Text",
-      "description": "The name of the answer"
-    },
-    {
-      "field": "Answer",
-      "type": "Text",
-      "description": "The Boolean answer to the survey question"
-    },
-    {
-      "field": "AnswerData",
-      "type": "Text",
-      "description": "The text content of the survey answer"
-    }
-  ]
-},
-{
-  "family": "email",
-  "name": "_Coupon",
-  "fields": [
-    {
-      "field": "Name",
-      "type": "Text",
-      "description": "Name of your coupon"
-    },
-    {
-      "field": "ExternalKey",
-      "type": "Text",
-      "description": "The external key used to refer to your coupon via the API"
-    },
-    {
-      "field": "Description",
-      "type": "Text",
-      "description": "Description of your coupon"
-    },
-    {
-      "field": "BeginDate",
-      "type": "Date",
-      "description": "The date the coupon becomes valid"
-    },
-    {
-      "field": "ExpirationDate",
-      "type": "Date",
-      "description": "The date the coupon becomes invalid"
-    }
-  ]
-},
-{
-  "family": "Group Connect",
-  "name": "_MobileLineAddressContactSubscriptionView",
-  "fields": [
-    {
-      "field": "ChannelID",
-      "type": "Text",
-      "description": "Channel ID of LINE account"
-    },
-    {
-      "field": "ContactID",
-      "type": "Number",
-      "description": "Marketing Cloud ContactId (system generated) linked to LINE UID"
-    },
-    {
-      "field": "ContactKey",
-      "type": "Text",
-      "description": "Marketing Cloud contact key (system generated) linked to LINE UID"
-    },
-    {
-      "field": "AddressID",
-      "type": "Text",
-      "description": "LINE UID"
-    },
-    {
-      "field": "IsActive",
-      "type": "Number",
-      "description": "Active flag: (1 = true, 0 = false)"
-    },
-    {
-      "field": "CreatedDate",
-      "type": "Date",
-      "description": "Date and time record created in Central Standard Time. Date the customer started following LINE account."
-    },
-    {
-      "field": "ModifiedDate",
-      "type": "Date",
-      "description": "Date and time record modified in Central Standard Time"
-    }
-  ]
-},
-{
-  "family": "Group Connect",
-  "name": "_MobileLineOrphanContactView",
-  "fields": [
-    {
-      "field": "ContactID",
-      "type": "Number",
-      "description": "Marketing Cloud ContactId (system generated) linked to LINE UID"
-    },
-    {
-      "field": "ContactKey",
-      "type": "Text",
-      "description": "ContactKey is either system-generated or provided by user during import. Linked to LINE UID"
-    },
-    {
-      "field": "AddressID",
-      "type": "Text",
-      "description": "LINE UID"
-    },
-    {
-      "field": "CreatedDate",
-      "type": "Date",
-      "description": "Date and time record created (in Central Standard Time). Date the customer started following LINE account."
-    }
-  ]
-},
-{
-  "family": "Automation Studio",
-  "name": "_AutomationInstance",
-  "fields": [
-    {
-      "field": "MemberID",
-      "type": "Number",
-      "description": "The unique ID of the business unit."
-    },
-    {
-      "field": "AutomationName",
-      "type": "Text",
-      "description": "The automation name."
-    },
-    {
-      "field": "AutomationDescription",
-      "type": "Text",
-      "description": "The automation description."
-    },
-    {
-      "field": "AutomationCustomerKey",
-      "type": "Text",
-      "description": "The unique ID of the automation."
-    },
-    {
-      "field": "AutomationType",
-      "type": "Text",
-      "description": "The automation’s starting source. Possible values are Schedule, File Drop, or Trigger."
-    },
-    {
-      "field": "AutomationNotificationRecipient_Complete",
-      "type": "Text",
-      "description": "The email address where notifications about completed automations are sent."
-    },
-    {
-      "field": "AutomationNotificationRecipient_Error",
-      "type": "Text",
-      "description": "The email address where notifications about automation errors are sent."
-    },
-    {
-      "field": "AutomationNotificationRecipient_Skip",
-      "type": "Text",
-      "description": "The email address where notifications about skipped automations are sent."
-    },
-    {
-      "field": "AutomationStepCount",
-      "type": "Number",
-      "description": "The number of steps in the automation."
-    },
-    {
-      "field": "AutomationInstanceID",
-      "type": "Text",
-      "description": "The unique ID of the automation run."
-    },
-    {
-      "field": "AutomationInstanceIsRunOnce",
-      "type": "Boolean",
-      "description": "Whether the automation was set to run once. 1 = true, 0 = false."
-    },
-    {
-      "field": "FilenameFromTrigger",
-      "type": "Text",
-      "description": "For file drop and trigger automations, the file that started the automation."
-    },
-    {
-      "field": "AutomationInstanceScheduledTime_UTC",
-      "type": "Date",
-      "description": "For scheduled automations, the time that the run was scheduled to begin."
-    },
-    {
-      "field": "AutomationInstanceStartTime_UTC",
-      "type": "Date",
-      "description": "The time that the automation run started. This value is null if the automation was skipped."
-    },
-    {
-      "field": "AutomationInstanceEndTime_UTC",
-      "type": "Date",
-      "description": "The time that the automation run ended. This value is null if the automation was skipped or is still running."
-    },
-    {
-      "field": "AutomationInstanceStatus",
-      "type": "Text",
-      "description": "The status of the automation run when the data view is queried. Possible values are QueuedFile, Initialized, Executing, Stopped, Complete, or Error."
-    },
-    {
-      "field": "AutomationInstanceActivityErrorDetails",
-      "type": "Text",
-      "description": "The message from the error log, if applicable. If a system or unclassified error occurs, the value is System Error. If multiple errors occur, only the first message is displayed. To get details on multiple errors, use the _AutomationActivityInstance view."
-    }
-  ]
-},
-{
-  "family": "Automation Studio",
-  "name": "_AutomationActivityInstance",
-  "fields": [
-    {
-      "field": "MemberID",
-      "type": "Number",
-      "description": "The unique ID of the business unit."
-    },
-    {
-      "field": "AutomationName",
-      "type": "Text",
-      "description": "The automation name."
-    },
-    {
-      "field": "AutomationCustomerKey",
-      "type": "Text",
-      "description": "The unique ID of the automation."
-    },
-    {
-      "field": "AutomationInstanceID",
-      "type": "Text",
-      "description": "The unique ID of the automation run."
-    },
-    {
-      "field": "ActivityType",
-      "type": "Number",
-      "description": "The activity type. Possible values are listed in the Activity Type IDs table."
-    },
-    {
-      "field": "ActivityName",
-      "type": "Text",
-      "description": "The activity name."
-    },
-    {
-      "field": "ActivityDescription",
-      "type": "Text",
-      "description": "The activity description."
-    },
-    {
-      "field": "ActivityCustomerKey",
-      "type": "Text",
-      "description": "The unique ID of the activity."
-    },
-    {
-      "field": "ActivityInstanceStep",
-      "type": "Text",
-      "description": "Where the activity occurs in the automation. For example, 3.2 is step 3, activity 2."
-    },
-    {
-      "field": "ActivityInstanceID",
-      "type": "Text",
-      "description": "The unique ID of the activity run."
-    },
-    {
-      "field": "ActivityInstanceStartTime_UTC",
-      "type": "Date",
-      "description": "The time that the activity run started. This value is null if the automation was skipped."
-    },
-    {
-      "field": "ActivityInstanceEndTime_UTC",
-      "type": "Date",
-      "description": "The time that the activity run ended. This value is null if the automation was skipped, is still running, or wasn’t selected as part of an Advanced Run Once."
-    },
-    {
-      "field": "ActivityInstanceStatus",
-      "type": "Text",
-      "description": "The status of the activity run when the data view is queried. Possible values are Initialized, Executing, Complete, Error, or NotSelected."
-    },
-    {
-      "field": "ActivityInstanceStatusDetails",
-      "type": "Text",
-      "description": "The message from the error log, if applicable. If a system or unclassified error occurs, the value is System Error."
-    }
-  ]
-},
-{
-  "family": "Mobile Connect",
-  "name": "_SMSMessageTracking",
-  "fields": [
-    {
-      "field": "MobileMessageTrackingID",
-      "type": "Number",
-      "description": "Unique ID for tracking information related to the sent message"
-    },
-    {
-      "field": "EID",
-      "type": "Number",
-      "description": "Enterprise ID number for the sender"
-    },
-    {
-      "field": "MID",
-      "type": "Number",
-      "description": "Member ID"
-    },
-    {
-      "field": "Mobile",
-      "type": "Phone",
-      "description": "Mobile number for the subscriber"
-    },
-    {
-      "field": "MessageID",
-      "type": "Number",
-      "description": "Mobile message ID"
-    },
-    {
-      "field": "KeywordID",
-      "type": "Text",
-      "description": "Unique identifier for the keyword"
-    },
-    {
-      "field": "CodeID",
-      "type": "Text",
-      "description": "Unique identifier for the SMS code"
-    },
-    {
-      "field": "ConversationID",
-      "type": "Text",
-      "description": "Unique identifier for the SMS conversation"
-    },
-    {
-      "field": "CampaignID",
-      "type": "Number",
-      "description": "The SMS campaign tied to the record"
-    },
-    {
-      "field": "Sent",
-      "type": "Boolean",
-      "description": "If the message was sent (1 = true, 0 = false)"
-    },
-    {
-      "field": "Delivered",
-      "type": "Boolean",
-      "description": "If the message was delivered (1 = true, 0 = false)"
-    },
-    {
-      "field": "Undelivered",
-      "type": "Boolean",
-      "description": "Whether the message was delivered successfully or not (1 = true, 0 = false)"
-    },
-    {
-      "field": "Outbound",
-      "type": "Boolean",
-      "description": "If the message was outgoing (1 = true, 0 = false)"
-    },
-    {
-      "field": "Inbound",
-      "type": "Boolean",
-      "description": "If the message was incoming (1 = true, 0 = false)"
-    },
-    {
-      "field": "CreateDateTime",
-      "type": "Date and time",
-      "description": "The date and time the tracking record was created"
-    },
-    {
-      "field": "ModifiedDateTime",
-      "type": "Date and time",
-      "description": "The date and time (in Central Standard Time) the tracking record was modified"
-    },
-    {
-      "field": "ActionDateTime",
-      "type": "Date and Time",
-      "description": "The actual date and time a delivery or non-delivery event was received by the Marketing Cloud."
-    },
-    {
-      "field": "MessageText",
-      "type": "Text",
-      "description": "The text of the message"
-    },
-    {
-      "field": "IsTest",
-      "type": "Boolean",
-      "description": "If the message was a test message"
-    },
-    {
-      "field": "MobileMessageRecurrenceID",
-      "type": "Number",
-      "description": "The ID of the recurrence schedule for the message. Can be used for troubleshooting send issues."
-    },
-    {
-      "field": "ResponseToMobileMessageTrackingID",
-      "type": "Number",
-      "description": "The tracking ID of the response to the message"
-},
-{
-  "field": "IsValid",
-  "type": "Boolean",
-  "description": "If the message is valid"
-},
-{
-  "field": "InvalidationCode",
-  "type": "Number",
-  "description": "Invalidation code for the message"
-},
-{
-  "field": "SendID",
-  "type": "Number",
-  "description": "The send ID number for the SMS send"
-},
-{
-  "field": "SendSplitID",
-  "type": "Number",
-  "description": "If the message was split, the ID of the split"
-},
-{
-  "field": "SendSegmentID",
-  "type": "Number",
-  "description": "The ID of the segment tied to the message"
-},
-{
-  "field": "SendJobID",
-  "type": "Number",
-  "description": "The job ID for the SMS send"
-},
-{
-  "field": "SendGroupID",
-  "type": "Number",
-  "description": "The group ID for the SMS send"
-},
-{
-  "field": "SendPersonID",
-  "type": "Number",
-  "description": "The sendperson ID for the SMS send"
-},
-{
-  "field": "SubscriberID",
-  "type": "Number",
-  "description": "The subscriber ID for the affected subscriber. This number represents the unique ID for each subscriber record"
-},
-{
-  "field": "SubscriberKey",
-  "type": "Text",
-  "description": "The subscriber key for the affected subscriber"
-},
-{
-  "field": "SMSStandardStatusCodeId",
-  "type": "Number",
-  "description": "SFMC delivery status code"
-},
-{
-  "field": "Description",
-  "type": "Text",
-  "description": "Detailed description of the status code"
-},
-{
-  "field": "Name",
-  "type": "Text",
-  "description": "The name of your message"
-},
-{
-  "field": "ShortCode",
-  "type": "Text",
-  "description": "The short code or long code used to send your message"
-},
-{
-  "field": "SharedKeyword",
-  "type": "Text",
-  "description": "The keyword used in your message"
-},
-{
-  "field": "Ordinal",
-  "type": "Number",
-  "description": "Represents the parts in a multi-part message. Represented in ascending order starting at 0."
-},
-{
-  "field": "FromName",
-  "type": "Text",
-  "description": "From Name that an individual message was deployed with. Maximum length: 11 characters"
-},
-{
-  "field": "JBActivityID",
-  "type": "Text",
-  "description": "Unique identifier for the journey activity the message was deployed from"
-},
-{
-  "field": "JBDefinitionID",
-  "type": "Text",
-  "description": "Unique identifier for the journey a message was deployed from"
-},
-{
-  "field": "SMSJobID",
-  "type": "Text",
-  "description": "Unique identifier for each SMS job triggered in MobileConnect"
-},
-{
-  "field": "BatchID",
-      "type": "Number",
-      "description": "Identifies a batch associated with an SMS send"
-    }
-  ]
-},
-{
-  "family": "Mobile Connect",
-  "name": "_SMSSubscriptionLog",
-  "fields": [
-    {
-      "field": "LogDate",
-      "type": "Date",
-      "description": "The date the subscription is logged"
-    },
-    {
-      "field": "SubscriberKey",
-      "type": "Text",
-      "description": "The subscriber key for the affected subscriber"
-    },
-    {
-      "field": "MobileSubscriptionID",
-      "type": "Number",
-      "description": "The unique ID of the subscription record"
-    },
-    {
-      "field": "SubscriptionDefinitionID",
-      "type": "Text",
-      "description": "The unique keyword ID"
-    },
-    {
-      "field": "MobileNumber",
-      "type": "Phone",
-      "description": "Mobile number for the subscriber"
-    },
-    {
-      "field": "OptOutStatusID",
-      "type": "Number",
-      "description": "Whether the subscriber has opted out of SMS messages. See key for values."
-    },
-    {
-      "field": "OptOutMethodID",
-      "type": "Number",
-      "description": "Method the subscriber used to opt out of SMS messages. See key for values."
-    },
-    {
-      "field": "OptOutDate",
-      "type": "Date",
-      "description": "Date the subscriber opted out of SMS messages"
-    },
-    {
-      "field": "OptInStatusID",
-      "type": "Number",
-      "description": "Whether the subscriber has opted in to SMS message. See key for values."
-    },
-       {
-      "field": "OptInMethodID",
-      "type": "Number",
-      "description": "Method the subscriber used to opt in to SMS messages. See key for values."
-    },
-    {
-      "field": "OptInDate",
-      "type": "Date",
-      "description": "Date the subscriber opted in to SMS messages"
-    },
-    {
-      "field": "Source",
-      "type": "Number",
-      "description": "The subscription source"
-    },
-    {
-      "field": "CreatedDate",
-      "type": "Date",
-      "description": "Date the message was created"
-    },
-    {
-      "field": "ModifiedDate",
-      "type": "Date",
-      "description": "Date the message was modified"
-    }
-  ]
-},
-{
-  "family": "Mobile Connect",
-  "name": "_UndeliverableSms",
-  "fields": [
-    {
-      "field": "MobileNumber",
-      "type": "Phone",
-      "description": "Mobile number for the subscriber"
-    },
-    {
-      "field": "Undeliverable",
-      "type": "Boolean",
-      "description": "Indicates that the number is Held and that MobileConnect discontinued sending messages to the subscriber"
-    },
-    {
-      "field": "BounceCount",
-      "type": "Number",
-      "description": "Number of bounced SMS messages for subscriber"
-    },
-    {
-      "field": "FirstBounceDate",
-      "type": "Date",
-      "description": "The date when the first bounce occurred"
-    },
-    {
-      "field": "HoldDate",
-      "type": "Date",
-      "description": "The date when MobileConnect discontinued sending messages to the subscriber"
-    }
-  ]
-}
-  ]
+	"data": [
+		{
+			"family": "email",
+			"name": "_Sent",
+			"fields": [
+				{
+					"field": "AccountID",
+					"type": "number",
+					"description": "Unique identifier for the Marketing Cloud account."
+				},
+				{
+					"field": "OYBAccountID",
+					"type": "number",
+					"description": "Unique identifier for the parent Marketing Cloud account."
+				},
+				{
+					"field": "JobID",
+					"type": "number",
+					"description": "A unique identifier for a specific send job. This value is unique across all accounts."
+				},
+				{
+					"field": "ListID",
+					"type": "number",
+					"description": "The identifier of the list used for the send."
+				},
+				{
+					"field": "BatchID",
+					"type": "number",
+					"description": "The identifier of the batch in which the subscriber resides."
+				},
+				{
+					"field": "SubscriberID",
+					"type": "number",
+					"description": "A system-generated unique identifier for the subscriber."
+				},
+				{
+					"field": "SubscriberKey",
+					"type": "text",
+					"description": "The subscriber's external unique identifier."
+				},
+				{
+					"field": "EventDate",
+					"type": "date",
+					"description": "The date the send was initiated."
+				},
+				{
+					"field": "Domain",
+					"type": "text",
+					"description": "The domain associated with the subscriber's email address."
+				},
+				{
+					"field": "TriggeredSendDefinitionObjectID",
+					"type": "text",
+					"description": "Identifies the triggered send definition associated with the send."
+				},
+				{
+					"field": "TriggeredSendCustomerKey",
+					"type": "text",
+					"description": "The unique identifier for the triggered send definition."
+				}
+			]
+		},
+		{
+			"family": "email",
+			"name": "_Open",
+			"fields": [
+				{
+					"field": "AccountID",
+					"type": "number",
+					"description": "Unique identifier for the Marketing Cloud account."
+				},
+				{
+					"field": "OYBAccountID",
+					"type": "number",
+					"description": "Unique identifier for the parent Marketing Cloud account."
+				},
+				{
+					"field": "JobID",
+					"type": "number",
+					"description": "A unique identifier for a specific send job. This value is unique across all accounts."
+				},
+				{
+					"field": "ListID",
+					"type": "number",
+					"description": "The identifier of the list used for the send."
+				},
+				{
+					"field": "BatchID",
+					"type": "number",
+					"description": "The identifier of the batch in which the subscriber resides."
+				},
+				{
+					"field": "SubscriberID",
+					"type": "number",
+					"description": "A system-generated unique identifier for the subscriber."
+				},
+				{
+					"field": "SubscriberKey",
+					"type": "text",
+					"description": "The subscriber's external unique identifier."
+				},
+				{
+					"field": "EventDate",
+					"type": "date",
+					"description": "The date the email was opened."
+				},
+				{
+					"field": "Domain",
+					"type": "text",
+					"description": "The domain associated with the subscriber's email address."
+				},
+				{
+					"field": "IsUnique",
+					"type": "boolean",
+					"description": "Indicates whether the email open event is unique."
+				},
+				{
+					"field": "URL",
+					"type": "text",
+					"description": "URL of the link clicked if the click event is associated with the open event."
+				},
+				{
+					"field": "Alias",
+					"type": "text",
+					"description": "Alias of the link clicked if the click event is associated with the open event."
+				}
+			]
+		},
+		{
+			"family": "email",
+			"name": "_Bounce",
+			"fields": [
+				{
+					"field": "AccountID",
+					"type": "number",
+					"description": "Unique identifier for the Marketing Cloud account."
+				},
+				{
+					"field": "OYBAccountID",
+					"type": "number",
+					"description": "Unique identifier for the parent Marketing Cloud account."
+				},
+				{
+					"field": "JobID",
+					"type": "number",
+					"description": "A unique identifier for a specific send job. This value is unique across all accounts."
+				},
+				{
+					"field": "ListID",
+					"type": "number",
+					"description": "The identifier of the list used for the send."
+				},
+				{
+					"field": "BatchID",
+					"type": "number",
+					"description": "The identifier of the batch in which the subscriber resides."
+				},
+				{
+					"field": "SubscriberID",
+					"type": "number",
+					"description": "A system-generated unique identifier for the subscriber."
+				},
+				{
+					"field": "SubscriberKey",
+					"type": "text",
+					"description": "The subscriber's external unique identifier."
+				},
+				{
+					"field": "EventDate",
+					"type": "date",
+					"description": "The date the email was sent."
+				},
+				{
+					"field": "Domain",
+					"type": "text",
+					"description": "The domain associated with the subscriber's email address."
+				},
+				{
+					"field": "BounceCategoryID",
+					"type": "number",
+					"description": "The ID number for the bounce category."
+				},
+				{
+					"field": "BounceCategory",
+					"type": "text",
+					"description": "The category of the bounce."
+				},
+				{
+					"field": "BounceSubcategoryID",
+					"type": "number",
+					"description": "The ID number for the bounce subcategory."
+				},
+				{
+					"field": "BounceSubcategory",
+					"type": "text",
+					"description": "The subcategory of the bounce."
+				},
+				{
+					"field": "BounceTypeID",
+					"type": "number",
+					"description": "The ID number for the bounce type."
+				},
+				{
+					"field": "BounceType",
+					"type": "text",
+					"description": "The type of bounce that occurred."
+				},
+				{
+					"field": "SMTPBounceReason",
+					"type": "text",
+					"description": "The reason for the bounce relayed by the mail system."
+				},
+				{
+					"field": "SMTPMessage",
+					"type": "text",
+					"description": "The message regarding the bounce from the mail system."
+				},
+				{
+					"field": "SMTPCode",
+					"type": "number",
+					"description": "The error code for the bounce from the mail system."
+				},
+				{
+					"field": "TriggererSendDefinitionObjectID",
+					"type": "text",
+					"description": "The object ID for the triggered send definition."
+				},
+				{
+					"field": "TriggeredSendCustomerKey",
+					"type": "text",
+					"description": "The customer key for the triggered send."
+				}
+			]
+		},
+		{
+			"family": "email",
+			"name": "_Click",
+			"fields": [
+				{
+					"field": "AccountID",
+					"type": "number",
+					"description": "The account ID number of the Marketing Cloud account."
+				},
+				{
+					"field": "OYBAccountID",
+					"type": "number",
+					"description": "The account ID number for any related On-Your-Behalf (OYB) accounts. This field applies to enterprise accounts only."
+				},
+				{
+					"field": "JobID",
+					"type": "number",
+					"description": "The job ID number for the email send."
+				},
+				{
+					"field": "ListID",
+					"type": "number",
+					"description": "The list ID number for the list used in the send."
+				},
+				{
+					"field": "BatchID",
+					"type": "number",
+					"description": "The batch ID number for any batches used in the send."
+				},
+				{
+					"field": "SubscriberID",
+					"type": "number",
+					"description": "The subscriber ID for the affected subscriber. This number represents the unique ID for each subscriber record."
+				},
+				{
+					"field": "SubscriberKey",
+					"type": "text",
+					"description": "The subscriber key for the affected subscriber."
+				},
+				{
+					"field": "EventDate",
+					"type": "date",
+					"description": "The date the click took place."
+				},
+				{
+					"field": "Domain",
+					"type": "text",
+					"description": "The domain at which the click occurred."
+				},
+				{
+					"field": "URL",
+					"type": "text",
+					"description": "The URL for the link clicked. No AMPscript or variables are populated in this column, for example, www.example.com?%%attribute%%."
+				},
+				{
+					"field": "LinkName",
+					"type": "text",
+					"description": "The link name assigned in the email send."
+				},
+				{
+					"field": "LinkContent",
+					"type": "text",
+					"description": "The link content assigned in the email send. AMPscript and variables are populated in this column, such as www.example.com?12345."
+				},
+				{
+					"field": "IsUnique",
+					"type": "boolean",
+					"description": "Whether the event is unique or repeated."
+				},
+				{
+					"field": "TriggererSendDefinitionObjectID",
+					"type": "text",
+					"description": "The object ID for the triggered send definition."
+				},
+				{
+					"field": "TriggeredSendCustomerKey",
+					"type": "text",
+					"description": "The customer key for the triggered send."
+				}
+			]
+		},
+		{
+			"family": "email",
+			"name": "_FTAT",
+			"fields": [
+				{
+					"field": "AccountID",
+					"type": "number",
+					"description": "Your account ID number."
+				},
+				{
+					"field": "OYBAccountID",
+					"type": "number",
+					"description": "The account ID number for any related On-Your-Behalf accounts and applies to enterprise accounts only."
+				},
+				{
+					"field": "JobID",
+					"type": "number",
+					"description": "The job ID number for the email send."
+				},
+				{
+					"field": "ListID",
+					"type": "number",
+					"description": "The list ID number for the list used in the send."
+				},
+				{
+					"field": "BatchID",
+					"type": "number",
+					"description": "The batch ID number for any batches used in the send."
+				},
+				{
+					"field": "SubscriberID",
+					"type": "number",
+					"description": "The subscriber ID for the affected subscriber. This number represents the unique ID for each subscriber record."
+				},
+				{
+					"field": "SubscriberKey",
+					"type": "text",
+					"description": "The subscriber key for the affected subscriber."
+				},
+				{
+					"field": "TransactionTime",
+					"type": "date",
+					"description": "The date the forward took place."
+				},
+				{
+					"field": "Domain",
+					"type": "text",
+					"description": "The domain at which the forward occurred."
+				},
+				{
+					"field": "IsUnique",
+					"type": "boolean",
+					"description": "Whether the event is unique or repeated."
+				},
+				{
+					"field": "TriggererSendDefinitionObjectID",
+					"type": "text",
+					"description": "The object ID for the triggered send definition."
+				},
+				{
+					"field": "TriggeredSendCustomerKey",
+					"type": "text",
+					"description": "The customer key for the triggered send."
+				}
+			]
+		},
+		{
+			"family": "email",
+			"name": "_Unsubscribe",
+			"fields": [
+				{
+					"field": "AccountID",
+					"type": "number",
+					"description": "Your account ID number."
+				},
+				{
+					"field": "OYBAccountID",
+					"type": "number",
+					"description": "The account ID number for any related On-Your-Behalf accounts. This field applies to enterprise accounts only."
+				},
+				{
+					"field": "JobID",
+					"type": "number",
+					"description": "The job ID number for the email send."
+				},
+				{
+					"field": "ListID",
+					"type": "number",
+					"description": "The list ID number for the list used in the send."
+				},
+				{
+					"field": "BatchID",
+					"type": "number",
+					"description": "The batch ID number for any batches used in the send."
+				},
+				{
+					"field": "SubscriberID",
+					"type": "number",
+					"description": "The subscriber ID for the affected subscriber. This number represents the unique ID for each subscriber record."
+				},
+				{
+					"field": "SubscriberKey",
+					"type": "text",
+					"description": "The subscriber key for the affected subscriber."
+				},
+				{
+					"field": "EventDate",
+					"type": "date",
+					"description": "The date the unsubscribe took place."
+				},
+				{
+					"field": "IsUnique",
+					"type": "boolean",
+					"description": "Whether the event is unique or repeated."
+				},
+				{
+					"field": "Domain",
+					"type": "text",
+					"description": "The domain at which the unsubscribe occurred."
+				}
+			]
+		},
+		{
+			"family": "email",
+			"name": "_Complaint",
+			"fields": [
+				{
+					"field": "AccountID",
+					"type": "number",
+					"description": "Your account ID number."
+				},
+				{
+					"field": "OYBAccountID",
+					"type": "number",
+					"description": "The account ID number for any related On-Your-Behalf (OYB) accounts. This field applies to enterprise accounts only."
+				},
+				{
+					"field": "JobID",
+					"type": "number",
+					"description": "The job ID number for the email send."
+				},
+				{
+					"field": "ListID",
+					"type": "number",
+					"description": "The list ID number for the list used in the send."
+				},
+				{
+					"field": "BatchID",
+					"type": "number",
+					"description": "The batch ID number for any batches used in the send."
+				},
+				{
+					"field": "SubscriberID",
+					"type": "number",
+					"description": "The subscriber ID for the affected subscriber. This number represents the unique ID for each subscriber record."
+				},
+				{
+					"field": "SubscriberKey",
+					"type": "text",
+					"description": "The subscriber key for the affected subscriber."
+				},
+				{
+					"field": "EventDate",
+					"type": "date",
+					"description": "The date the complaint took place."
+				},
+				{
+					"field": "IsUnique",
+					"type": "boolean",
+					"description": "Whether the event is unique or repeated."
+				},
+				{
+					"field": "Domain",
+					"type": "text",
+					"description": "The domain at which the complaint occurred."
+				}
+			]
+		},
+		{
+			"family": "email",
+			"name": "_BusinessUnitUnsubscribes",
+			"fields": [
+				{
+					"field": "BusinessUnitID",
+					"type": "number",
+					"description": "The Account ID for the Business Unit (BU)."
+				},
+				{
+					"field": "SubscriberID",
+					"type": "number",
+					"description": "The subscriber ID for the affected subscriber. This number represents the unique ID for each subscriber record."
+				},
+				{
+					"field": "SubscriberKey",
+					"type": "text",
+					"description": "A potential alternate identifier for subscribers. Defaults to the value of Email Address."
+				},
+				{
+					"field": "UnsubDateUTC",
+					"type": "date",
+					"description": "The date the subscriber unsubscribed from messages sent by BU."
+				},
+				{
+					"field": "UnsubReason",
+					"type": "text",
+					"description": "The reason listed is a custom value configured by your administrator."
+				}
+			]
+		},
+		{
+			"family": "subscribers",
+			"name": "_EnterpriseAttribute",
+			"fields": [
+				{
+					"field": "_SubscriberID",
+					"type": "number",
+					"description": "The subscriber ID for the affected subscriber. This number represents the unique ID for each subscriber record stored."
+				}
+			]
+		},
+		{
+			"family": "subscribers",
+			"name": "_Subscribers",
+			"fields": [
+				{
+					"field": "SubscriberID",
+					"type": "number",
+					"description": "The subscriber ID for the affected subscriber. This number represents the unique ID for each subscriber record."
+				},
+				{
+					"field": "DateUndeliverable",
+					"type": "date",
+					"description": "The date an email for the subscriber was returned as undeliverable."
+				},
+				{
+					"field": "DateJoined",
+					"type": "date",
+					"description": "The date the subscriber joined your list."
+				},
+				{
+					"field": "DateUnsubscribed",
+					"type": "date",
+					"description": "The date the subscriber unsubscribed from your list."
+				},
+				{
+					"field": "Domain",
+					"type": "text",
+					"description": "The domain of the subscriber."
+				},
+				{
+					"field": "EmailAddress",
+					"type": "email",
+					"description": "The subscriber's email address."
+				},
+				{
+					"field": "BounceCount",
+					"type": "number",
+					"description": "The total number of bounces accrued by the subscriber."
+				},
+				{
+					"field": "SubscriberKey",
+					"type": "text",
+					"description": "A potential alternate identifier for subscribers. Defaults to the value of Email Address."
+				},
+				{
+					"field": "SubscriberType",
+					"type": "text",
+					"description": "The subscriber type for the affected subscriber."
+				},
+				{
+					"field": "Status",
+					"type": "text",
+					"description": "The status of the subscriber: active, held, unsubscribed, or bounced."
+				},
+				{
+					"field": "Locale",
+					"type": "locale",
+					"description": "The locale code for the subscriber."
+				}
+			]
+		},
+		{
+			"family": "Subscribers",
+			"name": "_ListSubscribers",
+			"fields": [
+				{
+					"field": "AddedBy",
+					"type": "number",
+					"description": "The ID of the user who ran the process that added the subscriber"
+				},
+				{
+					"field": "AddMethod",
+					"type": "text",
+					"description": "The method by which the subscriber was added, including Unspecified, Webcollect, API, FTAF, Import, Move Copy, Application, Salesforce, Segmentation, Generic Extension, and Custom Object"
+				},
+				{
+					"field": "CreatedDate",
+					"type": "date",
+					"description": "The date the subscriber was added to the list"
+				},
+				{
+					"field": "DateUnsubscribed",
+					"type": "date",
+					"description": "The date the subscriber unsubscribed"
+				},
+				{
+					"field": "EmailAddress",
+					"type": "text",
+					"description": "The subscriber's email address"
+				},
+				{
+					"field": "ListID",
+					"type": "number",
+					"description": "The list ID number for the list used in the send"
+				},
+				{
+					"field": "ListName",
+					"type": "text",
+					"description": "The name of the list containing the subscribers"
+				},
+				{
+					"field": "ListType",
+					"type": "text",
+					"description": "Shows whether the type is list or group"
+				},
+				{
+					"field": "Status",
+					"type": "text",
+					"description": "The status of the subscriber"
+				},
+				{
+					"field": "SubscriberID",
+					"type": "number",
+					"description": "The subscriber ID for the affected subscriber. This number represents the unique ID for each subscriber record."
+				},
+				{
+					"field": "SubscriberKey",
+					"type": "text",
+					"description": "The subscriber key for the affected subscriber"
+				},
+				{
+					"field": "SubscriberType",
+					"type": "text",
+					"description": "The type of subscriber"
+				}
+			]
+		},
+		{
+			"family": "Journey Builder",
+			"name": "_Journey",
+			"fields": [
+				{
+					"field": "VersionID",
+					"type": "text",
+					"description": "The unique identifier for the version of the journey"
+				},
+				{
+					"field": "JourneyID",
+					"type": "text",
+					"description": "The unique identifier for the journey. There are one or more VersionID’s associated to a JourneyID."
+				},
+				{
+					"field": "JourneyName",
+					"type": "text",
+					"description": "The name of the journey"
+				},
+				{
+					"field": "VersionNumber",
+					"type": "number",
+					"description": "The version number of the version of the journey"
+				},
+				{
+					"field": "CreatedDate",
+					"type": "date",
+					"description": "The date that the version of the journey was created"
+				},
+				{
+					"field": "LastPublishedDate",
+					"type": "date",
+					"description": "The date that the version of the journey was last published"
+				},
+				{
+					"field": "ModifiedDate",
+					"type": "date",
+					"description": "The date that the version of the journey was last edited"
+				},
+				{
+					"field": "JourneyStatus",
+					"type": "text",
+					"description": "The current running mode of the journey. Possible values are Draft, Running, Finishing, and Stopped."
+				}
+			]
+		},
+		{
+			"family": "Journey Builder",
+			"name": "_JourneyActivity",
+			"fields": [
+				{
+					"field": "VersionID",
+					"type": "text",
+					"description": "The unique identifier for the version of the journey"
+				},
+				{
+					"field": "ActivityID",
+					"type": "text",
+					"description": "The unique identifier for the activity. There are one or more ActivityID’s associated to a VersionID."
+				},
+				{
+					"field": "ActivityName",
+					"type": "text",
+					"description": "The name of the activity"
+				},
+				{
+					"field": "ActivityExternalKey",
+					"type": "text",
+					"description": "The external key associated with the activity"
+				},
+				{
+					"field": "JourneyActivityObjectID",
+					"type": "text",
+					"description": "Use this unique identifier to join to email tracking system data views to identify a journey email’s Triggered Send Definition."
+				},
+				{
+					"field": "ActivityType",
+					"type": "text",
+					"description": "The type of activity"
+				}
+			]
+		},
+		{
+			"family": "email",
+			"name": "_Job",
+			"fields": [
+				{
+					"field": "JobID",
+					"type": "number",
+					"description": "The job ID number for the email send"
+				},
+				{
+					"field": "EmailID",
+					"type": "number",
+					"description": "The email ID for the job"
+				},
+				{
+					"field": "AccountID",
+					"type": "number",
+					"description": "The ID number for the account that performed the job"
+				},
+				{
+					"field": "AccountUserID",
+					"type": "number",
+					"description": "The ID number for the account user that performed the job"
+				},
+				{
+					"field": "FromName",
+					"type": "text",
+					"description": "The from name in the email send"
+				},
+				{
+					"field": "FromEmail",
+					"type": "email",
+					"description": "The from email address in the email send"
+				},
+				{
+					"field": "SchedTime",
+					"type": "date",
+					"description": "The time the job was scheduled"
+				},
+				{
+					"field": "PickupTime",
+					"type": "date",
+					"description": "The time the Marketing Cloud application started the job"
+				},
+				{
+					"field": "DeliveredTime",
+					"type": "date",
+					"description": "The time the email was delivered"
+				},
+				{
+					"field": "EventID",
+					"type": "text",
+					"description": "The ID for the job event"
+				},
+				{
+					"field": "IsMultipart",
+					"type": "boolean",
+					"description": "Whether the job was sent as multipart MIME or not"
+				},
+				{
+					"field": "JobType",
+					"type": "text",
+					"description": "The type of job"
+				},
+				{
+					"field": "JobStatus",
+					"type": "text",
+					"description": "The status of the job"
+				},
+				{
+					"field": "ModifiedBy",
+					"type": "number",
+					"description": "If modified, the user who modified the job"
+				},
+				{
+					"field": "ModifiedDate",
+					"type": "date",
+					"description": "The date the job was modified"
+				},
+				{
+					"field": "EmailName",
+					"type": "text",
+					"description": "The name of the email sent by the job"
+				},
+				{
+					"field": "EmailSubject",
+					"type": "text",
+					"description": "The subject of the email send"
+				},
+				{
+					"field": "IsWrapped",
+					"type": "boolean",
+					"description": "Whether the links in the email were wrapped for tracking"
+				},
+				{
+					"field": "TestEmailAddr",
+					"type": "email",
+					"description": "The test email address used in the job"
+				},
+				{
+					"field": "Category",
+					"type": "text",
+					"description": "The job category"
+				},
+				{
+					"field": "BccEmail",
+					"type": "Email",
+					"description": "Any email address send in the BCC field"
+				},
+				{
+					"field": "OriginalSchedTime",
+					"type": "Date",
+					"description": "The original scheduled time for the job"
+				},
+				{
+					"field": "CreatedDate",
+					"type": "Date",
+					"description": "The date the job was created"
+				},
+				{
+					"field": "CharacterSet",
+					"type": "Text",
+					"description": "The character set used in the job"
+				},
+				{
+					"field": "IPAddress",
+					"type": "Text",
+					"description": "This value is always null."
+				},
+				{
+					"field": "SalesForceTotalSubscriberCount",
+					"type": "Number",
+					"description": "The total number of Salesforce subscribers included in the job"
+				},
+				{
+					"field": "SalesForceErrorSubscriberCount",
+					"type": "Number",
+					"description": "The total number of Salesforce subscribers included in the job that received errors"
+				},
+				{
+					"field": "SendType",
+					"type": "Text",
+					"description": "The type of send used in the job"
+				},
+				{
+					"field": "DynamicEmailSubject",
+					"type": "Text",
+					"description": "The dynamic email subject included in the job"
+				},
+				{
+					"field": "SuppressTracking",
+					"type": "Boolean",
+					"description": "If tracking information for this job was suppressed"
+				},
+				{
+					"field": "SendClassificationType",
+					"type": "Text",
+					"description": "The send classification type for the job"
+				},
+				{
+					"field": "SendClassification",
+					"type": "Text",
+					"description": "The send classification for the job"
+				},
+				{
+					"field": "ResolveLinksWithCurrentData",
+					"type": "Boolean",
+					"description": "If the job resolved links with current data"
+				},
+				{
+					"field": "EmailSendDefinition",
+					"type": "Text",
+					"description": "The email send definition used in the job"
+				},
+				{
+					"field": "DeduplicateByEmail",
+					"type": "Boolean",
+					"description": "Whether the email addresses in the job are used to deduplicate subscribers"
+				},
+				{
+					"field": "TriggererSendDefinitionObjectID",
+					"type": "Text",
+					"description": "The object ID for the triggered send definition"
+				},
+				{
+					"field": "TriggeredSendCustomerKey",
+					"type": "Text",
+					"description": "The customer key for the triggered send"
+				}
+			]
+		},
+		{
+			"family": "email",
+			"name": "_SocialNetworkImpressions",
+			"fields": [
+				{
+					"field": "JobID",
+					"type": "Number",
+					"description": "The job ID number for the email send"
+				},
+				{
+					"field": "ListID",
+					"type": "Number",
+					"description": "The list ID number for the list used in the send"
+				},
+				{
+					"field": "RegionTitle",
+					"type": "Text",
+					"description": "The title of the region shared via Social Forward"
+				},
+				{
+					"field": "RegionDescription",
+					"type": "Text",
+					"description": "The description of the region shared via Social Forward"
+				},
+				{
+					"field": "RegionHTML",
+					"type": "Text",
+					"description": "The HTML associated with the social forward region"
+				},
+				{
+					"field": "ContentRegionID",
+					"type": "Number",
+					"description": "The ID of the shared content region"
+				},
+				{
+					"field": "SocialSharingSiteID",
+					"type": "Number",
+					"description": "The ID of the social network involved in the sharing of the content region"
+				},
+				{
+					"field": "SiteName",
+					"type": "Text",
+					"description": "The name of the social network involved in the sharing of the content region"
+				},
+				{
+					"field": "CountryCode",
+					"type": "Text",
+					"description": "The country code for the social network involved in the sharing of the content region"
+				},
+				{
+					"field": "ReferringURL",
+					"type": "Text",
+					"description": "The referring URL used in the Social Forward activity"
+				},
+				{
+					"field": "IPAddress",
+					"type": "Text",
+					"description": "The IP address for the URL from which the content region was shared."
+				},
+				{
+					"field": "TransactionTime",
+					"type": "Date",
+					"description": "The time at which the content area was shared"
+				},
+				{
+					"field": "PublishedSocialContentStatusID",
+					"type": "Text",
+					"description": "The status ID for the published social content"
+				},
+				{
+					"field": "ShortCode",
+					"type": "Text",
+					"description": "The short code for the published social content status, which is Active, Inactive, or Deleted"
+				},
+				{
+					"field": "PublishTime",
+					"type": "Date",
+					"description": "The time the social content area was published"
+				}
+			]
+		},
+		{
+			"family": "email",
+			"name": "_SocialNetworkTracking",
+			"fields": [
+				{
+					"field": "SubscriberID",
+					"type": "Number",
+					"description": "The subscriber ID for the affected subscriber. This number represents the unique ID for each subscriber record."
+				},
+				{
+					"field": "SubscriberKey",
+					"type": "Email",
+					"description": "The subscriber key for the affected subscriber"
+				},
+				{
+					"field": "ListID",
+					"type": "Number",
+					"description": "The list ID number for the list used in the send"
+				},
+				{
+					"field": "BatchID",
+					"type": "Number",
+					"description": "The batch ID number for any batches used in the send"
+				},
+				{
+					"field": "SocialSharingSiteID",
+					"type": "Number",
+					"description": "The ID of the social network used to share the content region"
+				},
+				{
+					"field": "SiteName",
+					"type": "Text",
+					"description": "The name of the social network involved in the sharing of the content region"
+				},
+				{
+					"field": "CountryCode",
+					"type": "Text",
+					"description": "The country code for the social network involved in the sharing of the content region"
+				},
+				{
+					"field": "PublishedSocialContentID",
+					"type": "Text",
+					"description": "The ID number for the content area published via Social Forward"
+				},
+				{
+					"field": "RegionTitle",
+					"type": "Text",
+					"description": "The title of the region shared via Social Forward"
+				},
+				{
+					"field": "RegionDescription",
+					"type": "Text",
+					"description": "The description of the region shared via Social Forward"
+				},
+				{
+					"field": "RegionHTML",
+					"type": "Text",
+					"description": "The HTML associated with the social forward region"
+				},
+				{
+					"field": "ContentRegionID",
+					"type": "Text",
+					"description": "The ID of the shared content region"
+				},
+				{
+					"field": "OYBMemberID",
+					"type": "Number",
+					"description": "The ID number for any On-Your-Behalf (OYB) account involved in the sharing of the content area"
+				},
+				{
+					"field": "TransactionTime",
+					"type": "Date",
+					"description": "The time at which the content area was shared"
+				},
+				{
+					"field": "IsUnique",
+					"type": "Boolean",
+					"description": "Whether the event is unique or not"
+				},
+				{
+					"field": "Domain",
+					"type": "Text",
+					"description": "The domain from which the content was shared"
+				},
+				{
+					"field": "PublishedSocialContentStatusID",
+					"type": "Text",
+					"description": "The status ID for the published social content"
+				},
+				{
+					"field": "ShortCode",
+					"type": "Text",
+					"description": "The short code for the published social content status, which is Active, Inactive, or Deleted"
+				},
+				{
+					"field": "PublishTime",
+					"type": "Date",
+					"description": "The time the social content area was published"
+				}
+			]
+		},
+		{
+			"family": "email",
+			"name": "_SurveyResponse",
+			"fields": [
+				{
+					"field": "AccountID",
+					"type": "Number",
+					"description": "Your account ID number"
+				},
+				{
+					"field": "OYBAccountID",
+					"type": "Number",
+					"description": "The account ID number for any related On-Your-Behalf accounts. This field applies to enterprise accounts only."
+				},
+				{
+					"field": "JobID",
+					"type": "Number",
+					"description": "The job ID number for the email send"
+				},
+				{
+					"field": "ListID",
+					"type": "Number",
+					"description": "The list ID number for the list used in the send"
+				},
+				{
+					"field": "BatchID",
+					"type": "Number",
+					"description": "The batch ID number for any batches used in the send"
+				},
+				{
+					"field": "SubscriberID",
+					"type": "Number",
+					"description": "The subscriber ID for the affected subscriber. This number represents the unique ID for each subscriber record."
+				},
+				{
+					"field": "SubscriberKey",
+					"type": "Text",
+					"description": "The subscriber key for the affected subscriber"
+				},
+				{
+					"field": "EventDate",
+					"type": "Date",
+					"description": "The date the survey response took place"
+				},
+				{
+					"field": "Domain",
+					"type": "Text",
+					"description": "The domain at which the survey response occurred"
+				},
+				{
+					"field": "SurveyID",
+					"type": "Number",
+					"description": "The ID of the survey"
+				},
+				{
+					"field": "SurveyName",
+					"type": "Text",
+					"description": "The name of the survey"
+				},
+				{
+					"field": "IsUnique",
+					"type": "Number",
+					"description": "Whether the response is unique or not"
+				},
+				{
+					"field": "QuestionID",
+					"type": "Number",
+					"description": "The ID of the survey question"
+				},
+				{
+					"field": "QuestionName",
+					"type": "Text",
+					"description": "The name of the survey question"
+				},
+				{
+					"field": "Question",
+					"type": "Text",
+					"description": "The survey question"
+				},
+				{
+					"field": "AnswerID",
+					"type": "Number",
+					"description": "The ID of the answer"
+				},
+				{
+					"field": "AnswerName",
+					"type": "Text",
+					"description": "The name of the answer"
+				},
+				{
+					"field": "Answer",
+					"type": "Text",
+					"description": "The Boolean answer to the survey question"
+				},
+				{
+					"field": "AnswerData",
+					"type": "Text",
+					"description": "The text content of the survey answer"
+				}
+			]
+		},
+		{
+			"family": "email",
+			"name": "_Coupon",
+			"fields": [
+				{
+					"field": "Name",
+					"type": "Text",
+					"description": "Name of your coupon"
+				},
+				{
+					"field": "ExternalKey",
+					"type": "Text",
+					"description": "The external key used to refer to your coupon via the API"
+				},
+				{
+					"field": "Description",
+					"type": "Text",
+					"description": "Description of your coupon"
+				},
+				{
+					"field": "BeginDate",
+					"type": "Date",
+					"description": "The date the coupon becomes valid"
+				},
+				{
+					"field": "ExpirationDate",
+					"type": "Date",
+					"description": "The date the coupon becomes invalid"
+				}
+			]
+		},
+		{
+			"family": "Group Connect",
+			"name": "_MobileLineAddressContactSubscriptionView",
+			"fields": [
+				{
+					"field": "ChannelID",
+					"type": "Text",
+					"description": "Channel ID of LINE account"
+				},
+				{
+					"field": "ContactID",
+					"type": "Number",
+					"description": "Marketing Cloud ContactId (system generated) linked to LINE UID"
+				},
+				{
+					"field": "ContactKey",
+					"type": "Text",
+					"description": "Marketing Cloud contact key (system generated) linked to LINE UID"
+				},
+				{
+					"field": "AddressID",
+					"type": "Text",
+					"description": "LINE UID"
+				},
+				{
+					"field": "IsActive",
+					"type": "Number",
+					"description": "Active flag: (1 = true, 0 = false)"
+				},
+				{
+					"field": "CreatedDate",
+					"type": "Date",
+					"description": "Date and time record created in Central Standard Time. Date the customer started following LINE account."
+				},
+				{
+					"field": "ModifiedDate",
+					"type": "Date",
+					"description": "Date and time record modified in Central Standard Time"
+				}
+			]
+		},
+		{
+			"family": "Group Connect",
+			"name": "_MobileLineOrphanContactView",
+			"fields": [
+				{
+					"field": "ContactID",
+					"type": "Number",
+					"description": "Marketing Cloud ContactId (system generated) linked to LINE UID"
+				},
+				{
+					"field": "ContactKey",
+					"type": "Text",
+					"description": "ContactKey is either system-generated or provided by user during import. Linked to LINE UID"
+				},
+				{
+					"field": "AddressID",
+					"type": "Text",
+					"description": "LINE UID"
+				},
+				{
+					"field": "CreatedDate",
+					"type": "Date",
+					"description": "Date and time record created (in Central Standard Time). Date the customer started following LINE account."
+				}
+			]
+		},
+		{
+			"family": "Automation Studio",
+			"name": "_AutomationInstance",
+			"fields": [
+				{
+					"field": "MemberID",
+					"type": "Number",
+					"description": "The unique ID of the business unit."
+				},
+				{
+					"field": "AutomationName",
+					"type": "Text",
+					"description": "The automation name."
+				},
+				{
+					"field": "AutomationDescription",
+					"type": "Text",
+					"description": "The automation description."
+				},
+				{
+					"field": "AutomationCustomerKey",
+					"type": "Text",
+					"description": "The unique ID of the automation."
+				},
+				{
+					"field": "AutomationType",
+					"type": "Text",
+					"description": "The automation’s starting source. Possible values are Schedule, File Drop, or Trigger."
+				},
+				{
+					"field": "AutomationNotificationRecipient_Complete",
+					"type": "Text",
+					"description": "The email address where notifications about completed automations are sent."
+				},
+				{
+					"field": "AutomationNotificationRecipient_Error",
+					"type": "Text",
+					"description": "The email address where notifications about automation errors are sent."
+				},
+				{
+					"field": "AutomationNotificationRecipient_Skip",
+					"type": "Text",
+					"description": "The email address where notifications about skipped automations are sent."
+				},
+				{
+					"field": "AutomationStepCount",
+					"type": "Number",
+					"description": "The number of steps in the automation."
+				},
+				{
+					"field": "AutomationInstanceID",
+					"type": "Text",
+					"description": "The unique ID of the automation run."
+				},
+				{
+					"field": "AutomationInstanceIsRunOnce",
+					"type": "Boolean",
+					"description": "Whether the automation was set to run once. 1 = true, 0 = false."
+				},
+				{
+					"field": "FilenameFromTrigger",
+					"type": "Text",
+					"description": "For file drop and trigger automations, the file that started the automation."
+				},
+				{
+					"field": "AutomationInstanceScheduledTime_UTC",
+					"type": "Date",
+					"description": "For scheduled automations, the time that the run was scheduled to begin."
+				},
+				{
+					"field": "AutomationInstanceStartTime_UTC",
+					"type": "Date",
+					"description": "The time that the automation run started. This value is null if the automation was skipped."
+				},
+				{
+					"field": "AutomationInstanceEndTime_UTC",
+					"type": "Date",
+					"description": "The time that the automation run ended. This value is null if the automation was skipped or is still running."
+				},
+				{
+					"field": "AutomationInstanceStatus",
+					"type": "Text",
+					"description": "The status of the automation run when the data view is queried. Possible values are QueuedFile, Initialized, Executing, Stopped, Complete, or Error."
+				},
+				{
+					"field": "AutomationInstanceActivityErrorDetails",
+					"type": "Text",
+					"description": "The message from the error log, if applicable. If a system or unclassified error occurs, the value is System Error. If multiple errors occur, only the first message is displayed. To get details on multiple errors, use the _AutomationActivityInstance view."
+				}
+			]
+		},
+		{
+			"family": "Automation Studio",
+			"name": "_AutomationActivityInstance",
+			"fields": [
+				{
+					"field": "MemberID",
+					"type": "Number",
+					"description": "The unique ID of the business unit."
+				},
+				{
+					"field": "AutomationName",
+					"type": "Text",
+					"description": "The automation name."
+				},
+				{
+					"field": "AutomationCustomerKey",
+					"type": "Text",
+					"description": "The unique ID of the automation."
+				},
+				{
+					"field": "AutomationInstanceID",
+					"type": "Text",
+					"description": "The unique ID of the automation run."
+				},
+				{
+					"field": "ActivityType",
+					"type": "Number",
+					"description": "The activity type. Possible values are listed in the Activity Type IDs table."
+				},
+				{
+					"field": "ActivityName",
+					"type": "Text",
+					"description": "The activity name."
+				},
+				{
+					"field": "ActivityDescription",
+					"type": "Text",
+					"description": "The activity description."
+				},
+				{
+					"field": "ActivityCustomerKey",
+					"type": "Text",
+					"description": "The unique ID of the activity."
+				},
+				{
+					"field": "ActivityInstanceStep",
+					"type": "Text",
+					"description": "Where the activity occurs in the automation. For example, 3.2 is step 3, activity 2."
+				},
+				{
+					"field": "ActivityInstanceID",
+					"type": "Text",
+					"description": "The unique ID of the activity run."
+				},
+				{
+					"field": "ActivityInstanceStartTime_UTC",
+					"type": "Date",
+					"description": "The time that the activity run started. This value is null if the automation was skipped."
+				},
+				{
+					"field": "ActivityInstanceEndTime_UTC",
+					"type": "Date",
+					"description": "The time that the activity run ended. This value is null if the automation was skipped, is still running, or wasn’t selected as part of an Advanced Run Once."
+				},
+				{
+					"field": "ActivityInstanceStatus",
+					"type": "Text",
+					"description": "The status of the activity run when the data view is queried. Possible values are Initialized, Executing, Complete, Error, or NotSelected."
+				},
+				{
+					"field": "ActivityInstanceStatusDetails",
+					"type": "Text",
+					"description": "The message from the error log, if applicable. If a system or unclassified error occurs, the value is System Error."
+				}
+			]
+		},
+		{
+			"family": "Mobile Connect",
+			"name": "_SMSMessageTracking",
+			"fields": [
+				{
+					"field": "MobileMessageTrackingID",
+					"type": "Number",
+					"description": "Unique ID for tracking information related to the sent message"
+				},
+				{
+					"field": "EID",
+					"type": "Number",
+					"description": "Enterprise ID number for the sender"
+				},
+				{
+					"field": "MID",
+					"type": "Number",
+					"description": "Member ID"
+				},
+				{
+					"field": "Mobile",
+					"type": "Phone",
+					"description": "Mobile number for the subscriber"
+				},
+				{
+					"field": "MessageID",
+					"type": "Number",
+					"description": "Mobile message ID"
+				},
+				{
+					"field": "KeywordID",
+					"type": "Text",
+					"description": "Unique identifier for the keyword"
+				},
+				{
+					"field": "CodeID",
+					"type": "Text",
+					"description": "Unique identifier for the SMS code"
+				},
+				{
+					"field": "ConversationID",
+					"type": "Text",
+					"description": "Unique identifier for the SMS conversation"
+				},
+				{
+					"field": "CampaignID",
+					"type": "Number",
+					"description": "The SMS campaign tied to the record"
+				},
+				{
+					"field": "Sent",
+					"type": "Boolean",
+					"description": "If the message was sent (1 = true, 0 = false)"
+				},
+				{
+					"field": "Delivered",
+					"type": "Boolean",
+					"description": "If the message was delivered (1 = true, 0 = false)"
+				},
+				{
+					"field": "Undelivered",
+					"type": "Boolean",
+					"description": "Whether the message was delivered successfully or not (1 = true, 0 = false)"
+				},
+				{
+					"field": "Outbound",
+					"type": "Boolean",
+					"description": "If the message was outgoing (1 = true, 0 = false)"
+				},
+				{
+					"field": "Inbound",
+					"type": "Boolean",
+					"description": "If the message was incoming (1 = true, 0 = false)"
+				},
+				{
+					"field": "CreateDateTime",
+					"type": "Date and time",
+					"description": "The date and time the tracking record was created"
+				},
+				{
+					"field": "ModifiedDateTime",
+					"type": "Date and time",
+					"description": "The date and time (in Central Standard Time) the tracking record was modified"
+				},
+				{
+					"field": "ActionDateTime",
+					"type": "Date and Time",
+					"description": "The actual date and time a delivery or non-delivery event was received by the Marketing Cloud."
+				},
+				{
+					"field": "MessageText",
+					"type": "Text",
+					"description": "The text of the message"
+				},
+				{
+					"field": "IsTest",
+					"type": "Boolean",
+					"description": "If the message was a test message"
+				},
+				{
+					"field": "MobileMessageRecurrenceID",
+					"type": "Number",
+					"description": "The ID of the recurrence schedule for the message. Can be used for troubleshooting send issues."
+				},
+				{
+					"field": "ResponseToMobileMessageTrackingID",
+					"type": "Number",
+					"description": "The tracking ID of the response to the message"
+				},
+				{
+					"field": "IsValid",
+					"type": "Boolean",
+					"description": "If the message is valid"
+				},
+				{
+					"field": "InvalidationCode",
+					"type": "Number",
+					"description": "Invalidation code for the message"
+				},
+				{
+					"field": "SendID",
+					"type": "Number",
+					"description": "The send ID number for the SMS send"
+				},
+				{
+					"field": "SendSplitID",
+					"type": "Number",
+					"description": "If the message was split, the ID of the split"
+				},
+				{
+					"field": "SendSegmentID",
+					"type": "Number",
+					"description": "The ID of the segment tied to the message"
+				},
+				{
+					"field": "SendJobID",
+					"type": "Number",
+					"description": "The job ID for the SMS send"
+				},
+				{
+					"field": "SendGroupID",
+					"type": "Number",
+					"description": "The group ID for the SMS send"
+				},
+				{
+					"field": "SendPersonID",
+					"type": "Number",
+					"description": "The sendperson ID for the SMS send"
+				},
+				{
+					"field": "SubscriberID",
+					"type": "Number",
+					"description": "The subscriber ID for the affected subscriber. This number represents the unique ID for each subscriber record"
+				},
+				{
+					"field": "SubscriberKey",
+					"type": "Text",
+					"description": "The subscriber key for the affected subscriber"
+				},
+				{
+					"field": "SMSStandardStatusCodeId",
+					"type": "Number",
+					"description": "SFMC delivery status code"
+				},
+				{
+					"field": "Description",
+					"type": "Text",
+					"description": "Detailed description of the status code"
+				},
+				{
+					"field": "Name",
+					"type": "Text",
+					"description": "The name of your message"
+				},
+				{
+					"field": "ShortCode",
+					"type": "Text",
+					"description": "The short code or long code used to send your message"
+				},
+				{
+					"field": "SharedKeyword",
+					"type": "Text",
+					"description": "The keyword used in your message"
+				},
+				{
+					"field": "Ordinal",
+					"type": "Number",
+					"description": "Represents the parts in a multi-part message. Represented in ascending order starting at 0."
+				},
+				{
+					"field": "FromName",
+					"type": "Text",
+					"description": "From Name that an individual message was deployed with. Maximum length: 11 characters"
+				},
+				{
+					"field": "JBActivityID",
+					"type": "Text",
+					"description": "Unique identifier for the journey activity the message was deployed from"
+				},
+				{
+					"field": "JBDefinitionID",
+					"type": "Text",
+					"description": "Unique identifier for the journey a message was deployed from"
+				},
+				{
+					"field": "SMSJobID",
+					"type": "Text",
+					"description": "Unique identifier for each SMS job triggered in MobileConnect"
+				},
+				{
+					"field": "BatchID",
+					"type": "Number",
+					"description": "Identifies a batch associated with an SMS send"
+				}
+			]
+		},
+		{
+			"family": "Mobile Connect",
+			"name": "_SMSSubscriptionLog",
+			"fields": [
+				{
+					"field": "LogDate",
+					"type": "Date",
+					"description": "The date the subscription is logged"
+				},
+				{
+					"field": "SubscriberKey",
+					"type": "Text",
+					"description": "The subscriber key for the affected subscriber"
+				},
+				{
+					"field": "MobileSubscriptionID",
+					"type": "Number",
+					"description": "The unique ID of the subscription record"
+				},
+				{
+					"field": "SubscriptionDefinitionID",
+					"type": "Text",
+					"description": "The unique keyword ID"
+				},
+				{
+					"field": "MobileNumber",
+					"type": "Phone",
+					"description": "Mobile number for the subscriber"
+				},
+				{
+					"field": "OptOutStatusID",
+					"type": "Number",
+					"description": "Whether the subscriber has opted out of SMS messages. See key for values."
+				},
+				{
+					"field": "OptOutMethodID",
+					"type": "Number",
+					"description": "Method the subscriber used to opt out of SMS messages. See key for values."
+				},
+				{
+					"field": "OptOutDate",
+					"type": "Date",
+					"description": "Date the subscriber opted out of SMS messages"
+				},
+				{
+					"field": "OptInStatusID",
+					"type": "Number",
+					"description": "Whether the subscriber has opted in to SMS message. See key for values."
+				},
+				{
+					"field": "OptInMethodID",
+					"type": "Number",
+					"description": "Method the subscriber used to opt in to SMS messages. See key for values."
+				},
+				{
+					"field": "OptInDate",
+					"type": "Date",
+					"description": "Date the subscriber opted in to SMS messages"
+				},
+				{
+					"field": "Source",
+					"type": "Number",
+					"description": "The subscription source"
+				},
+				{
+					"field": "CreatedDate",
+					"type": "Date",
+					"description": "Date the message was created"
+				},
+				{
+					"field": "ModifiedDate",
+					"type": "Date",
+					"description": "Date the message was modified"
+				}
+			]
+		},
+		{
+			"family": "Mobile Connect",
+			"name": "_UndeliverableSms",
+			"fields": [
+				{
+					"field": "MobileNumber",
+					"type": "Phone",
+					"description": "Mobile number for the subscriber"
+				},
+				{
+					"field": "Undeliverable",
+					"type": "Boolean",
+					"description": "Indicates that the number is Held and that MobileConnect discontinued sending messages to the subscriber"
+				},
+				{
+					"field": "BounceCount",
+					"type": "Number",
+					"description": "Number of bounced SMS messages for subscriber"
+				},
+				{
+					"field": "FirstBounceDate",
+					"type": "Date",
+					"description": "The date when the first bounce occurred"
+				},
+				{
+					"field": "HoldDate",
+					"type": "Date",
+					"description": "The date when MobileConnect discontinued sending messages to the subscriber"
+				}
+			]
+		}
+	]
 }

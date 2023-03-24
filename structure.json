@@ -1249,73 +1249,6 @@
 			]
 		},
 		{
-			"family": "Group Connect",
-			"name": "_MobileLineAddressContactSubscriptionView",
-			"fields": [
-				{
-					"field": "ChannelID",
-					"type": "Text",
-					"description": "Channel ID of LINE account"
-				},
-				{
-					"field": "ContactID",
-					"type": "Number",
-					"description": "Marketing Cloud ContactId (system generated) linked to LINE UID"
-				},
-				{
-					"field": "ContactKey",
-					"type": "Text",
-					"description": "Marketing Cloud contact key (system generated) linked to LINE UID"
-				},
-				{
-					"field": "AddressID",
-					"type": "Text",
-					"description": "LINE UID"
-				},
-				{
-					"field": "IsActive",
-					"type": "Number",
-					"description": "Active flag: (1 = true, 0 = false)"
-				},
-				{
-					"field": "CreatedDate",
-					"type": "Date",
-					"description": "Date and time record created in Central Standard Time. Date the customer started following LINE account."
-				},
-				{
-					"field": "ModifiedDate",
-					"type": "Date",
-					"description": "Date and time record modified in Central Standard Time"
-				}
-			]
-		},
-		{
-			"family": "Group Connect",
-			"name": "_MobileLineOrphanContactView",
-			"fields": [
-				{
-					"field": "ContactID",
-					"type": "Number",
-					"description": "Marketing Cloud ContactId (system generated) linked to LINE UID"
-				},
-				{
-					"field": "ContactKey",
-					"type": "Text",
-					"description": "ContactKey is either system-generated or provided by user during import. Linked to LINE UID"
-				},
-				{
-					"field": "AddressID",
-					"type": "Text",
-					"description": "LINE UID"
-				},
-				{
-					"field": "CreatedDate",
-					"type": "Date",
-					"description": "Date and time record created (in Central Standard Time). Date the customer started following LINE account."
-				}
-			]
-		},
-		{
 			"family": "Automation Studio",
 			"name": "_AutomationInstance",
 			"fields": [
@@ -2203,6 +2136,73 @@
 					"description": ""
 				}
 			]
+		},		{
+			"family": "Group Connect",
+			"name": "_MobileLineAddressContactSubscriptionView",
+			"fields": [
+				{
+					"field": "ChannelID",
+					"type": "Text",
+					"description": "Channel ID of LINE account"
+				},
+				{
+					"field": "ContactID",
+					"type": "Number",
+					"description": "Marketing Cloud ContactId (system generated) linked to LINE UID"
+				},
+				{
+					"field": "ContactKey",
+					"type": "Text",
+					"description": "Marketing Cloud contact key (system generated) linked to LINE UID"
+				},
+				{
+					"field": "AddressID",
+					"type": "Text",
+					"description": "LINE UID"
+				},
+				{
+					"field": "IsActive",
+					"type": "Number",
+					"description": "Active flag: (1 = true, 0 = false)"
+				},
+				{
+					"field": "CreatedDate",
+					"type": "Date",
+					"description": "Date and time record created in Central Standard Time. Date the customer started following LINE account."
+				},
+				{
+					"field": "ModifiedDate",
+					"type": "Date",
+					"description": "Date and time record modified in Central Standard Time"
+				}
+			]
+		},
+		{
+			"family": "Group Connect",
+			"name": "_MobileLineOrphanContactView",
+			"fields": [
+				{
+					"field": "ContactID",
+					"type": "Number",
+					"description": "Marketing Cloud ContactId (system generated) linked to LINE UID"
+				},
+				{
+					"field": "ContactKey",
+					"type": "Text",
+					"description": "ContactKey is either system-generated or provided by user during import. Linked to LINE UID"
+				},
+				{
+					"field": "AddressID",
+					"type": "Text",
+					"description": "LINE UID"
+				},
+				{
+					"field": "CreatedDate",
+					"type": "Date",
+					"description": "Date and time record created (in Central Standard Time). Date the customer started following LINE account."
+				}
+			]
 		}
+
 	]
 }

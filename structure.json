@@ -1743,12 +1743,12 @@
 			"name": "_MobileAddress",
 			"fields": [
 				{
-					"field": "_ContactID",
+					"field": "_MobileNumber",
 					"type": "Text",
 					"description": ""
 				},
 				{
-					"field": "_MobileNumber",
+					"field": "_ContactID",
 					"type": "Text",
 					"description": ""
 				},

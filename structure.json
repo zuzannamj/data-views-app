@@ -1262,14 +1262,14 @@
 					"description": "The automation name."
 				},
 				{
-					"field": "AutomationDescription",
-					"type": "Text",
-					"description": "The automation description."
-				},
-				{
 					"field": "AutomationCustomerKey",
 					"type": "Text",
 					"description": "The unique ID of the automation."
+				},
+				{
+					"field": "AutomationDescription",
+					"type": "Text",
+					"description": "The automation description."
 				},
 				{
 					"field": "AutomationType",

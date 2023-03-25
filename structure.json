@@ -762,16 +762,6 @@
          "about":"description",
          "fields":[
             {
-               "field":"JobID",
-               "type":"number",
-               "description":"The job ID number for the email send"
-            },
-            {
-               "field":"EmailID",
-               "type":"number",
-               "description":"The email ID for the job"
-            },
-            {
                "field":"AccountID",
                "type":"number",
                "description":"The ID number for the account that performed the job"
@@ -780,6 +770,15 @@
                "field":"AccountUserID",
                "type":"number",
                "description":"The ID number for the account user that performed the job"
+            },{
+               "field":"JobID",
+               "type":"number",
+               "description":"The job ID number for the email send"
+            },
+            {
+               "field":"EmailID",
+               "type":"number",
+               "description":"The email ID for the job"
             },
             {
                "field":"FromName",
@@ -1946,12 +1945,12 @@
          "about":"description",
          "fields":[
             {
-               "field":"_ContactID",
+               "field":"_DeviceID",
                "type":"Text",
                "description":""
             },
             {
-               "field":"_DeviceID",
+               "field":"_ContactID",
                "type":"Text",
                "description":""
             },

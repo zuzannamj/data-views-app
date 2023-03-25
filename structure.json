@@ -1763,7 +1763,7 @@
       {
          "family":"Mobile Connect",
          "name":"_MobileAddress",
-         "about":"description",
+         "about":"These data views are no longer supported and have been replaced by SMSSubscriptionLog and SMSMessageTracking.",
          "fields":[
             {
                "field":"_MobileNumber",
@@ -1870,7 +1870,7 @@
       {
          "family":"Mobile Connect",
          "name":"_MobileSubscription",
-         "about":"description",
+         "about":"These data views are no longer supported and have been replaced by SMSSubscriptionLog and SMSMessageTracking. ",
          "fields":[
             {
                "field":"_MobileNumber",
@@ -1942,7 +1942,7 @@
       {
          "family":"Mobile Push",
          "name":"_PushAddress",
-         "about":"description",
+         "about":"This is an unofficial, unsupported data view, please use it with caution.",
          "fields":[
             {
                "field":"_DeviceID",
@@ -2124,7 +2124,7 @@
       {
          "family":"Mobile Push",
          "name":"_PushTag",
-         "about":"description",
+         "about":"This is an unofficial, unsupported data view, please use it with caution.",
          "fields":[
             {
                "field":"_DeviceID",

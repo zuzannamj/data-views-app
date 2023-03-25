@@ -544,6 +544,11 @@
 					"description": "The subscriber ID for the affected subscriber. This number represents the unique ID for each subscriber record."
 				},
 				{
+					"field": "SubscriberKey",
+					"type": "text",
+					"description": "A potential alternate identifier for subscribers. Defaults to the value of Email Address."
+				},
+				{
 					"field": "DateUndeliverable",
 					"type": "date",
 					"description": "The date an email for the subscriber was returned as undeliverable."
@@ -574,11 +579,6 @@
 					"description": "The total number of bounces accrued by the subscriber."
 				},
 				{
-					"field": "SubscriberKey",
-					"type": "text",
-					"description": "A potential alternate identifier for subscribers. Defaults to the value of Email Address."
-				},
-				{
 					"field": "SubscriberType",
 					"type": "text",
 					"description": "The subscriber type for the affected subscriber."
@@ -600,6 +600,15 @@
 			"name": "_ListSubscribers",
 			"fields": [
 				{
+					"field": "SubscriberID",
+					"type": "number",
+					"description": "The subscriber ID for the affected subscriber. This number represents the unique ID for each subscriber record."
+				},
+				{
+					"field": "SubscriberKey",
+					"type": "text",
+					"description": "The subscriber key for the affected subscriber"
+				},{
 					"field": "AddedBy",
 					"type": "number",
 					"description": "The ID of the user who ran the process that added the subscriber"
@@ -643,16 +652,6 @@
 					"field": "Status",
 					"type": "text",
 					"description": "The status of the subscriber"
-				},
-				{
-					"field": "SubscriberID",
-					"type": "number",
-					"description": "The subscriber ID for the affected subscriber. This number represents the unique ID for each subscriber record."
-				},
-				{
-					"field": "SubscriberKey",
-					"type": "text",
-					"description": "The subscriber key for the affected subscriber"
 				},
 				{
 					"field": "SubscriberType",

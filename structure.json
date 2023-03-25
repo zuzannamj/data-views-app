@@ -1419,6 +1419,21 @@
 			"name": "_SMSMessageTracking",
 			"fields": [
 				{
+					"field": "Mobile",
+					"type": "Phone",
+					"description": "Mobile number for the subscriber"
+				},
+				{
+					"field": "SubscriberID",
+					"type": "Number",
+					"description": "The subscriber ID for the affected subscriber. This number represents the unique ID for each subscriber record"
+				},
+				{
+					"field": "SubscriberKey",
+					"type": "Text",
+					"description": "The subscriber key for the affected subscriber"
+				},
+				{
 					"field": "MobileMessageTrackingID",
 					"type": "Number",
 					"description": "Unique ID for tracking information related to the sent message"
@@ -1433,11 +1448,7 @@
 					"type": "Number",
 					"description": "Member ID"
 				},
-				{
-					"field": "Mobile",
-					"type": "Phone",
-					"description": "Mobile number for the subscriber"
-				},
+				
 				{
 					"field": "MessageID",
 					"type": "Number",
@@ -1562,16 +1573,6 @@
 					"field": "SendPersonID",
 					"type": "Number",
 					"description": "The sendperson ID for the SMS send"
-				},
-				{
-					"field": "SubscriberID",
-					"type": "Number",
-					"description": "The subscriber ID for the affected subscriber. This number represents the unique ID for each subscriber record"
-				},
-				{
-					"field": "SubscriberKey",
-					"type": "Text",
-					"description": "The subscriber key for the affected subscriber"
 				},
 				{
 					"field": "SMSStandardStatusCodeId",

@@ -502,16 +502,6 @@
 					"description": "The Account ID for the Business Unit (BU)."
 				},
 				{
-					"field": "SubscriberID",
-					"type": "number",
-					"description": "The subscriber ID for the affected subscriber. This number represents the unique ID for each subscriber record."
-				},
-				{
-					"field": "SubscriberKey",
-					"type": "text",
-					"description": "A potential alternate identifier for subscribers. Defaults to the value of Email Address."
-				},
-				{
 					"field": "UnsubDateUTC",
 					"type": "date",
 					"description": "The date the subscriber unsubscribed from messages sent by BU."
@@ -520,6 +510,16 @@
 					"field": "UnsubReason",
 					"type": "text",
 					"description": "The reason listed is a custom value configured by your administrator."
+				},
+				{
+					"field": "SubscriberID",
+					"type": "number",
+					"description": "The subscriber ID for the affected subscriber. This number represents the unique ID for each subscriber record."
+				},
+				{
+					"field": "SubscriberKey",
+					"type": "text",
+					"description": "A potential alternate identifier for subscribers. Defaults to the value of Email Address."
 				}
 			]
 		},
@@ -793,6 +793,16 @@
 					"description": "The time the email was delivered"
 				},
 				{
+					"field": "TriggererSendDefinitionObjectID",
+					"type": "Text",
+					"description": "The object ID for the triggered send definition"
+				},
+				{
+					"field": "TriggeredSendCustomerKey",
+					"type": "Text",
+					"description": "The customer key for the triggered send"
+				},
+				{
 					"field": "EventID",
 					"type": "text",
 					"description": "The ID for the job event"
@@ -921,16 +931,107 @@
 					"field": "DeduplicateByEmail",
 					"type": "Boolean",
 					"description": "Whether the email addresses in the job are used to deduplicate subscribers"
+				}
+			]
+		},
+		{
+			"family": "Email",
+			"name": "_SurveyResponse",
+			"fields": [
+				{
+					"field": "AccountID",
+					"type": "Number",
+					"description": "Your account ID number"
 				},
 				{
-					"field": "TriggererSendDefinitionObjectID",
-					"type": "Text",
-					"description": "The object ID for the triggered send definition"
+					"field": "OYBAccountID",
+					"type": "Number",
+					"description": "The account ID number for any related On-Your-Behalf accounts. This field applies to enterprise accounts only."
 				},
 				{
-					"field": "TriggeredSendCustomerKey",
+					"field": "JobID",
+					"type": "Number",
+					"description": "The job ID number for the email send"
+				},
+				{
+					"field": "ListID",
+					"type": "Number",
+					"description": "The list ID number for the list used in the send"
+				},
+				{
+					"field": "BatchID",
+					"type": "Number",
+					"description": "The batch ID number for any batches used in the send"
+				},
+				{
+					"field": "SubscriberID",
+					"type": "Number",
+					"description": "The subscriber ID for the affected subscriber. This number represents the unique ID for each subscriber record."
+				},
+				{
+					"field": "SubscriberKey",
 					"type": "Text",
-					"description": "The customer key for the triggered send"
+					"description": "The subscriber key for the affected subscriber"
+				},
+				{
+					"field": "EventDate",
+					"type": "Date",
+					"description": "The date the survey response took place"
+				},
+				{
+					"field": "Domain",
+					"type": "Text",
+					"description": "The domain at which the survey response occurred"
+				},
+				{
+					"field": "SurveyID",
+					"type": "Number",
+					"description": "The ID of the survey"
+				},
+				{
+					"field": "SurveyName",
+					"type": "Text",
+					"description": "The name of the survey"
+				},
+				{
+					"field": "IsUnique",
+					"type": "Number",
+					"description": "Whether the response is unique or not"
+				},
+				{
+					"field": "QuestionID",
+					"type": "Number",
+					"description": "The ID of the survey question"
+				},
+				{
+					"field": "QuestionName",
+					"type": "Text",
+					"description": "The name of the survey question"
+				},
+				{
+					"field": "Question",
+					"type": "Text",
+					"description": "The survey question"
+				},
+				{
+					"field": "AnswerID",
+					"type": "Number",
+					"description": "The ID of the answer"
+				},
+				{
+					"field": "AnswerName",
+					"type": "Text",
+					"description": "The name of the answer"
+				},
+				{
+					"field": "Answer",
+					"type": "Text",
+					"description": "The Boolean answer to the survey question"
+				},
+				{
+					"field": "AnswerData",
+					"type": "Text",
+					"description": "The text content of the survey answer"
 				}
 			]
 		},
@@ -1113,107 +1214,6 @@
 					"field": "PublishTime",
 					"type": "Date",
 					"description": "The time the social content area was published"
-				}
-			]
-		},
-		{
-			"family": "Email",
-			"name": "_SurveyResponse",
-			"fields": [
-				{
-					"field": "AccountID",
-					"type": "Number",
-					"description": "Your account ID number"
-				},
-				{
-					"field": "OYBAccountID",
-					"type": "Number",
-					"description": "The account ID number for any related On-Your-Behalf accounts. This field applies to enterprise accounts only."
-				},
-				{
-					"field": "JobID",
-					"type": "Number",
-					"description": "The job ID number for the email send"
-				},
-				{
-					"field": "ListID",
-					"type": "Number",
-					"description": "The list ID number for the list used in the send"
-				},
-				{
-					"field": "BatchID",
-					"type": "Number",
-					"description": "The batch ID number for any batches used in the send"
-				},
-				{
-					"field": "SubscriberID",
-					"type": "Number",
-					"description": "The subscriber ID for the affected subscriber. This number represents the unique ID for each subscriber record."
-				},
-				{
-					"field": "SubscriberKey",
-					"type": "Text",
-					"description": "The subscriber key for the affected subscriber"
-				},
-				{
-					"field": "EventDate",
-					"type": "Date",
-					"description": "The date the survey response took place"
-				},
-				{
-					"field": "Domain",
-					"type": "Text",
-					"description": "The domain at which the survey response occurred"
-				},
-				{
-					"field": "SurveyID",
-					"type": "Number",
-					"description": "The ID of the survey"
-				},
-				{
-					"field": "SurveyName",
-					"type": "Text",
-					"description": "The name of the survey"
-				},
-				{
-					"field": "IsUnique",
-					"type": "Number",
-					"description": "Whether the response is unique or not"
-				},
-				{
-					"field": "QuestionID",
-					"type": "Number",
-					"description": "The ID of the survey question"
-				},
-				{
-					"field": "QuestionName",
-					"type": "Text",
-					"description": "The name of the survey question"
-				},
-				{
-					"field": "Question",
-					"type": "Text",
-					"description": "The survey question"
-				},
-				{
-					"field": "AnswerID",
-					"type": "Number",
-					"description": "The ID of the answer"
-				},
-				{
-					"field": "AnswerName",
-					"type": "Text",
-					"description": "The name of the answer"
-				},
-				{
-					"field": "Answer",
-					"type": "Text",
-					"description": "The Boolean answer to the survey question"
-				},
-				{
-					"field": "AnswerData",
-					"type": "Text",
-					"description": "The text content of the survey answer"
 				}
 			]
 		},

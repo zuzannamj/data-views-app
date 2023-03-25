@@ -1424,14 +1424,14 @@
 					"description": "Mobile number for the subscriber"
 				},
 				{
-					"field": "SubscriberID",
-					"type": "Number",
-					"description": "The subscriber ID for the affected subscriber. This number represents the unique ID for each subscriber record"
-				},
-				{
 					"field": "SubscriberKey",
 					"type": "Text",
 					"description": "The subscriber key for the affected subscriber"
+				},
+				{
+					"field": "SubscriberID",
+					"type": "Number",
+					"description": "The subscriber ID for the affected subscriber. This number represents the unique ID for each subscriber record"
 				},
 				{
 					"field": "MobileMessageTrackingID",
@@ -1636,14 +1636,19 @@
 			"name": "_SMSSubscriptionLog",
 			"fields": [
 				{
-					"field": "LogDate",
-					"type": "Date",
-					"description": "The date the subscription is logged"
+					"field": "MobileNumber",
+					"type": "Phone",
+					"description": "Mobile number for the subscriber"
 				},
 				{
 					"field": "SubscriberKey",
 					"type": "Text",
 					"description": "The subscriber key for the affected subscriber"
+				},
+				{
+					"field": "LogDate",
+					"type": "Date",
+					"description": "The date the subscription is logged"
 				},
 				{
 					"field": "MobileSubscriptionID",
@@ -1654,11 +1659,6 @@
 					"field": "SubscriptionDefinitionID",
 					"type": "Text",
 					"description": "The unique keyword ID"
-				},
-				{
-					"field": "MobileNumber",
-					"type": "Phone",
-					"description": "Mobile number for the subscriber"
 				},
 				{
 					"field": "OptOutStatusID",
@@ -2141,11 +2141,6 @@
 			"name": "_MobileLineAddressContactSubscriptionView",
 			"fields": [
 				{
-					"field": "ChannelID",
-					"type": "Text",
-					"description": "Channel ID of LINE account"
-				},
-				{
 					"field": "ContactID",
 					"type": "Number",
 					"description": "Marketing Cloud ContactId (system generated) linked to LINE UID"
@@ -2154,6 +2149,11 @@
 					"field": "ContactKey",
 					"type": "Text",
 					"description": "Marketing Cloud contact key (system generated) linked to LINE UID"
+				},
+				{
+					"field": "ChannelID",
+					"type": "Text",
+					"description": "Channel ID of LINE account"
 				},
 				{
 					"field": "AddressID",

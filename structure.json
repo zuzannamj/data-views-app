@@ -239,7 +239,7 @@
       {
          "family":"Email",
          "name":"_Click",
-         "about":"Query this data view in Automation Studio to view click data for emails from your Marketing Cloud account.\n\nView clicks for links in emails sent from your account by querying the _Click data view. Records dating back six months from the day the query runs are available.\n\nDates and times are stored in Central Standard Time. Daylight Savings Time is not observed. To view time-related data in your time zone, set time zone user preferences.",
+         "about":"Query this data view in Automation Studio to view click data for emails from your Marketing Cloud account.\n\nView clicks for links in emails sent from your account by querying the _Click data view. Records dating back six months from the day the query runs are available.",
          "fields":[
             {
                "field":"AccountID",

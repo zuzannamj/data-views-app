@@ -1849,12 +1849,12 @@
 			"name": "_MobileSubscription",
 			"fields": [
 				{
-					"field": "_SubscriptionDefinitionID",
+					"field": "_MobileNumber",
 					"type": "Text",
 					"description": ""
 				},
 				{
-					"field": "_MobileNumber",
+					"field": "_SubscriptionDefinitionID",
 					"type": "Text",
 					"description": ""
 				},

@@ -3,7 +3,7 @@
       {
          "family":"Email",
          "name":"_Sent",
-         "about":"Query this data view in Automation Studio to find the subscribers sent emails from your Marketing Cloud account.\\n\\nView subscribers who were sent emails from your account by querying the _Sent data view. Records dating back six months from the day the query runs are available.",
+         "about":"Query this data view in Automation Studio to find the subscribers sent emails from your Marketing Cloud account.<br /><br />View subscribers who were sent emails from your account by querying the _Sent data view.<br /><br />Records dating back six months from the day the query runs are available.",
          "fields":[
             {
                "field":"AccountID",

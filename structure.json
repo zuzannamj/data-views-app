@@ -3,7 +3,7 @@
       {
          "family":"Email",
          "name":"_Sent",
-         "about":"Query this data view in Automation Studio to find the subscribers sent emails from your Marketing Cloud account.<br /><br />View subscribers who were sent emails from your account by querying the _Sent data view.<br /><br />Records dating back six months from the day the query runs are available.",
+         "about":"Query this data view in Automation Studio to find the subscribers sent emails from your Marketing Cloud account. View subscribers who were sent emails from your account by querying the _Sent data view. Records dating back six months from the day the query runs are available.",
          "fields":[
             {
                "field":"AccountID",
@@ -65,7 +65,7 @@
       {
          "family":"Email",
          "name":"_Open",
-         "about":"Query this data view in Automation Studio to find email opens for your Marketing Cloud account.\n\nView email opens for your account by querying the _Open data view. Records dating back six months from the day the query runs are available.\n\nDates and times are stored in Central Standard Time. Daylight Savings Time is not observed. To view time-related data in your time zone, set time zone user preferences.",
+         "about":"Query this data view in Automation Studio to find email opens for your Marketing Cloud account. View email opens for your account by querying the _Open data view. Records dating back six months from the day the query runs are available.",
          "fields":[
             {
                "field":"AccountID",
@@ -132,7 +132,7 @@
       {
          "family":"Email",
          "name":"_Bounce",
-         "about":"To view bounce data for emails from your Marketing Cloud account, query the _bounce data view in Automation Studio.\n\nView bounce data for emails from your account by querying the _bounce data view. Records dating back six months from the day the query runs are available.\n\nDates and times are stored in Central Standard Time. Daylight Savings Time isn’t observed. To view time-related data in your time zone, set time zone user preferences.",
+         "about":"To view bounce data for emails from your Marketing Cloud account, query the _bounce data view in Automation Studio. View bounce data for emails from your account by querying the _bounce data view. Records dating back six months from the day the query runs are available.",
          "fields":[
             {
                "field":"AccountID",
@@ -239,7 +239,7 @@
       {
          "family":"Email",
          "name":"_Click",
-         "about":"Query this data view in Automation Studio to view click data for emails from your Marketing Cloud account.\n\nView clicks for links in emails sent from your account by querying the _Click data view. Records dating back six months from the day the query runs are available.",
+         "about":"Query this data view in Automation Studio to view click data for emails from your Marketing Cloud account. View clicks for links in emails sent from your account by querying the _Click data view. Records dating back six months from the day the query runs are available.",
          "fields":[
             {
                "field":"AccountID",
@@ -321,7 +321,7 @@
       {
          "family":"Email",
          "name":"_FTAT",
-         "about":"description",
+         "about":"Query this data view in Automation Studio to view behavioral information related to email messages from your Marketing Cloud account that were forwarded to friends. View behavioral information related to email messages from your account that were forwarded to friends (FTAF) by querying the _FTAF data view. Records dating back six months from the day the query runs are available.",
          "fields":[
             {
                "field":"AccountID",
@@ -388,7 +388,7 @@
       {
          "family":"Email",
          "name":"_Unsubscribe",
-         "about":"description",
+         "about":"Query this data view in Automation Studio to find unsubscribes from email lists in your Marketing Cloud account. View unsubscribes from email lists in your account by querying the _Unsubscribe data view. Records dating back six months from the day the query runs are available.",
          "fields":[
             {
                "field":"AccountID",
@@ -445,7 +445,7 @@
       {
          "family":"Email",
          "name":"_Complaint",
-         "about":"description",
+         "about":"Query this data view in Automation Studio to view complaints data related to emails from your Marketing Cloud account. View data regarding spam complaints from subscribers about email sends from your account by querying the _Complaint data view. Records dating back six months from the day the query runs are available.",
          "fields":[
             {
                "field":"AccountID",
@@ -502,7 +502,7 @@
       {
          "family":"Email",
          "name":"_BusinessUnitUnsubscribes",
-         "about":"description",
+         "about":"To find subscribers in your account and their child business unit unsubscribe data, use the _BusinessUnitUnsubscribes data view in Marketing Cloud Automation Studio. You can only run the data view on the parent account only and not on child business units.",
          "fields":[
             {
                "field":"BusinessUnitID",
@@ -534,7 +534,7 @@
       {
          "family":"Subscribers",
          "name":"_EnterpriseAttribute",
-         "about":"description",
+         "about":"Query this data view in Automation Studio to view subscribers in your Enterprise Marketing Cloud account and their profile attributes. View subscribers in your Enterprise account and their profile attributes by querying the _EnterpriseAttribute data view. This data view is for Enterprise 2.0 clients only. When profile attributes are created in Enterprise 2.0 accounts, new columns are added to the _EnterpriseAttribute table. Data view queries in Enterprise 2.0 accounts can return results from profile attribute columns in addition to the columns listed here. This data view is only available in the Parent account and can't be used in a business unit.",
          "fields":[
             {
                "field":"_SubscriberID",
@@ -546,7 +546,7 @@
       {
          "family":"Subscribers",
          "name":"_Subscribers",
-         "about":"description",
+         "about":"Query this data view in Automation Studio to find subscribers in your Marketing Cloud account and their statuses. View email subscribers in your account and their statuses by querying the _Subscribers data view. Subscriber attributes aren’t available. This data view only returns results at the Enterprise level, and not for business units.",
          "fields":[
             {
                "field":"SubscriberID",
@@ -608,7 +608,7 @@
       {
          "family":"Subscribers",
          "name":"_ListSubscribers",
-         "about":"description",
+         "about":"Query this data view in Automation Studio to find subscribers on lists in your Marketing Cloud account. View subscribers on lists in your account by querying the _ListSubscribers data view.",
          "fields":[
             {
                "field":"SubscriberID",
@@ -675,7 +675,7 @@
       {
          "family":"Journey Builder",
          "name":"_Journey",
-         "about":"description",
+         "about":"Find a journey's status, created and last modified date, and other general journey information using this Journey Builder data view. View data about your Journey Builder journeys using the _Journey System Data View.",
          "fields":[
             {
                "field":"VersionID",
@@ -722,7 +722,7 @@
       {
          "family":"Journey Builder",
          "name":"_JourneyActivity",
-         "about":"description",
+         "about":"Use this data view to join to the email tracking system data views. Also use it to identify the Triggered Send Definition associated to an email activity in a Marketing Cloud journey and more. View data about activities included in your Journey Builder journeys using the _JourneyActivity data view.",
          "fields":[
             {
                "field":"VersionID",
@@ -759,7 +759,7 @@
       {
          "family":"Email",
          "name":"_Job",
-         "about":"description",
+         "about":"Query this data view in Automation Studio to find data on Marketing Cloud email send jobs. View email send jobs from your account by querying the _Job data view.",
          "fields":[
             {
                "field":"AccountID",
@@ -950,7 +950,7 @@
       {
          "family":"Email",
          "name":"_SurveyResponse",
-         "about":"description",
+         "about":"Query this data view in Automation Studio to find responses to surveys sent from your Marketing Cloud account. View responses to surveys sent from your account by querying the _SurveyResponse data view. Records dating back six months from the day the query runs are available.",
          "fields":[
             {
                "field":"AccountID",
@@ -1052,7 +1052,7 @@
       {
          "family":"Email",
          "name":"_SocialNetworkImpressions",
-         "about":"description",
+         "about":"Query this data view in Automation Studio to find data on content shared from your Marketing Cloud sends via Social Forward. View impression data on content shared from your sends via Social Forward by querying the _SocialNetworkImpressions data view.",
          "fields":[
             {
                "field":"JobID",
@@ -1134,7 +1134,7 @@
       {
          "family":"Email",
          "name":"_SocialNetworkTracking",
-         "about":"description",
+         "about":"Query this data view in Automation Studio to find tracking data on content shared from your Marketing Cloud sends via Social Forward. View tracking data on content shared from your sends via Social Forward by querying the _SocialNetworkTracking view.",
          "fields":[
             {
                "field":"SubscriberID",
@@ -1236,7 +1236,7 @@
       {
          "family":"Email",
          "name":"_Coupon",
-         "about":"description",
+         "about":"View data regarding coupons used in your Marketing Cloud account by querying the _Coupon data view in Automation Studio. To use this data view, you must use live content in Content Builder Block SDK.",
          "fields":[
             {
                "field":"Name",
@@ -1268,7 +1268,7 @@
       {
          "family":"Automation Studio",
          "name":"_AutomationInstance",
-         "about":"description",
+         "about":"Get a big-picture view of all automations within a tenant, and improve the efficiency and success rate of your automations by reviewing automation health. Query the _AutomationInstance data view in Automation Studio to prevent failures by identifying long-running processes and fix failed automations by addressing the cause of failure.",
          "fields":[
             {
                "field":"MemberID",
@@ -1360,7 +1360,7 @@
       {
          "family":"Automation Studio",
          "name":"_AutomationActivityInstance",
-         "about":"description",
+         "about":"Improve the efficiency and success rate of your automations by reviewing automation activity health. Query the _AutomationActivityInstance data view in Automation Studio to prevent failures by identifying activities that often fail or run long.",
          "fields":[
             {
                "field":"MemberID",
@@ -1437,7 +1437,7 @@
       {
          "family":"Mobile Connect",
          "name":"_SMSMessageTracking",
-         "about":"description",
+         "about":"Query this data view in Automation Studio to find message tracking information from Marketing Cloud MobileConnect SMS sends. This data view allows customers to view their send and receive history. Information from this query relates to the owner of a private short code or long code. Query information can also relate to a client using a shared short code to which the subscriber has opted in.",
          "fields":[
             {
                "field":"Mobile",
@@ -1654,7 +1654,7 @@
       {
          "family":"Mobile Connect",
          "name":"_SMSSubscriptionLog",
-         "about":"description",
+         "about":"Query this data view in Automation Studio to find subscription log information from Marketing Cloud MobileConnect SMS sends. For example, view a history of all mobile numbers subscribed to a keyword. View subscription log information about SMS sends in MobileConnect by querying the _SMSSubscriptionLog data view. Information from this query relates to the owner of a private short code or long code or a client using a shared short code to which the subscriber has opted in. This data view shows more than 6 months of data.",
          "fields":[
             {
                "field":"MobileNumber",
@@ -1731,7 +1731,7 @@
       {
          "family":"Mobile Connect",
          "name":"_UndeliverableSms",
-         "about":"description",
+         "about":"Query this data view in Automation Studio to find failed message deliveries to Marketing Cloud MobileConnect subscribers. View information about failed message deliveries to MobileConnect subscribers by querying the _UndeliverableSms data view. Information from this query relates to the owner of a private short code or long code, or a client using a shared short code to which the subscriber has opted in.",
          "fields":[
             {
                "field":"MobileNumber",
@@ -1763,7 +1763,7 @@
       {
          "family":"Mobile Connect",
          "name":"_MobileAddress",
-         "about":"These data views are no longer supported and have been replaced by SMSSubscriptionLog and SMSMessageTracking.",
+         "about":"These data views are no longer officially supported and have been replaced by SMSSubscriptionLog and SMSMessageTracking.",
          "fields":[
             {
                "field":"_MobileNumber",
@@ -1870,7 +1870,7 @@
       {
          "family":"Mobile Connect",
          "name":"_MobileSubscription",
-         "about":"These data views are no longer supported and have been replaced by SMSSubscriptionLog and SMSMessageTracking. ",
+         "about":"These data views are no longer officially supported and have been replaced by SMSSubscriptionLog and SMSMessageTracking. ",
          "fields":[
             {
                "field":"_MobileNumber",
@@ -2166,7 +2166,7 @@
       {
          "family":"Group Connect",
          "name":"_MobileLineAddressContactSubscriptionView",
-         "about":"description",
+         "about":"To view active LINE followers and users who have blocked your brand, you can query GroupConnect data view in Automation Studio. With Contact Subscriptions, customers can view their current subscribers each day. Prerequisites: Enable the business rule SYSTEM_DATA_VIEWS on your account and set it to 1. Your account is checked upon load of the GroupConnect app, and if it doesn't exist, it’s created. To access this view for the first time, a user or admin within the Business Unit must navigate to the GroupConnect channel app. This step triggers the creation of the view.",
          "fields":[
             {
                "field":"ContactID",
@@ -2208,7 +2208,7 @@
       {
          "family":"Group Connect",
          "name":"_MobileLineOrphanContactView",
-         "about":"description",
+         "about":"If an import has multiple ContactKeys for the same LINE Address ID in GroupConnect Contact Import, the system keeps one ContactKey. The remaining ContactKeys are orphaned. To view orphaned contacts, you can query the MobileLineOrphanContactView data view in Automation Studio.",
          "fields":[
             {
                "field":"ContactID",

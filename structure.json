@@ -117,15 +117,15 @@
                "type":"boolean",
                "description":"Indicates whether the email open event is unique."
             },
-            {
-               "field":"URL",
+                        {
+               "field":"TriggeredSendDefinitionObjectID",
                "type":"text",
-               "description":"URL of the link clicked if the click event is associated with the open event."
+               "description":"Identifies the triggered send definition associated with the send."
             },
             {
-               "field":"Alias",
+               "field":"TriggeredSendCustomerKey",
                "type":"text",
-               "description":"Alias of the link clicked if the click event is associated with the open event."
+               "description":"The unique identifier for the triggered send definition."
             }
          ]
       },

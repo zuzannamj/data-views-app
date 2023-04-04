@@ -3,7 +3,7 @@
       {
          "family":"Email",
          "name":"_Sent",
-         "about":"Query this data view in Automation Studio to find the subscribers sent emails from your Marketing Cloud account. View subscribers who were sent emails from your account by querying the _Sent data view. Records dating back six months from the day the query runs are available.",
+         "about":"View subscribers who were sent emails from your account by querying the _Sent data view. Records dating back six months from the day the query runs are available.",
          "fields":[
             {
                "field":"AccountID",
@@ -65,7 +65,7 @@
       {
          "family":"Email",
          "name":"_Open",
-         "about":"Query this data view in Automation Studio to find email opens for your Marketing Cloud account. View email opens for your account by querying the _Open data view. Records dating back six months from the day the query runs are available.",
+         "about":"View email opens for your account by querying the _Open data view. Records dating back six months from the day the query runs are available.",
          "fields":[
             {
                "field":"AccountID",
@@ -132,7 +132,7 @@
       {
          "family":"Email",
          "name":"_Bounce",
-         "about":"To view bounce data for emails from your Marketing Cloud account, query the _bounce data view in Automation Studio. View bounce data for emails from your account by querying the _bounce data view. Records dating back six months from the day the query runs are available.",
+         "about":"View bounce data for emails from your account by querying the _bounce data view. Records dating back six months from the day the query runs are available.",
          "fields":[
             {
                "field":"AccountID",
@@ -239,7 +239,7 @@
       {
          "family":"Email",
          "name":"_Click",
-         "about":"Query this data view in Automation Studio to view click data for emails from your Marketing Cloud account. View clicks for links in emails sent from your account by querying the _Click data view. Records dating back six months from the day the query runs are available.",
+         "about":"View clicks for links in emails sent from your account by querying the _Click data view. Records dating back six months from the day the query runs are available.",
          "fields":[
             {
                "field":"AccountID",
@@ -321,7 +321,7 @@
       {
          "family":"Email",
          "name":"_FTAT",
-         "about":"Query this data view in Automation Studio to view behavioral information related to email messages from your Marketing Cloud account that were forwarded to friends. View behavioral information related to email messages from your account that were forwarded to friends (FTAF) by querying the _FTAF data view. Records dating back six months from the day the query runs are available.",
+         "about":"Query this data view to view behavioral information related to email messages from your Marketing Cloud account that were forwarded to friends. View behavioral information related to email messages from your account that were forwarded to friends (FTAF) by querying the _FTAF data view. Records dating back six months from the day the query runs are available.",
          "fields":[
             {
                "field":"AccountID",
@@ -388,7 +388,7 @@
       {
          "family":"Email",
          "name":"_Unsubscribe",
-         "about":"Query this data view in Automation Studio to find unsubscribes from email lists in your Marketing Cloud account. View unsubscribes from email lists in your account by querying the _Unsubscribe data view. Records dating back six months from the day the query runs are available.",
+         "about":"View unsubscribes from email lists in your account by querying the _Unsubscribe data view. Records dating back six months from the day the query runs are available.",
          "fields":[
             {
                "field":"AccountID",
@@ -445,7 +445,7 @@
       {
          "family":"Email",
          "name":"_Complaint",
-         "about":"Query this data view in Automation Studio to view complaints data related to emails from your Marketing Cloud account. View data regarding spam complaints from subscribers about email sends from your account by querying the _Complaint data view. Records dating back six months from the day the query runs are available.",
+         "about":"View data regarding spam complaints from subscribers about email sends from your account by querying the _Complaint data view. Records dating back six months from the day the query runs are available.",
          "fields":[
             {
                "field":"AccountID",
@@ -608,7 +608,7 @@
       {
          "family":"Subscribers",
          "name":"_ListSubscribers",
-         "about":"Query this data view in Automation Studio to find subscribers on lists in your Marketing Cloud account. View subscribers on lists in your account by querying the _ListSubscribers data view.",
+         "about":"View subscribers on lists in your account by querying the _ListSubscribers data view.",
          "fields":[
             {
                "field":"SubscriberID",
@@ -759,7 +759,7 @@
       {
          "family":"Email",
          "name":"_Job",
-         "about":"Query this data view in Automation Studio to find data on Marketing Cloud email send jobs. View email send jobs from your account by querying the _Job data view.",
+         "about":"View email send jobs from your account by querying the _Job data view.",
          "fields":[
             {
                "field":"AccountID",
@@ -950,7 +950,7 @@
       {
          "family":"Email",
          "name":"_SurveyResponse",
-         "about":"Query this data view in Automation Studio to find responses to surveys sent from your Marketing Cloud account. View responses to surveys sent from your account by querying the _SurveyResponse data view. Records dating back six months from the day the query runs are available.",
+         "about":"View responses to surveys sent from your account by querying the _SurveyResponse data view. Records dating back six months from the day the query runs are available.",
          "fields":[
             {
                "field":"AccountID",
@@ -1052,7 +1052,7 @@
       {
          "family":"Email",
          "name":"_SocialNetworkImpressions",
-         "about":"Query this data view in Automation Studio to find data on content shared from your Marketing Cloud sends via Social Forward. View impression data on content shared from your sends via Social Forward by querying the _SocialNetworkImpressions data view.",
+         "about":"Query this data view to find data on content shared from your Marketing Cloud sends via Social Forward. View impression data on content shared from your sends via Social Forward by querying the _SocialNetworkImpressions data view.",
          "fields":[
             {
                "field":"JobID",
@@ -1134,7 +1134,7 @@
       {
          "family":"Email",
          "name":"_SocialNetworkTracking",
-         "about":"Query this data view in Automation Studio to find tracking data on content shared from your Marketing Cloud sends via Social Forward. View tracking data on content shared from your sends via Social Forward by querying the _SocialNetworkTracking view.",
+         "about":"Query this data view to find tracking data on content shared from your Marketing Cloud sends via Social Forward. View tracking data on content shared from your sends via Social Forward by querying the _SocialNetworkTracking view.",
          "fields":[
             {
                "field":"SubscriberID",
@@ -1236,7 +1236,7 @@
       {
          "family":"Email",
          "name":"_Coupon",
-         "about":"View data regarding coupons used in your Marketing Cloud account by querying the _Coupon data view in Automation Studio. To use this data view, you must use live content in Content Builder Block SDK.",
+         "about":"View data regarding coupons used in your Marketing Cloud account. To use this data view, you must use live content in Content Builder Block SDK.",
          "fields":[
             {
                "field":"Name",
@@ -1437,7 +1437,7 @@
       {
          "family":"Mobile Connect",
          "name":"_SMSMessageTracking",
-         "about":"Query this data view in Automation Studio to find message tracking information from Marketing Cloud MobileConnect SMS sends. This data view allows customers to view their send and receive history. Information from this query relates to the owner of a private short code or long code. Query information can also relate to a client using a shared short code to which the subscriber has opted in.",
+         "about":"Query this data view to find message tracking information from Marketing Cloud MobileConnect SMS sends. This data view allows customers to view their send and receive history. Information from this query relates to the owner of a private short code or long code. Query information can also relate to a client using a shared short code to which the subscriber has opted in.",
          "fields":[
             {
                "field":"Mobile",
@@ -1654,7 +1654,7 @@
       {
          "family":"Mobile Connect",
          "name":"_SMSSubscriptionLog",
-         "about":"Query this data view in Automation Studio to find subscription log information from Marketing Cloud MobileConnect SMS sends. For example, view a history of all mobile numbers subscribed to a keyword. View subscription log information about SMS sends in MobileConnect by querying the _SMSSubscriptionLog data view. Information from this query relates to the owner of a private short code or long code or a client using a shared short code to which the subscriber has opted in. This data view shows more than 6 months of data.",
+         "about":"Query this data view to find subscription log information from Marketing Cloud MobileConnect SMS sends. For example, view a history of all mobile numbers subscribed to a keyword. View subscription log information about SMS sends in MobileConnect by querying the _SMSSubscriptionLog data view. Information from this query relates to the owner of a private short code or long code or a client using a shared short code to which the subscriber has opted in. This data view shows more than 6 months of data.",
          "fields":[
             {
                "field":"MobileNumber",
@@ -1731,7 +1731,7 @@
       {
          "family":"Mobile Connect",
          "name":"_UndeliverableSms",
-         "about":"Query this data view in Automation Studio to find failed message deliveries to Marketing Cloud MobileConnect subscribers. View information about failed message deliveries to MobileConnect subscribers by querying the _UndeliverableSms data view. Information from this query relates to the owner of a private short code or long code, or a client using a shared short code to which the subscriber has opted in.",
+         "about":"Query this data view to find failed message deliveries to Marketing Cloud MobileConnect subscribers. View information about failed message deliveries to MobileConnect subscribers by querying the _UndeliverableSms data view. Information from this query relates to the owner of a private short code or long code, or a client using a shared short code to which the subscriber has opted in.",
          "fields":[
             {
                "field":"MobileNumber",

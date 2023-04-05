@@ -1645,7 +1645,7 @@
                "description":"Unique identifier for each SMS job triggered in MobileConnect"
             },
             {
-               "field":"BatchID",
+               "field":"SMSBatchID",
                "type":"Number",
                "description":"Identifies a batch associated with an SMS send"
             }

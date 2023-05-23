@@ -51,7 +51,7 @@
                "description":"The domain associated with the subscriber's email address."
             },
             {
-               "field":"TriggeredSendDefinitionObjectID",
+               "field":"TriggererSendDefinitionObjectID",
                "type":"text",
                "description":"Identifies the triggered send definition associated with the send."
             },
@@ -225,7 +225,7 @@
                "description":"The error code for the bounce from the mail system."
             },
             {
-               "field":"TriggeredSendDefinitionObjectID",
+               "field":"TriggererSendDefinitionObjectID",
                "type":"text",
                "description":"The object ID for the triggered send definition."
             },
@@ -307,7 +307,7 @@
                "description":"Whether the event is unique or repeated."
             },
             {
-               "field":"TriggeredSendDefinitionObjectID",
+               "field":"TriggererSendDefinitionObjectID",
                "type":"text",
                "description":"The object ID for the triggered send definition."
             },
@@ -374,7 +374,7 @@
                "description":"Whether the event is unique or repeated."
             },
             {
-               "field":"TriggeredSendDefinitionObjectID",
+               "field":"TriggererSendDefinitionObjectID",
                "type":"text",
                "description":"The object ID for the triggered send definition."
             },
@@ -806,7 +806,7 @@
                "description":"The time the email was delivered"
             },
             {
-               "field":"TriggeredSendDefinitionObjectID",
+               "field":"TriggererSendDefinitionObjectID",
                "type":"Text",
                "description":"The object ID for the triggered send definition"
             },

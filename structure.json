@@ -118,7 +118,7 @@
                "description":"Indicates whether the email open event is unique."
             },
                         {
-               "field":"TriggeredSendDefinitionObjectID",
+               "field":"TriggererSendDefinitionObjectID",
                "type":"text",
                "description":"Identifies the triggered send definition associated with the send."
             },

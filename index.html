@@ -141,7 +141,7 @@
       <td>%%=v(@ActivityInstanceEndTime_UTC)=%%</td>
       <td>%%=v(@ActivityInstanceStatus)=%%</td>
       <td>%%=v(@ActivityInstanceStatusDetails)=%%</td>
-     </tr> %%[next @i endif elseif @dv == "_Bounce" then set @rows = LookupOrderedRows(@dv, @cap, "EventDate desc", "AccountID", @mid) set @rowCount = rowcount(@rows) ]%% <div class="table-responsive">
+     </tr> %%[next @i endif elseif @dv == "_Bounce" then set @rows = LookupOrderedRows("ent._Bounce", @cap, "EventDate desc", "AccountID", @mid) set @rowCount = rowcount(@rows) ]%% <div class="table-responsive">
       <table class="table">
        <thead>
         <tr>
@@ -187,7 +187,7 @@
         <td>%%=v(@SMTPBounceReason)=%%</td>
         <td>%%=v(@SMTPMessage)=%%</td>
         <td>%%=v(@SMTPCode)=%%</td>
-       </tr> %%[next @i endif elseif @dv == "_BusinessUnitUnsubscribes" then set @rows = LookupOrderedRows(@dv, @cap, "UnsubDateUTC desc", "BusinessUnitID", @mid) set @rowCount = rowcount(@rows) ]%% <div class="table-responsive">
+       </tr> %%[next @i endif elseif @dv == "_BusinessUnitUnsubscribes" then set @rows = LookupOrderedRows("ent._BusinessUnitUnsubscribes", @cap, "UnsubDateUTC desc", "BusinessUnitID", @mid) set @rowCount = rowcount(@rows) ]%% <div class="table-responsive">
         <table class="table">
          <thead>
           <tr>
@@ -205,7 +205,7 @@
           <td>%%=v(@SubscriberKey)=%%</td>
           <td>%%=v(@UnsubDateUTC)=%%</td>
           <td>%%=v(@UnsubReason)=%%</td>
-         </tr> %%[next @i endif elseif @dv == "_Click" then set @rows = LookupOrderedRows(@dv, @cap, "EventDate desc", "AccountID", @mid) set @rowCount = rowcount(@rows) ]%% <div class="table-responsive">
+         </tr> %%[next @i endif elseif @dv == "_Click" then set @rows = LookupOrderedRows("ent._Click", @cap, "EventDate desc", "AccountID", @mid) set @rowCount = rowcount(@rows) ]%% <div class="table-responsive">
           <table class="table">
            <thead>
             <tr>
@@ -243,7 +243,7 @@
             <td>%%=v(@URL)=%%</td>
             <td>%%=v(@LinkName)=%%</td>
             <td>%%=v(@LinkContent)=%%</td>
-           </tr> %%[next @i endif elseif @dv == "_Complaint" then set @rows = LookupOrderedRows(@dv, @cap, "EventDate desc", "AccountID", @mid) set @rowCount = rowcount(@rows) ]%% <div class="table-responsive">
+           </tr> %%[next @i endif elseif @dv == "_Complaint" then set @rows = LookupOrderedRows("ent._Complaint", @cap, "EventDate desc", "AccountID", @mid) set @rowCount = rowcount(@rows) ]%% <div class="table-responsive">
             <table class="table">
              <thead>
               <tr>
@@ -271,7 +271,7 @@
               <td>%%=v(@EventDate)=%%</td>
               <td>%%=v(@Domain)=%%</td>
               <td>%%=v(@IsUnique)=%%</td>
-             </tr> %%[next @i endif elseif @dv == "_FTAF" then set @rows = LookupOrderedRows(@dv, @cap, "TransactionTime desc", "AccountID", @mid) set @rowCount = rowcount(@rows) ]%% <div class="table-responsive">
+             </tr> %%[next @i endif elseif @dv == "_FTAF" then set @rows = LookupOrderedRows("ent._FTAF", @cap, "TransactionTime desc", "AccountID", @mid) set @rowCount = rowcount(@rows) ]%% <div class="table-responsive">
               <table class="table">
                <thead>
                 <tr>
@@ -303,7 +303,7 @@
                 <td>%%=v(@TriggererSendDefinitionObjectID)=%%</td>
                 <td>%%=v(@IsUnique)=%%</td>
                 <td>%%=v(@TriggeredSendCustomerKey)=%%</td>
-               </tr> %%[next @i endif elseif @dv == "_Job" then set @rows = LookupOrderedRows(@dv, @cap, "PickupTime desc", "AccountID", @mid) set @rowCount = rowcount(@rows) ]%% <div class="table-responsive">
+               </tr> %%[next @i endif elseif @dv == "_Job" then set @rows = LookupOrderedRows("ent._Job", @cap, "PickupTime desc", "AccountID", @mid) set @rowCount = rowcount(@rows) ]%% <div class="table-responsive">
                 <table class="table">
                  <thead>
                   <tr>
@@ -385,7 +385,7 @@
                   <td>%%=v(@SendClassification)=%%</td>
                   <td>%%=v(@ResolveLinksWithCurrentData)=%%</td>
                   <td>%%=v(@EmailSendDefinition)=%%</td>
-                 </tr> %%[next @i endif elseif @dv == "_Open" then set @rows = LookupOrderedRows(@dv, @cap, "EventDate desc", "AccountID", @mid) set @rowCount = rowcount(@rows) ]%% <div class="table-responsive">
+                 </tr> %%[next @i endif elseif @dv == "_Open" then set @rows = LookupOrderedRows("ent._Open", @cap, "EventDate desc", "AccountID", @mid) set @rowCount = rowcount(@rows) ]%% <div class="table-responsive">
                   <table class="table">
                    <thead>
                     <tr>
@@ -417,7 +417,7 @@
                     <td>%%=v(@TriggererSendDefinitionObjectID)=%%</td>
                     <td>%%=v(@IsUnique)=%%</td>
                     <td>%%=v(@TriggeredSendCustomerKey)=%%</td>
-                   </tr> %%[next @i endif elseif @dv == "_Sent" then set @rows = LookupOrderedRows(@dv, @cap, "EventDate desc", "AccountID", @mid) set @rowCount = rowcount(@rows) ]%% <div class="table-responsive">
+                   </tr> %%[next @i endif elseif @dv == "_Sent" then set @rows = LookupOrderedRows("ent._Sent", @cap, "EventDate desc", "AccountID", @mid) set @rowCount = rowcount(@rows) ]%% <div class="table-responsive">
                     <table class="table">
                      <thead>
                       <tr>
@@ -541,7 +541,7 @@
                         <td>%%=v(@JBActivityID)=%%</td>
                         <td>%%=v(@JBDefinitionID)=%%</td>
                         <td>%%=v(@SMSJobID)=%%</td>
-                       </tr> %%[next @i endif elseif @dv == "_Unsubscribe" then set @rows = LookupOrderedRows(@dv, @cap, "EventDate desc", "AccountID", @mid) set @rowCount = rowcount(@rows) ]%% <div class="table-responsive">
+                       </tr> %%[next @i endif elseif @dv == "_Unsubscribe" then set @rows = LookupOrderedRows("ent._Unsubscribe", @cap, "EventDate desc", "AccountID", @mid) set @rowCount = rowcount(@rows) ]%% <div class="table-responsive">
                         <table class="table">
                          <thead>
                           <tr>

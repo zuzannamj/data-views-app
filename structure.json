@@ -1940,6 +1940,88 @@
          ]
       },
       {
+   "family":"Mobile Connect",
+   "name":"_ChatMessagingSubscription",
+   "about":"This is an unofficial WhatsApp Data View",
+   "fields":[
+      {
+         "field":"_MobileNumber",
+         "type":"Text",
+         "description":""
+      },
+      {
+         "field":"_ChannelId",
+         "type":"Text",
+         "description":""
+      },
+      {
+         "field":"_ChannelType",
+         "type":"Text",
+         "description":""
+      },
+      {
+         "field":"_OptOutStatusID",
+         "type":"Text",
+         "description":""
+      },
+      {
+         "field":"_OptOutMethodID",
+         "type":"Text",
+         "description":""
+      },
+      {
+         "field":"_OptOutDate",
+         "type":"Date",
+         "description":""
+      },
+      {
+         "field":"_OptinStatusID",
+         "type":"Text",
+         "description":""
+      },
+      {
+         "field":"_OptinMethodID",
+         "type":"Text",
+         "description":""
+      },
+      {
+         "field":"_OptinDate",
+         "type":"Date",
+         "description":""
+      },
+      {
+         "field":"_Source",
+         "type":"Text",
+         "description":""
+      },
+      {
+         "field":"_SourceObjectId",
+         "type":"Text",
+         "description":""
+      },
+      {
+         "field":"_CreatedDate",
+         "type":"Date",
+         "description":""
+      },
+      {
+         "field":"_CreatedBy",
+         "type":"Text",
+         "description":""
+      },
+      {
+         "field":"_ModifiedDate",
+         "type":"Date",
+         "description":""
+      },
+      {
+         "field":"_ModifiedBy",
+         "type":"Text",
+         "description":""
+      }
+   ]
+},
+      {
          "family":"Mobile Push",
          "name":"_PushAddress",
          "about":"This is an unofficial, unsupported data view, please use it with caution.",

@@ -230,6 +230,11 @@
                "description":"The object ID for the triggered send definition."
             },
             {
+               "field":"IsUnique",
+               "type":"boolean",
+               "description":"Whether the event is unique or repeated."
+            },
+            {
                "field":"TriggeredSendCustomerKey",
                "type":"text",
                "description":"The customer key for the triggered send."

@@ -224,15 +224,15 @@
                "type":"number",
                "description":"The error code for the bounce from the mail system."
             },
+           {
+               "field":"IsUnique",
+               "type":"boolean",
+               "description":"Whether the event is unique or repeated."
+            },
             {
                "field":"TriggererSendDefinitionObjectID",
                "type":"text",
                "description":"The object ID for the triggered send definition."
-            },
-            {
-               "field":"IsUnique",
-               "type":"boolean",
-               "description":"Whether the event is unique or repeated."
             },
             {
                "field":"TriggeredSendCustomerKey",

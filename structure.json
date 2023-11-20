@@ -325,7 +325,7 @@
       },
       {
          "family":"Email",
-         "name":"_FTAT",
+         "name":"_FTAF",
          "about":"Query this data view to view behavioral information related to email messages from your Marketing Cloud account that were forwarded to friends. View behavioral information related to email messages from your account that were forwarded to friends (FTAF) by querying the _FTAF data view. Records dating back six months from the day the query runs are available.",
          "fields":[
             {

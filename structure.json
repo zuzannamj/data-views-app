@@ -2456,7 +2456,7 @@
    ]
 },
 {
-   "family":"SMSMessageTracking",
+   "family":"SendLog Templates",
    "name":"SMSSubscriptionLog",
    "about":"Used for creating a Data Extension for the _SMSMessageTracking view, which provides detailed tracking information for SMS messages.",
    "fields":[
@@ -2633,8 +2633,8 @@
    ]
 },
 {
-   "family":"PushSendLog",
-   "name":"SMSSubscriptionLog",
+   "family":"SendLog Templates",
+   "name":"PushSendLog",
    "about":"Push Send Log Data Extension Template used for capturing and analyzing data related to push notifications sent through the platform.",
    "fields":[
       {
@@ -2671,6 +2671,72 @@
          "field":"LogDate",
          "type":"Date",
          "description":"Date and time when the log entry was created. Default value is the current date and time (GETDATE())."
+      }
+   ]
+},
+{
+   "family":"Synchronized Data Extensions",
+   "name":"Contact_Salesforce",
+   "about":"Push Send Log Data Extension Template used for capturing and analyzing data related to push notifications sent through the platform.",
+   "fields":[
+      {
+         "field":"PushJobID",
+         "type":"Text",
+         "description":"Unique identifier for the push job, typically a UUID."
+      },
+      {
+         "field":"PushTriggeredSendRequestID",
+         "type":"Text",
+         "description":"Unique identifier for the triggered send request of the push notification."
+      },
+      {
+         "field":"PushBatchID",
+         "type":"LongNumber",
+         "description":"Numeric identifier representing the batch in which the push notification was sent."
+      }
+   ]
+},
+{
+   "family":"Synchronized Data Extensions",
+   "name":"Lead_Salesforce",
+   "about":"Push Send Log Data Extension Template used for capturing and analyzing data related to push notifications sent through the platform.",
+   "fields":[
+      {
+         "field":"PushJobID",
+         "type":"Text",
+         "description":"Unique identifier for the push job, typically a UUID."
+      },
+      {
+         "field":"PushTriggeredSendRequestID",
+         "type":"Text",
+         "description":"Unique identifier for the triggered send request of the push notification."
+      },
+      {
+         "field":"PushBatchID",
+         "type":"LongNumber",
+         "description":"Numeric identifier representing the batch in which the push notification was sent."
+      }
+   ]
+},
+{
+   "family":"Synchronized Data Extensions",
+   "name":"Account_Salesforce",
+   "about":"Push Send Log Data Extension Template used for capturing and analyzing data related to push notifications sent through the platform.",
+   "fields":[
+      {
+         "field":"PushJobID",
+         "type":"Text",
+         "description":"Unique identifier for the push job, typically a UUID."
+      },
+      {
+         "field":"PushTriggeredSendRequestID",
+         "type":"Text",
+         "description":"Unique identifier for the triggered send request of the push notification."
+      },
+      {
+         "field":"PushBatchID",
+         "type":"LongNumber",
+         "description":"Numeric identifier representing the batch in which the push notification was sent."
       }
    ]
 }

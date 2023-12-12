@@ -131,6 +131,88 @@
       },
       {
          "family":"Email",
+         "name":"_Click",
+         "about":"View clicks for links in emails sent from your account by querying the _Click data view. Records dating back six months from the day the query runs are available.",
+         "fields":[
+            {
+               "field":"AccountID",
+               "type":"number",
+               "description":"The account ID number of the Marketing Cloud account."
+            },
+            {
+               "field":"OYBAccountID",
+               "type":"number",
+               "description":"The account ID number for any related On-Your-Behalf (OYB) accounts. This field applies to enterprise accounts only."
+            },
+            {
+               "field":"JobID",
+               "type":"number",
+               "description":"The job ID number for the email send."
+            },
+            {
+               "field":"ListID",
+               "type":"number",
+               "description":"The list ID number for the list used in the send."
+            },
+            {
+               "field":"BatchID",
+               "type":"number",
+               "description":"The batch ID number for any batches used in the send."
+            },
+            {
+               "field":"SubscriberID",
+               "type":"number",
+               "description":"The subscriber ID for the affected subscriber. This number represents the unique ID for each subscriber record."
+            },
+            {
+               "field":"SubscriberKey",
+               "type":"text",
+               "description":"The subscriber key for the affected subscriber."
+            },
+            {
+               "field":"EventDate",
+               "type":"date",
+               "description":"The date the click took place."
+            },
+            {
+               "field":"Domain",
+               "type":"text",
+               "description":"The domain at which the click occurred."
+            },
+            {
+               "field":"URL",
+               "type":"text",
+               "description":"The URL for the link clicked. No AMPscript or variables are populated in this column, for example, www.example.com?%%attribute%%."
+            },
+            {
+               "field":"LinkName",
+               "type":"text",
+               "description":"The link name assigned in the email send."
+            },
+            {
+               "field":"LinkContent",
+               "type":"text",
+               "description":"The link content assigned in the email send. AMPscript and variables are populated in this column, such as www.example.com?12345."
+            },
+            {
+               "field":"IsUnique",
+               "type":"boolean",
+               "description":"Whether the event is unique or repeated."
+            },
+            {
+               "field":"TriggererSendDefinitionObjectID",
+               "type":"text",
+               "description":"The object ID for the triggered send definition."
+            },
+            {
+               "field":"TriggeredSendCustomerKey",
+               "type":"text",
+               "description":"The customer key for the triggered send."
+            }
+         ]
+      },
+            {
+         "family":"Email",
          "name":"_Bounce",
          "about":"View bounce data for emails from your account by querying the _bounce data view. Records dating back six months from the day the query runs are available.",
          "fields":[
@@ -225,88 +307,6 @@
                "description":"The error code for the bounce from the mail system."
             },
            {
-               "field":"IsUnique",
-               "type":"boolean",
-               "description":"Whether the event is unique or repeated."
-            },
-            {
-               "field":"TriggererSendDefinitionObjectID",
-               "type":"text",
-               "description":"The object ID for the triggered send definition."
-            },
-            {
-               "field":"TriggeredSendCustomerKey",
-               "type":"text",
-               "description":"The customer key for the triggered send."
-            }
-         ]
-      },
-      {
-         "family":"Email",
-         "name":"_Click",
-         "about":"View clicks for links in emails sent from your account by querying the _Click data view. Records dating back six months from the day the query runs are available.",
-         "fields":[
-            {
-               "field":"AccountID",
-               "type":"number",
-               "description":"The account ID number of the Marketing Cloud account."
-            },
-            {
-               "field":"OYBAccountID",
-               "type":"number",
-               "description":"The account ID number for any related On-Your-Behalf (OYB) accounts. This field applies to enterprise accounts only."
-            },
-            {
-               "field":"JobID",
-               "type":"number",
-               "description":"The job ID number for the email send."
-            },
-            {
-               "field":"ListID",
-               "type":"number",
-               "description":"The list ID number for the list used in the send."
-            },
-            {
-               "field":"BatchID",
-               "type":"number",
-               "description":"The batch ID number for any batches used in the send."
-            },
-            {
-               "field":"SubscriberID",
-               "type":"number",
-               "description":"The subscriber ID for the affected subscriber. This number represents the unique ID for each subscriber record."
-            },
-            {
-               "field":"SubscriberKey",
-               "type":"text",
-               "description":"The subscriber key for the affected subscriber."
-            },
-            {
-               "field":"EventDate",
-               "type":"date",
-               "description":"The date the click took place."
-            },
-            {
-               "field":"Domain",
-               "type":"text",
-               "description":"The domain at which the click occurred."
-            },
-            {
-               "field":"URL",
-               "type":"text",
-               "description":"The URL for the link clicked. No AMPscript or variables are populated in this column, for example, www.example.com?%%attribute%%."
-            },
-            {
-               "field":"LinkName",
-               "type":"text",
-               "description":"The link name assigned in the email send."
-            },
-            {
-               "field":"LinkContent",
-               "type":"text",
-               "description":"The link content assigned in the email send. AMPscript and variables are populated in this column, such as www.example.com?12345."
-            },
-            {
                "field":"IsUnique",
                "type":"boolean",
                "description":"Whether the event is unique or repeated."

@@ -325,73 +325,6 @@
       },
       {
          "family":"Email",
-         "name":"_FTAF",
-         "about":"Query this data view to view behavioral information related to email messages from your Marketing Cloud account that were forwarded to friends. View behavioral information related to email messages from your account that were forwarded to friends (FTAF) by querying the _FTAF data view. Records dating back six months from the day the query runs are available.",
-         "fields":[
-            {
-               "field":"AccountID",
-               "type":"number",
-               "description":"Your account ID number."
-            },
-            {
-               "field":"OYBAccountID",
-               "type":"number",
-               "description":"The account ID number for any related On-Your-Behalf accounts and applies to enterprise accounts only."
-            },
-            {
-               "field":"JobID",
-               "type":"number",
-               "description":"The job ID number for the email send."
-            },
-            {
-               "field":"ListID",
-               "type":"number",
-               "description":"The list ID number for the list used in the send."
-            },
-            {
-               "field":"BatchID",
-               "type":"number",
-               "description":"The batch ID number for any batches used in the send."
-            },
-            {
-               "field":"SubscriberID",
-               "type":"number",
-               "description":"The subscriber ID for the affected subscriber. This number represents the unique ID for each subscriber record."
-            },
-            {
-               "field":"SubscriberKey",
-               "type":"text",
-               "description":"The subscriber key for the affected subscriber."
-            },
-            {
-               "field":"TransactionTime",
-               "type":"date",
-               "description":"The date the forward took place."
-            },
-            {
-               "field":"Domain",
-               "type":"text",
-               "description":"The domain at which the forward occurred."
-            },
-            {
-               "field":"IsUnique",
-               "type":"boolean",
-               "description":"Whether the event is unique or repeated."
-            },
-            {
-               "field":"TriggererSendDefinitionObjectID",
-               "type":"text",
-               "description":"The object ID for the triggered send definition."
-            },
-            {
-               "field":"TriggeredSendCustomerKey",
-               "type":"text",
-               "description":"The customer key for the triggered send."
-            }
-         ]
-      },
-      {
-         "family":"Email",
          "name":"_Unsubscribe",
          "about":"View unsubscribes from email lists in your account by querying the _Unsubscribe data view. Records dating back six months from the day the query runs are available.",
          "fields":[
@@ -501,6 +434,73 @@
                "field":"Domain",
                "type":"text",
                "description":"The domain at which the complaint occurred."
+            }
+         ]
+      },
+            {
+         "family":"Email",
+         "name":"_FTAF",
+         "about":"Query this data view to view behavioral information related to email messages from your Marketing Cloud account that were forwarded to friends. View behavioral information related to email messages from your account that were forwarded to friends (FTAF) by querying the _FTAF data view. Records dating back six months from the day the query runs are available.",
+         "fields":[
+            {
+               "field":"AccountID",
+               "type":"number",
+               "description":"Your account ID number."
+            },
+            {
+               "field":"OYBAccountID",
+               "type":"number",
+               "description":"The account ID number for any related On-Your-Behalf accounts and applies to enterprise accounts only."
+            },
+            {
+               "field":"JobID",
+               "type":"number",
+               "description":"The job ID number for the email send."
+            },
+            {
+               "field":"ListID",
+               "type":"number",
+               "description":"The list ID number for the list used in the send."
+            },
+            {
+               "field":"BatchID",
+               "type":"number",
+               "description":"The batch ID number for any batches used in the send."
+            },
+            {
+               "field":"SubscriberID",
+               "type":"number",
+               "description":"The subscriber ID for the affected subscriber. This number represents the unique ID for each subscriber record."
+            },
+            {
+               "field":"SubscriberKey",
+               "type":"text",
+               "description":"The subscriber key for the affected subscriber."
+            },
+            {
+               "field":"TransactionTime",
+               "type":"date",
+               "description":"The date the forward took place."
+            },
+            {
+               "field":"Domain",
+               "type":"text",
+               "description":"The domain at which the forward occurred."
+            },
+            {
+               "field":"IsUnique",
+               "type":"boolean",
+               "description":"Whether the event is unique or repeated."
+            },
+            {
+               "field":"TriggererSendDefinitionObjectID",
+               "type":"text",
+               "description":"The object ID for the triggered send definition."
+            },
+            {
+               "field":"TriggeredSendCustomerKey",
+               "type":"text",
+               "description":"The customer key for the triggered send."
             }
          ]
       },

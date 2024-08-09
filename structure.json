@@ -2318,6 +2318,361 @@
                "description":"Date and time record created (in Central Standard Time). Date the customer started following LINE account."
             }
          ]
+      }       ,
+      {
+   "family":"SendLog Templates",
+   "name":"SendLog",
+   "about":"Use send logging in Email Studio to obtain run-time information about email send attributes for use in reports and data extracts. Send logging gives you access to data not available via standard tracking functions.",
+   "fields":[
+      {
+         "field":"JobID",
+         "type":"Number",
+         "description":"A unique identifier for the job."
+      },
+      {
+         "field":"ListID",
+         "type":"Number",
+         "description":"The identifier for the list used in the send."
+      },
+      {
+         "field":"BatchID",
+         "type":"Number",
+         "description":"The batch number associated with the send."
+      },
+      {
+         "field":"SubID",
+         "type":"Number",
+         "description":"Subscriber ID associated with the send."
+      },
+      {
+         "field":"TriggeredSendID",
+         "type":"Text",
+         "description":"The unique ID of the triggered send."
+      },
+      {
+         "field":"ErrorCode",
+         "type":"Number",
+         "description":"The error code associated with the send, if any."
       }
+   ]
+},
+      {
+   "family":"SendLog Templates",
+   "name":"SMSSendLog",
+   "about":"Use SMS Send Logging to capture detailed information about SMS message sends, including recipient data and message content. This feature allows for enhanced analysis and reporting, providing insights into SMS campaigns beyond standard tracking metrics.",
+   "fields":[
+      {
+         "field":"SMSJobID",
+         "type":"Text",
+         "description":"A unique 36-character identifier for the SMS job."
+      },
+      {
+         "field":"SMSTriggeredSendID",
+         "type":"Text",
+         "description":"A 36-character unique identifier for the triggered SMS send."
+      },
+      {
+         "field":"SMSBatchID",
+         "type":"LongNumber",
+         "description":"The batch number associated with the SMS send."
+      },
+      {
+         "field":"SubID",
+         "type":"LongNumber",
+         "description":"The subscriber ID associated with the SMS send."
+      }
+   ]
+},
+      {
+   "family":"SendLog Templates",
+   "name":"SMSSubscriptionLog",
+   "about":"Used for creating a Data Extension for the _SMSSubscriptionLog view, which tracks SMS subscription data including opt-in and opt-out information.",
+   "fields":[
+      {
+         "field":"LogDate",
+         "type":"Date",
+         "description":"The date and time when the log entry was recorded."
+      },
+      {
+         "field":"MobileSubscriptionID",
+         "type":"Number",
+         "description":"A unique identifier for the mobile subscription."
+      },
+      {
+         "field":"SubscriptionDefinitionID",
+         "type":"Text",
+         "description":"The definition ID of the SMS subscription."
+      },
+      {
+         "field":"MobileNumber",
+         "type":"Text",
+         "description":"The mobile number associated with the subscription."
+      },
+      {
+         "field":"OptOutStatusID",
+         "type":"Number",
+         "description":"The status ID indicating the opt-out status of the subscription."
+      },
+      {
+         "field":"OptOutMethodID",
+         "type":"Number",
+         "description":"An identifier for the method used for opting out."
+      },
+      {
+         "field":"OptOutDate",
+         "type":"Date",
+         "description":"The date when the opt-out occurred."
+      },
+      {
+         "field":"OptInStatusID",
+         "type":"Number",
+         "description":"The status ID indicating the opt-in status of the subscription."
+      },
+      {
+         "field":"OptInMethodID",
+         "type":"Number",
+         "description":"An identifier for the method used for opting in."
+      },
+      {
+         "field":"OptInDate",
+         "type":"Date",
+         "description":"The date when the opt-in occurred."
+      },
+      {
+         "field":"Source",
+         "type":"Number",
+         "description":"The source identifier for the SMS subscription."
+      },
+      {
+         "field":"CreatedDate",
+         "type":"Date",
+         "description":"The date when the subscription record was created."
+      },
+      {
+         "field":"ModifiedDate",
+         "type":"Date",
+         "description":"The date when the subscription record was last modified."
+      }
+   ]
+},
+{
+   "family":"SendLog Templates",
+   "name":"SMSMessageTracking",
+   "about":"Used for creating a Data Extension for the _SMSMessageTracking view, which provides detailed tracking information for SMS messages.",
+   "fields":[
+      {
+         "field":"MobileMessageTrackingId",
+         "type":"Number",
+         "description":"Unique identifier for the mobile message tracking."
+      },
+      {
+         "field":"EID",
+         "type":"Number",
+         "description":"Enterprise ID associated with the message."
+      },
+      {
+         "field":"MID",
+         "type":"Number",
+         "description":"Member ID associated with the message."
+      },
+      {
+         "field":"Mobile",
+         "type":"Text",
+         "description":"The mobile number to which the message was sent."
+      },
+      {
+         "field":"MessageID",
+         "type":"Number",
+         "description":"The unique identifier of the message."
+      },
+      {
+         "field":"MessageTypeID",
+         "type":"Number",
+         "description":"The ID indicating the type of message sent."
+      },
+      {
+         "field":"KeywordID",
+         "type":"Text",
+         "description":"The ID associated with the keyword in the message."
+      },
+      {
+         "field":"CodeID",
+         "type":"Text",
+         "description":"The ID of the code used in the message."
+      },
+      {
+         "field":"ConversationID",
+         "type":"Number",
+         "description":"The ID representing the conversation to which the message belongs."
+      },
+      {
+         "field":"CampaignID",
+         "type":"Number",
+         "description":"The campaign ID associated with the message."
+      },
+      {
+         "field":"Sent",
+         "type":"Number",
+         "description":"The count of sent messages."
+      },
+      {
+         "field":"Delivered",
+         "type":"Number",
+         "description":"The count of delivered messages."
+      },
+      {
+         "field":"Undelivered",
+         "type":"Number",
+         "description":"The count of undelivered messages."
+      },
+      {
+         "field":"Unsub",
+         "type":"Number",
+         "description":"The count of unsubscribe actions."
+      },
+      {
+         "field":"OptIn",
+         "type":"Number",
+         "description":"The count of opt-in actions."
+      },
+      {
+         "field":"OptOut",
+         "type":"Number",
+         "description":"The count of opt-out actions."
+      },
+      {
+         "field":"Outbound",
+         "type":"Number",
+         "description":"The count of outbound messages."
+      },
+      {
+         "field":"Inbound",
+         "type":"Number",
+         "description":"The count of inbound messages."
+      },
+      {
+         "field":"CreateDateTime",
+         "type":"Date",
+         "description":"The date and time when the record was created."
+      },
+      {
+         "field":"ModifiedDateTime",
+         "type":"Date",
+         "description":"The date and time when the record was last modified."
+      },
+      {
+         "field":"ActionDateTime",
+         "type":"Date",
+         "description":"The date and time of the message action."
+      },
+      {
+         "field":"MessageText",
+         "type":"Text",
+         "description":"The text content of the SMS message."
+      },
+      {
+         "field":"IsTest",
+         "type":"Text",
+         "description":"Indicates if the message was a test."
+      },
+      {
+         "field":"MobileMessageRecurrenceID",
+         "type":"Number",
+         "description":"Identifier for the recurrence of the mobile message."
+      },
+      {
+         "field":"ResponseToMobileMessageTrackingID",
+         "type":"Number",
+         "description":"The tracking ID of the message this is a response to."
+      },
+      {
+         "field":"IsValid",
+         "type":"Text",
+         "description":"Indicates whether the message is valid."
+      },
+      {
+         "field":"InvalidationCode",
+         "type":"Number",
+         "description":"The code indicating why a message was invalidated."
+      },
+      {
+         "field":"SendID",
+         "type":"Number",
+         "description":"The unique identifier for the send action."
+      },
+      {
+         "field":"SendSplitID",
+         "type":"Number",
+         "description":"The ID for the send split."
+      },
+      {
+         "field":"SendSegmentID",
+         "type":"Number",
+         "description":"The ID for the segment of the send."
+      },
+      {
+         "field":"SendJobID",
+         "type":"Number",
+         "description":"The job ID for the send."
+      },
+      {
+         "field":"SendGroupID",
+         "type":"Number",
+         "description":"The group ID for the send."
+      },
+      {
+         "field":"SendPersonID",
+         "type":"Number",
+         "description":"The personal ID associated with the send."
+      },
+      {
+         "field":"SubscriberId",
+         "type":"Number",
+         "description":"The subscriber ID associated with the message."
+      }
+   ]
+},
+{
+   "family":"SendLog Templates",
+   "name":"PushSendLog",
+   "about":"Push Send Log Data Extension Template used for capturing and analyzing data related to push notifications sent through the platform.",
+   "fields":[
+      {
+         "field":"PushJobID",
+         "type":"Text",
+         "description":"Unique identifier for the push job, typically a UUID."
+      },
+      {
+         "field":"PushTriggeredSendRequestID",
+         "type":"Text",
+         "description":"Unique identifier for the triggered send request of the push notification."
+      },
+      {
+         "field":"PushBatchID",
+         "type":"LongNumber",
+         "description":"Numeric identifier representing the batch in which the push notification was sent."
+      },
+      {
+         "field":"SubID",
+         "type":"LongNumber",
+         "description":"Subscriber ID associated with the push notification."
+      },
+      {
+         "field":"DeviceId",
+         "type":"Text",
+         "description":"Unique identifier for the device receiving the push notification."
+      },
+      {
+         "field":"AppId",
+         "type":"Text",
+         "description":"Unique identifier for the application through which the push notification is sent."
+      },
+      {
+         "field":"LogDate",
+         "type":"Date",
+         "description":"Date and time when the log entry was created. Default value is the current date and time (GETDATE())."
+      }
+   ]
+}
    ]
 }

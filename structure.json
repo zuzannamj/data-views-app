@@ -551,7 +551,7 @@
       {
          "family":"Subscribers",
          "name":"_Subscribers",
-         "about":"Query this data view in Automation Studio to find subscribers in your Marketing Cloud account and their statuses. View email subscribers in your account and their statuses by querying the _Subscribers data view. Subscriber attributes aren’t available. This data view only returns results at the Enterprise level, and not for business units.",
+         "about":"Query this data view in Automation Studio to find subscribers in your Marketing Cloud account and their statuses. View email subscribers in your account and their statuses by querying the _Subscribers data view. Subscriber attributes aren’t available. This data view only returns results at the Enterprise level, and not for business units. This data view represent the All Subscribers List.",
          "fields":[
             {
                "field":"SubscriberID",
@@ -560,7 +560,7 @@
             },
             {
                "field":"SubscriberKey",
-               "type":"text",
+               "type":"text(254)",
                "description":"A potential alternate identifier for subscribers. Defaults to the value of Email Address."
             },
             {
@@ -580,7 +580,7 @@
             },
             {
                "field":"Domain",
-               "type":"text",
+               "type":"text(254)",
                "description":"The domain of the subscriber."
             },
             {
@@ -595,12 +595,12 @@
             },
             {
                "field":"SubscriberType",
-               "type":"text",
+               "type":"text(100)",
                "description":"The subscriber type for the affected subscriber."
             },
             {
                "field":"Status",
-               "type":"text",
+               "type":"text(12)",
                "description":"The status of the subscriber: active, held, unsubscribed, or bounced."
             },
             {
@@ -622,7 +622,7 @@
             },
             {
                "field":"SubscriberKey",
-               "type":"text",
+               "type":"text(254)",
                "description":"The subscriber key for the affected subscriber"
             },
             {
@@ -632,7 +632,7 @@
             },
             {
                "field":"AddMethod",
-               "type":"text",
+               "type":"text(17)",
                "description":"The method by which the subscriber was added, including Unspecified, Webcollect, API, FTAF, Import, Move Copy, Application, Salesforce, Segmentation, Generic Extension, and Custom Object"
             },
             {
@@ -657,22 +657,22 @@
             },
             {
                "field":"ListName",
-               "type":"text",
+               "type":"text(50)",
                "description":"The name of the list containing the subscribers"
             },
             {
                "field":"ListType",
-               "type":"text",
+               "type":"text(16)",
                "description":"Shows whether the type is list or group"
             },
             {
                "field":"Status",
-               "type":"text",
+               "type":"text(12)",
                "description":"The status of the subscriber"
             },
             {
                "field":"SubscriberType",
-               "type":"text",
+               "type":"text(100)",
                "description":"The type of subscriber"
             }
          ]
@@ -787,7 +787,7 @@
             },
             {
                "field":"FromName",
-               "type":"text",
+               "type":"text(130)",
                "description":"The from name in the email send"
             },
             {
@@ -812,17 +812,17 @@
             },
             {
                "field":"TriggererSendDefinitionObjectID",
-               "type":"Text",
+               "type":"Text(36)",
                "description":"The object ID for the triggered send definition"
             },
             {
-               "field":"TriggeredSendCustomerKey",
+               "field":"TriggeredSendCustomerKey(36)",
                "type":"Text",
                "description":"The customer key for the triggered send"
             },
             {
                "field":"EventID",
-               "type":"text",
+               "type":"text(50)",
                "description":"The ID for the job event"
             },
             {
@@ -832,12 +832,12 @@
             },
             {
                "field":"JobType",
-               "type":"text",
+               "type":"text(50)",
                "description":"The type of job"
             },
             {
                "field":"JobStatus",
-               "type":"text",
+               "type":"text(50)",
                "description":"The status of the job"
             },
             {
@@ -852,12 +852,12 @@
             },
             {
                "field":"EmailName",
-               "type":"text",
+               "type":"text(100)",
                "description":"The name of the email sent by the job"
             },
             {
                "field":"EmailSubject",
-               "type":"text",
+               "type":"text(200)",
                "description":"The subject of the email send"
             },
             {
@@ -872,7 +872,7 @@
             },
             {
                "field":"Category",
-               "type":"text",
+               "type":"text(100)",
                "description":"The job category"
             },
             {
@@ -892,12 +892,12 @@
             },
             {
                "field":"CharacterSet",
-               "type":"Text",
+               "type":"Text(30)",
                "description":"The character set used in the job"
             },
             {
                "field":"IPAddress",
-               "type":"Text",
+               "type":"Text(50)",
                "description":"This value is always null."
             },
             {
@@ -912,7 +912,7 @@
             },
             {
                "field":"SendType",
-               "type":"Text",
+               "type":"Text(128)",
                "description":"The type of send used in the job"
             },
             {
@@ -927,12 +927,12 @@
             },
             {
                "field":"SendClassificationType",
-               "type":"Text",
+               "type":"Text(32)",
                "description":"The send classification type for the job"
             },
             {
                "field":"SendClassification",
-               "type":"Text",
+               "type":"Text(36)",
                "description":"The send classification for the job"
             },
             {
@@ -942,7 +942,7 @@
             },
             {
                "field":"EmailSendDefinition",
-               "type":"Text",
+               "type":"Text(36)",
                "description":"The email send definition used in the job"
             },
             {
@@ -2346,12 +2346,12 @@
       },
       {
          "field":"TriggeredSendID",
-         "type":"Text",
+         "type":"Text(36)",
          "description":"The unique ID of the triggered send."
       },
       {
          "field":"ErrorCode",
-         "type":"Number",
+         "type":"Text(36)",
          "description":"The error code associated with the send, if any."
       }
    ]
@@ -2363,12 +2363,12 @@
    "fields":[
       {
          "field":"SMSJobID",
-         "type":"Text",
+         "type":"Text(36)",
          "description":"A unique 36-character identifier for the SMS job."
       },
       {
          "field":"SMSTriggeredSendID",
-         "type":"Text",
+         "type":"Text(36)",
          "description":"A 36-character unique identifier for the triggered SMS send."
       },
       {

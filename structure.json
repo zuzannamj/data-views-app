@@ -1111,7 +1111,7 @@
             },
             {
                "field":"IPAddress",
-               "type":"Text",
+               "type":"Text(50)",
                "description":"The IP address for the URL from which the content region was shared."
             },
             {
@@ -1282,7 +1282,7 @@
             },
             {
                "field":"AutomationName",
-               "type":"Text",
+               "type":"Text(400)",
                "description":"The automation name."
             },
             {
@@ -1292,27 +1292,27 @@
             },
             {
                "field":"AutomationDescription",
-               "type":"Text",
+               "type":"Text(400)",
                "description":"The automation description."
             },
             {
                "field":"AutomationType",
-               "type":"Text",
+               "type":"Text(50)",
                "description":"The automation’s starting source. Possible values are Schedule, File Drop, or Trigger."
             },
             {
                "field":"AutomationNotificationRecipient_Complete",
-               "type":"Text",
+               "type":"Text(500)",
                "description":"The email address where notifications about completed automations are sent."
             },
             {
                "field":"AutomationNotificationRecipient_Error",
-               "type":"Text",
+               "type":"Text(500)",
                "description":"The email address where notifications about automation errors are sent."
             },
             {
                "field":"AutomationNotificationRecipient_Skip",
-               "type":"Text",
+               "type":"Text(500)",
                "description":"The email address where notifications about skipped automations are sent."
             },
             {
@@ -1322,7 +1322,7 @@
             },
             {
                "field":"AutomationInstanceID",
-               "type":"Text",
+               "type":"Text(50)",
                "description":"The unique ID of the automation run."
             },
             {
@@ -1332,7 +1332,7 @@
             },
             {
                "field":"FilenameFromTrigger",
-               "type":"Text",
+               "type":"Text(4000)",
                "description":"For file drop and trigger automations, the file that started the automation."
             },
             {
@@ -1352,12 +1352,12 @@
             },
             {
                "field":"AutomationInstanceStatus",
-               "type":"Text",
+               "type":"Text(400)",
                "description":"The status of the automation run when the data view is queried. Possible values are QueuedFile, Initialized, Executing, Stopped, Complete, or Error."
             },
             {
                "field":"AutomationInstanceActivityErrorDetails",
-               "type":"Text",
+               "type":"Text(4000)",
                "description":"The message from the error log, if applicable. If a system or unclassified error occurs, the value is System Error. If multiple errors occur, only the first message is displayed. To get details on multiple errors, use the _AutomationActivityInstance view."
             }
          ]
@@ -1374,17 +1374,17 @@
             },
             {
                "field":"AutomationName",
-               "type":"Text",
+               "type":"Text(400)",
                "description":"The automation name."
             },
             {
                "field":"AutomationCustomerKey",
-               "type":"Text",
+               "type":"Text(400)",
                "description":"The unique ID of the automation."
             },
             {
                "field":"AutomationInstanceID",
-               "type":"Text",
+               "type":"Text(50)",
                "description":"The unique ID of the automation run."
             },
             {
@@ -1394,27 +1394,27 @@
             },
             {
                "field":"ActivityName",
-               "type":"Text",
+               "type":"Text(400)",
                "description":"The activity name."
             },
             {
                "field":"ActivityDescription",
-               "type":"Text",
+               "type":"Text(400)",
                "description":"The activity description."
             },
             {
                "field":"ActivityCustomerKey",
-               "type":"Text",
+               "type":"Text(400)",
                "description":"The unique ID of the activity."
             },
             {
                "field":"ActivityInstanceStep",
-               "type":"Text",
+               "type":"Text(50)",
                "description":"Where the activity occurs in the automation. For example, 3.2 is step 3, activity 2."
             },
             {
                "field":"ActivityInstanceID",
-               "type":"Text",
+               "type":"Text(50)",
                "description":"The unique ID of the activity run."
             },
             {
@@ -1429,12 +1429,12 @@
             },
             {
                "field":"ActivityInstanceStatus",
-               "type":"Text",
+               "type":"Text(256)",
                "description":"The status of the activity run when the data view is queried. Possible values are Initialized, Executing, Complete, Error, or NotSelected."
             },
             {
                "field":"ActivityInstanceStatusDetails",
-               "type":"Text",
+               "type":"Text(4000)",
                "description":"The message from the error log, if applicable. If a system or unclassified error occurs, the value is System Error."
             }
          ]
@@ -1956,17 +1956,17 @@
    "fields":[
       {
          "field":"_MobileNumber",
-         "type":"Text",
+         "type":"Text(254)",
          "description":""
       },
       {
          "field":"_ChannelId",
-         "type":"Text",
+         "type":"Text(50)",
          "description":""
       },
       {
          "field":"_ChannelType",
-         "type":"Text",
+         "type":"Text(20)",
          "description":""
       },
       {
@@ -2006,7 +2006,7 @@
       },
       {
          "field":"_SourceObjectId",
-         "type":"Text",
+         "type":"Text(200)",
          "description":""
       },
       {
@@ -2038,7 +2038,7 @@
          "fields":[
             {
                "field":"_DeviceID",
-               "type":"Text",
+               "type":"Text(200)",
                "description":""
             },
             {
@@ -2048,7 +2048,7 @@
             },
             {
                "field":"_APID",
-               "type":"Text",
+               "type":"Text(38)",
                "description":""
             },
             {
@@ -2063,22 +2063,22 @@
             },
             {
                "field":"_SourceObjectId",
-               "type":"Text",
+               "type":"Text(200)",
                "description":""
             },
             {
                "field":"_Platform",
-               "type":"Text",
+               "type":"Text(100)",
                "description":""
             },
             {
                "field":"_PlatformVersion",
-               "type":"Text",
+               "type":"Text(100)",
                "description":""
             },
             {
                "field":"_Alias",
-               "type":"Text",
+               "type":"Text(100)",
                "description":""
             },
             {
@@ -2113,7 +2113,7 @@
             },
             {
                "field":"_Channel",
-               "type":"Text",
+               "type":"Text(20)",
                "description":""
             },
             {
@@ -2138,27 +2138,27 @@
             },
             {
                "field":"_City",
-               "type":"Text",
+               "type":"Text(200)",
                "description":""
             },
             {
                "field":"_State",
-               "type":"Text",
+               "type":"Text(200)",
                "description":""
             },
             {
                "field":"_ZipCode",
-               "type":"Text",
+               "type":"Text(20)",
                "description":""
             },
             {
                "field":"_FirstName",
-               "type":"Text",
+               "type":"Text(100)",
                "description":""
             },
             {
                "field":"_LastName",
-               "type":"Text",
+               "type":"Text(100)",
                "description":""
             },
             {
@@ -2173,12 +2173,12 @@
             },
             {
                "field":"_SystemToken",
-               "type":"Text",
+               "type":"Text(4000)",
                "description":""
             },
             {
                "field":"_ProviderToken",
-               "type":"Text",
+               "type":"Text(200)",
                "description":""
             },
             {
@@ -2193,22 +2193,22 @@
             },
             {
                "field":"_TimeZone",
-               "type":"Text",
+               "type":"Text(50)",
                "description":""
             },
             {
                "field":"_Device",
-               "type":"Text",
+               "type":"Text(100)",
                "description":""
             },
             {
                "field":"_HardwareId",
-               "type":"Text",
+               "type":"Text(100)",
                "description":""
             },
             {
                "field":"_DeviceType",
-               "type":"Text",
+               "type":"Text(20)",
                "description":""
             }
          ]
@@ -2220,17 +2220,17 @@
          "fields":[
             {
                "field":"_DeviceID",
-               "type":"Text",
+               "type":"Text(200)",
                "description":""
             },
             {
                "field":"_APID",
-               "type":"Text",
+               "type":"Text(38)",
                "description":""
             },
             {
                "field":"_Value",
-               "type":"Text",
+               "type":"Text(128)",
                "description":""
             },
             {

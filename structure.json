@@ -499,7 +499,7 @@
             },
             {
                "field":"TriggeredSendCustomerKey",
-               "type":"text",
+               "type":"text(36)",
                "description":"The customer key for the triggered send."
             }
          ]
@@ -816,8 +816,8 @@
                "description":"The object ID for the triggered send definition"
             },
             {
-               "field":"TriggeredSendCustomerKey(36)",
-               "type":"Text",
+               "field":"TriggeredSendCustomerKey",
+               "type":"Text(36)",
                "description":"The customer key for the triggered send"
             },
             {
@@ -882,12 +882,12 @@
             },
             {
                "field":"OriginalSchedTime",
-               "type":"Date",
+               "type":"date",
                "description":"The original scheduled time for the job"
             },
             {
                "field":"CreatedDate",
-               "type":"Date",
+               "type":"date",
                "description":"The date the job was created"
             },
             {
@@ -902,12 +902,12 @@
             },
             {
                "field":"SalesForceTotalSubscriberCount",
-               "type":"Number",
+               "type":"number",
                "description":"The total number of Salesforce subscribers included in the job"
             },
             {
                "field":"SalesForceErrorSubscriberCount",
-               "type":"Number",
+               "type":"number",
                "description":"The total number of Salesforce subscribers included in the job that received errors"
             },
             {
@@ -917,7 +917,7 @@
             },
             {
                "field":"DynamicEmailSubject",
-               "type":"Text",
+               "type":"text",
                "description":"The dynamic email subject included in the job"
             },
             {
@@ -959,97 +959,97 @@
          "fields":[
             {
                "field":"AccountID",
-               "type":"Number",
+               "type":"number",
                "description":"Your account ID number"
             },
             {
                "field":"OYBAccountID",
-               "type":"Number",
+               "type":"number",
                "description":"The account ID number for any related On-Your-Behalf accounts. This field applies to enterprise accounts only."
             },
             {
                "field":"JobID",
-               "type":"Number",
+               "type":"number",
                "description":"The job ID number for the email send"
             },
             {
                "field":"ListID",
-               "type":"Number",
+               "type":"number",
                "description":"The list ID number for the list used in the send"
             },
             {
                "field":"BatchID",
-               "type":"Number",
+               "type":"number",
                "description":"The batch ID number for any batches used in the send"
             },
             {
                "field":"SubscriberID",
-               "type":"Number",
+               "type":"number",
                "description":"The subscriber ID for the affected subscriber. This number represents the unique ID for each subscriber record."
             },
             {
                "field":"SubscriberKey",
-               "type":"Text",
+               "type":"text",
                "description":"The subscriber key for the affected subscriber"
             },
             {
                "field":"EventDate",
-               "type":"Date",
+               "type":"date",
                "description":"The date the survey response took place"
             },
             {
                "field":"Domain",
-               "type":"Text",
+               "type":"text",
                "description":"The domain at which the survey response occurred"
             },
             {
                "field":"SurveyID",
-               "type":"Number",
+               "type":"number",
                "description":"The ID of the survey"
             },
             {
                "field":"SurveyName",
-               "type":"Text",
+               "type":"text",
                "description":"The name of the survey"
             },
             {
                "field":"IsUnique",
-               "type":"Number",
+               "type":"number",
                "description":"Whether the response is unique or not"
             },
             {
                "field":"QuestionID",
-               "type":"Number",
+               "type":"number",
                "description":"The ID of the survey question"
             },
             {
                "field":"QuestionName",
-               "type":"Text",
+               "type":"text",
                "description":"The name of the survey question"
             },
             {
                "field":"Question",
-               "type":"Text",
+               "type":"text",
                "description":"The survey question"
             },
             {
                "field":"AnswerID",
-               "type":"Number",
+               "type":"number",
                "description":"The ID of the answer"
             },
             {
                "field":"AnswerName",
-               "type":"Text",
+               "type":"text",
                "description":"The name of the answer"
             },
             {
                "field":"Answer",
-               "type":"Text",
+               "type":"text",
                "description":"The Boolean answer to the survey question"
             },
             {
                "field":"AnswerData",
-               "type":"Text",
+               "type":"text",
                "description":"The text content of the survey answer"
             }
          ]
@@ -1061,52 +1061,52 @@
          "fields":[
             {
                "field":"JobID",
-               "type":"Number",
+               "type":"number",
                "description":"The job ID number for the email send"
             },
             {
                "field":"ListID",
-               "type":"Number",
+               "type":"number",
                "description":"The list ID number for the list used in the send"
             },
             {
                "field":"RegionTitle",
-               "type":"Text",
+               "type":"text",
                "description":"The title of the region shared via Social Forward"
             },
             {
                "field":"RegionDescription",
-               "type":"Text",
+               "type":"text",
                "description":"The description of the region shared via Social Forward"
             },
             {
                "field":"RegionHTML",
-               "type":"Text",
+               "type":"text",
                "description":"The HTML associated with the social forward region"
             },
             {
                "field":"ContentRegionID",
-               "type":"Number",
+               "type":"number",
                "description":"The ID of the shared content region"
             },
             {
                "field":"SocialSharingSiteID",
-               "type":"Number",
+               "type":"number",
                "description":"The ID of the social network involved in the sharing of the content region"
             },
             {
                "field":"SiteName",
-               "type":"Text",
+               "type":"text",
                "description":"The name of the social network involved in the sharing of the content region"
             },
             {
                "field":"CountryCode",
-               "type":"Text",
+               "type":"text",
                "description":"The country code for the social network involved in the sharing of the content region"
             },
             {
                "field":"ReferringURL",
-               "type":"Text",
+               "type":"text",
                "description":"The referring URL used in the Social Forward activity"
             },
             {
@@ -1116,22 +1116,22 @@
             },
             {
                "field":"TransactionTime",
-               "type":"Date",
+               "type":"date",
                "description":"The time at which the content area was shared"
             },
             {
                "field":"PublishedSocialContentStatusID",
-               "type":"Text",
+               "type":"text",
                "description":"The status ID for the published social content"
             },
             {
                "field":"ShortCode",
-               "type":"Text",
+               "type":"text",
                "description":"The short code for the published social content status, which is Active, Inactive, or Deleted"
             },
             {
                "field":"PublishTime",
-               "type":"Date",
+               "type":"date",
                "description":"The time the social content area was published"
             }
          ]
@@ -1143,7 +1143,7 @@
          "fields":[
             {
                "field":"SubscriberID",
-               "type":"Number",
+               "type":"number",
                "description":"The subscriber ID for the affected subscriber. This number represents the unique ID for each subscriber record."
             },
             {
@@ -1153,62 +1153,62 @@
             },
             {
                "field":"ListID",
-               "type":"Number",
+               "type":"number",
                "description":"The list ID number for the list used in the send"
             },
             {
                "field":"BatchID",
-               "type":"Number",
+               "type":"number",
                "description":"The batch ID number for any batches used in the send"
             },
             {
                "field":"SocialSharingSiteID",
-               "type":"Number",
+               "type":"number",
                "description":"The ID of the social network used to share the content region"
             },
             {
                "field":"SiteName",
-               "type":"Text",
+               "type":"text",
                "description":"The name of the social network involved in the sharing of the content region"
             },
             {
                "field":"CountryCode",
-               "type":"Text",
+               "type":"text",
                "description":"The country code for the social network involved in the sharing of the content region"
             },
             {
                "field":"PublishedSocialContentID",
-               "type":"Text",
+               "type":"text",
                "description":"The ID number for the content area published via Social Forward"
             },
             {
                "field":"RegionTitle",
-               "type":"Text",
+               "type":"text",
                "description":"The title of the region shared via Social Forward"
             },
             {
                "field":"RegionDescription",
-               "type":"Text",
+               "type":"text",
                "description":"The description of the region shared via Social Forward"
             },
             {
                "field":"RegionHTML",
-               "type":"Text",
+               "type":"text",
                "description":"The HTML associated with the social forward region"
             },
             {
                "field":"ContentRegionID",
-               "type":"Text",
+               "type":"text",
                "description":"The ID of the shared content region"
             },
             {
                "field":"OYBMemberID",
-               "type":"Number",
+               "type":"number",
                "description":"The ID number for any On-Your-Behalf (OYB) account involved in the sharing of the content area"
             },
             {
                "field":"TransactionTime",
-               "type":"Date",
+               "type":"date",
                "description":"The time at which the content area was shared"
             },
             {
@@ -1218,22 +1218,22 @@
             },
             {
                "field":"Domain",
-               "type":"Text",
+               "type":"text",
                "description":"The domain from which the content was shared"
             },
             {
                "field":"PublishedSocialContentStatusID",
-               "type":"Text",
+               "type":"text",
                "description":"The status ID for the published social content"
             },
             {
                "field":"ShortCode",
-               "type":"Text",
+               "type":"text",
                "description":"The short code for the published social content status, which is Active, Inactive, or Deleted"
             },
             {
                "field":"PublishTime",
-               "type":"Date",
+               "type":"date",
                "description":"The time the social content area was published"
             }
          ]
@@ -1245,27 +1245,27 @@
          "fields":[
             {
                "field":"Name",
-               "type":"Text",
+               "type":"text",
                "description":"Name of your coupon"
             },
             {
                "field":"ExternalKey",
-               "type":"Text",
+               "type":"text",
                "description":"The external key used to refer to your coupon via the API"
             },
             {
                "field":"Description",
-               "type":"Text",
+               "type":"text",
                "description":"Description of your coupon"
             },
             {
                "field":"BeginDate",
-               "type":"Date",
+               "type":"date",
                "description":"The date the coupon becomes valid"
             },
             {
                "field":"ExpirationDate",
-               "type":"Date",
+               "type":"date",
                "description":"The date the coupon becomes invalid"
             }
          ]
@@ -1277,7 +1277,7 @@
          "fields":[
             {
                "field":"MemberID",
-               "type":"Number",
+               "type":"number",
                "description":"The unique ID of the business unit."
             },
             {
@@ -1287,7 +1287,7 @@
             },
             {
                "field":"AutomationCustomerKey",
-               "type":"Text",
+               "type":"text",
                "description":"The unique ID of the automation."
             },
             {
@@ -1317,7 +1317,7 @@
             },
             {
                "field":"AutomationStepCount",
-               "type":"Number",
+               "type":"number",
                "description":"The number of steps in the automation."
             },
             {
@@ -1337,17 +1337,17 @@
             },
             {
                "field":"AutomationInstanceScheduledTime_UTC",
-               "type":"Date",
+               "type":"date",
                "description":"For scheduled automations, the time that the run was scheduled to begin."
             },
             {
                "field":"AutomationInstanceStartTime_UTC",
-               "type":"Date",
+               "type":"date",
                "description":"The time that the automation run started. This value is null if the automation was skipped."
             },
             {
                "field":"AutomationInstanceEndTime_UTC",
-               "type":"Date",
+               "type":"date",
                "description":"The time that the automation run ended. This value is null if the automation was skipped or is still running."
             },
             {
@@ -1369,7 +1369,7 @@
          "fields":[
             {
                "field":"MemberID",
-               "type":"Number",
+               "type":"number",
                "description":"The unique ID of the business unit."
             },
             {
@@ -1389,7 +1389,7 @@
             },
             {
                "field":"ActivityType",
-               "type":"Number",
+               "type":"number",
                "description":"The activity type. Possible values are listed in the Activity Type IDs table."
             },
             {
@@ -1419,12 +1419,12 @@
             },
             {
                "field":"ActivityInstanceStartTime_UTC",
-               "type":"Date",
+               "type":"date",
                "description":"The time that the activity run started. This value is null if the automation was skipped."
             },
             {
                "field":"ActivityInstanceEndTime_UTC",
-               "type":"Date",
+               "type":"date",
                "description":"The time that the activity run ended. This value is null if the automation was skipped, is still running, or wasn’t selected as part of an Advanced Run Once."
             },
             {
@@ -1451,52 +1451,52 @@
             },
             {
                "field":"SubscriberKey",
-               "type":"Text",
+               "type":"text",
                "description":"The subscriber key for the affected subscriber"
             },
             {
                "field":"SubscriberID",
-               "type":"Number",
+               "type":"number",
                "description":"The subscriber ID for the affected subscriber. This number represents the unique ID for each subscriber record"
             },
             {
                "field":"MobileMessageTrackingID",
-               "type":"Number",
+               "type":"number",
                "description":"Unique ID for tracking information related to the sent message"
             },
             {
                "field":"EID",
-               "type":"Number",
+               "type":"number",
                "description":"Enterprise ID number for the sender"
             },
             {
                "field":"MID",
-               "type":"Number",
+               "type":"number",
                "description":"Member ID"
             },
             {
                "field":"MessageID",
-               "type":"Number",
+               "type":"number",
                "description":"Mobile message ID"
             },
             {
                "field":"KeywordID",
-               "type":"Text",
+               "type":"text",
                "description":"Unique identifier for the keyword"
             },
             {
                "field":"CodeID",
-               "type":"Text",
+               "type":"text",
                "description":"Unique identifier for the SMS code"
             },
             {
                "field":"ConversationID",
-               "type":"Text",
+               "type":"text",
                "description":"Unique identifier for the SMS conversation"
             },
             {
                "field":"CampaignID",
-               "type":"Number",
+               "type":"number",
                "description":"The SMS campaign tied to the record"
             },
             {
@@ -1541,7 +1541,7 @@
             },
             {
                "field":"MessageText",
-               "type":"Text",
+               "type":"text",
                "description":"The text of the message"
             },
             {
@@ -1551,12 +1551,12 @@
             },
             {
                "field":"MobileMessageRecurrenceID",
-               "type":"Number",
+               "type":"number",
                "description":"The ID of the recurrence schedule for the message. Can be used for troubleshooting send issues."
             },
             {
                "field":"ResponseToMobileMessageTrackingID",
-               "type":"Number",
+               "type":"number",
                "description":"The tracking ID of the response to the message"
             },
             {
@@ -1566,92 +1566,92 @@
             },
             {
                "field":"InvalidationCode",
-               "type":"Number",
+               "type":"number",
                "description":"Invalidation code for the message"
             },
             {
                "field":"SendID",
-               "type":"Number",
+               "type":"number",
                "description":"The send ID number for the SMS send"
             },
             {
                "field":"SendSplitID",
-               "type":"Number",
+               "type":"number",
                "description":"If the message was split, the ID of the split"
             },
             {
                "field":"SendSegmentID",
-               "type":"Number",
+               "type":"number",
                "description":"The ID of the segment tied to the message"
             },
             {
                "field":"SendJobID",
-               "type":"Number",
+               "type":"number",
                "description":"The job ID for the SMS send"
             },
             {
                "field":"SendGroupID",
-               "type":"Number",
+               "type":"number",
                "description":"The group ID for the SMS send"
             },
             {
                "field":"SendPersonID",
-               "type":"Number",
+               "type":"number",
                "description":"The sendperson ID for the SMS send"
             },
             {
                "field":"SMSStandardStatusCodeId",
-               "type":"Number",
+               "type":"number",
                "description":"SFMC delivery status code"
             },
             {
                "field":"Description",
-               "type":"Text",
+               "type":"text",
                "description":"Detailed description of the status code"
             },
             {
                "field":"Name",
-               "type":"Text",
+               "type":"text",
                "description":"The name of your message"
             },
             {
                "field":"ShortCode",
-               "type":"Text",
+               "type":"text",
                "description":"The short code or long code used to send your message"
             },
             {
                "field":"SharedKeyword",
-               "type":"Text",
+               "type":"text",
                "description":"The keyword used in your message"
             },
             {
                "field":"Ordinal",
-               "type":"Number",
+               "type":"number",
                "description":"Represents the parts in a multi-part message. Represented in ascending order starting at 0."
             },
             {
                "field":"FromName",
-               "type":"Text",
+               "type":"text",
                "description":"From Name that an individual message was deployed with. Maximum length: 11 characters"
             },
             {
                "field":"JBActivityID",
-               "type":"Text",
+               "type":"text",
                "description":"Unique identifier for the journey activity the message was deployed from"
             },
             {
                "field":"JBDefinitionID",
-               "type":"Text",
+               "type":"text",
                "description":"Unique identifier for the journey a message was deployed from"
             },
             {
                "field":"SMSJobID",
-               "type":"Text",
+               "type":"text",
                "description":"Unique identifier for each SMS job triggered in MobileConnect"
             },
             {
                "field":"SMSBatchID",
-               "type":"Number",
+               "type":"number",
                "description":"Identifies a batch associated with an SMS send"
             }
          ]
@@ -1668,67 +1668,67 @@
             },
             {
                "field":"SubscriberKey",
-               "type":"Text",
+               "type":"text",
                "description":"The subscriber key for the affected subscriber"
             },
             {
                "field":"LogDate",
-               "type":"Date",
+               "type":"date",
                "description":"The date the subscription is logged"
             },
             {
                "field":"MobileSubscriptionID",
-               "type":"Number",
+               "type":"number",
                "description":"The unique ID of the subscription record"
             },
             {
                "field":"SubscriptionDefinitionID",
-               "type":"Text",
+               "type":"text",
                "description":"The unique keyword ID"
             },
             {
                "field":"OptOutStatusID",
-               "type":"Number",
+               "type":"number",
                "description":"Whether the subscriber has opted out of SMS messages. See key for values."
             },
             {
                "field":"OptOutMethodID",
-               "type":"Number",
+               "type":"number",
                "description":"Method the subscriber used to opt out of SMS messages. See key for values."
             },
             {
                "field":"OptOutDate",
-               "type":"Date",
+               "type":"date",
                "description":"Date the subscriber opted out of SMS messages"
             },
             {
                "field":"OptInStatusID",
-               "type":"Number",
+               "type":"number",
                "description":"Whether the subscriber has opted in to SMS message. See key for values."
             },
             {
                "field":"OptInMethodID",
-               "type":"Number",
+               "type":"number",
                "description":"Method the subscriber used to opt in to SMS messages. See key for values."
             },
             {
                "field":"OptInDate",
-               "type":"Date",
+               "type":"date",
                "description":"Date the subscriber opted in to SMS messages"
             },
             {
                "field":"Source",
-               "type":"Number",
+               "type":"number",
                "description":"The subscription source"
             },
             {
                "field":"CreatedDate",
-               "type":"Date",
+               "type":"date",
                "description":"Date the message was created"
             },
             {
                "field":"ModifiedDate",
-               "type":"Date",
+               "type":"date",
                "description":"Date the message was modified"
             }
          ]
@@ -1750,17 +1750,17 @@
             },
             {
                "field":"BounceCount",
-               "type":"Number",
+               "type":"number",
                "description":"Number of bounced SMS messages for subscriber"
             },
             {
                "field":"FirstBounceDate",
-               "type":"Date",
+               "type":"date",
                "description":"The date when the first bounce occurred"
             },
             {
                "field":"HoldDate",
-               "type":"Date",
+               "type":"date",
                "description":"The date when MobileConnect discontinued sending messages to the subscriber"
             }
          ]
@@ -1777,17 +1777,17 @@
             },
             {
                "field":"_ContactID",
-               "type":"Text",
+               "type":"text",
                "description":""
             },
             {
                "field":"_Status",
-               "type":"Text",
+               "type":"text",
                "description":""
             },
             {
                "field":"_Source",
-               "type":"Text",
+               "type":"text",
                "description":""
             },
             {
@@ -1797,7 +1797,7 @@
             },
             {
                "field":"_Priority",
-               "type":"Text",
+               "type":"text",
                "description":""
             },
             {
@@ -1807,7 +1807,7 @@
             },
             {
                "field":"_CarrierID",
-               "type":"Text",
+               "type":"text",
                "description":""
             },
             {
@@ -1817,22 +1817,22 @@
             },
             {
                "field":"_CreatedDate",
-               "type":"Date",
+               "type":"date",
                "description":""
             },
             {
                "field":"_CreatedBy",
-               "type":"Text",
+               "type":"text",
                "description":""
             },
             {
                "field":"_ModifiedDate",
-               "type":"Date",
+               "type":"date",
                "description":""
             },
             {
                "field":"_ModifiedBy",
-               "type":"Text",
+               "type":"text",
                "description":""
             },
             {
@@ -1862,7 +1862,7 @@
             },
             {
                "field":"_UTCOffset",
-               "type":"Number",
+               "type":"number",
                "description":""
             },
             {
@@ -1889,42 +1889,42 @@
             },
             {
                "field":"_OptOutStatusID",
-               "type":"Text",
+               "type":"text",
                "description":""
             },
             {
                "field":"_OptOutMethodID",
-               "type":"Text",
+               "type":"text",
                "description":""
             },
             {
                "field":"_OptOutDate",
-               "type":"Date",
+               "type":"date",
                "description":""
             },
             {
                "field":"_OptInStatusID",
-               "type":"Text",
+               "type":"text",
                "description":""
             },
             {
                "field":"_OptInMethodID",
-               "type":"Text",
+               "type":"text",
                "description":""
             },
             {
                "field":"_OptInDate",
-               "type":"Date",
+               "type":"date",
                "description":""
             },
             {
                "field":"_Source",
-               "type":"Text",
+               "type":"text",
                "description":""
             },
             {
                "field":"_CreatedDate",
-               "type":"Date",
+               "type":"date",
                "description":""
             },
             {
@@ -1934,17 +1934,17 @@
             },
             {
                "field":"_CreatedBy",
-               "type":"Text",
+               "type":"text",
                "description":""
             },
             {
                "field":"_ModifiedDate",
-               "type":"Date",
+               "type":"date",
                "description":""
             },
             {
                "field":"_ModifiedBy",
-               "type":"Text",
+               "type":"text",
                "description":""
             }
          ]
@@ -1971,37 +1971,37 @@
       },
       {
          "field":"_OptOutStatusID",
-         "type":"Text",
+         "type":"text",
          "description":""
       },
       {
          "field":"_OptOutMethodID",
-         "type":"Text",
+         "type":"text",
          "description":""
       },
       {
          "field":"_OptOutDate",
-         "type":"Date",
+         "type":"date",
          "description":""
       },
       {
          "field":"_OptinStatusID",
-         "type":"Text",
+         "type":"text",
          "description":""
       },
       {
          "field":"_OptinMethodID",
-         "type":"Text",
+         "type":"text",
          "description":""
       },
       {
          "field":"_OptinDate",
-         "type":"Date",
+         "type":"date",
          "description":""
       },
       {
          "field":"_Source",
-         "type":"Text",
+         "type":"text",
          "description":""
       },
       {
@@ -2011,22 +2011,22 @@
       },
       {
          "field":"_CreatedDate",
-         "type":"Date",
+         "type":"date",
          "description":""
       },
       {
          "field":"_CreatedBy",
-         "type":"Text",
+         "type":"text",
          "description":""
       },
       {
          "field":"_ModifiedDate",
-         "type":"Date",
+         "type":"date",
          "description":""
       },
       {
          "field":"_ModifiedBy",
-         "type":"Text",
+         "type":"text",
          "description":""
       }
    ]
@@ -2043,7 +2043,7 @@
             },
             {
                "field":"_ContactID",
-               "type":"Text",
+               "type":"text",
                "description":""
             },
             {
@@ -2053,12 +2053,12 @@
             },
             {
                "field":"_Status",
-               "type":"Text",
+               "type":"text",
                "description":""
             },
             {
                "field":"_Source",
-               "type":"Text",
+               "type":"text",
                "description":""
             },
             {
@@ -2083,32 +2083,32 @@
             },
             {
                "field":"_OptOutStatusID",
-               "type":"Text",
+               "type":"text",
                "description":""
             },
             {
                "field":"_OptOutMethodID",
-               "type":"Text",
+               "type":"text",
                "description":""
             },
             {
                "field":"_OptOutDate",
-               "type":"Date",
+               "type":"date",
                "description":""
             },
             {
                "field":"_OptInStatusID",
-               "type":"Text",
+               "type":"text",
                "description":""
             },
             {
                "field":"_OptInMethodID",
-               "type":"Text",
+               "type":"text",
                "description":""
             },
             {
                "field":"_OptInDate",
-               "type":"Date",
+               "type":"date",
                "description":""
             },
             {
@@ -2118,22 +2118,22 @@
             },
             {
                "field":"_CreatedDate",
-               "type":"Date",
+               "type":"date",
                "description":""
             },
             {
                "field":"_CreatedBy",
-               "type":"Text",
+               "type":"text",
                "description":""
             },
             {
                "field":"_ModifiedDate",
-               "type":"Date",
+               "type":"date",
                "description":""
             },
             {
                "field":"_ModifiedBy",
-               "type":"Text",
+               "type":"text",
                "description":""
             },
             {
@@ -2183,7 +2183,7 @@
             },
             {
                "field":"_Badge",
-               "type":"Number",
+               "type":"number",
                "description":""
             },
             {
@@ -2235,22 +2235,22 @@
             },
             {
                "field":"_CreatedDate",
-               "type":"Date",
+               "type":"date",
                "description":""
             },
             {
                "field":"_CreatedBy",
-               "type":"Text",
+               "type":"text",
                "description":""
             },
             {
                "field":"_ModifiedDate",
-               "type":"Date",
+               "type":"date",
                "description":""
             },
             {
                "field":"_ModifiedBy",
-               "type":"Text",
+               "type":"text",
                "description":""
             }
          ]
@@ -2262,37 +2262,37 @@
          "fields":[
             {
                "field":"ContactID",
-               "type":"Number",
+               "type":"number",
                "description":"Marketing Cloud ContactId (system generated) linked to LINE UID"
             },
             {
                "field":"ContactKey",
-               "type":"Text",
+               "type":"text",
                "description":"Marketing Cloud contact key (system generated) linked to LINE UID"
             },
             {
                "field":"ChannelID",
-               "type":"Text",
+               "type":"text",
                "description":"Channel ID of LINE account"
             },
             {
                "field":"AddressID",
-               "type":"Text",
+               "type":"text",
                "description":"LINE UID"
             },
             {
                "field":"IsActive",
-               "type":"Number",
+               "type":"number",
                "description":"Active flag: (1 = true, 0 = false)"
             },
             {
                "field":"CreatedDate",
-               "type":"Date",
+               "type":"date",
                "description":"Date and time record created in Central Standard Time. Date the customer started following LINE account."
             },
             {
                "field":"ModifiedDate",
-               "type":"Date",
+               "type":"date",
                "description":"Date and time record modified in Central Standard Time"
             }
          ]
@@ -2304,22 +2304,22 @@
          "fields":[
             {
                "field":"ContactID",
-               "type":"Number",
+               "type":"number",
                "description":"Marketing Cloud ContactId (system generated) linked to LINE UID"
             },
             {
                "field":"ContactKey",
-               "type":"Text",
+               "type":"text",
                "description":"ContactKey is either system-generated or provided by user during import. Linked to LINE UID"
             },
             {
                "field":"AddressID",
-               "type":"Text",
+               "type":"text",
                "description":"LINE UID"
             },
             {
                "field":"CreatedDate",
-               "type":"Date",
+               "type":"date",
                "description":"Date and time record created (in Central Standard Time). Date the customer started following LINE account."
             }
          ]
@@ -2331,22 +2331,22 @@
    "fields":[
       {
          "field":"JobID",
-         "type":"Number",
+         "type":"number",
          "description":"A unique identifier for the job."
       },
       {
          "field":"ListID",
-         "type":"Number",
+         "type":"number",
          "description":"The identifier for the list used in the send."
       },
       {
          "field":"BatchID",
-         "type":"Number",
+         "type":"number",
          "description":"The batch number associated with the send."
       },
       {
          "field":"SubID",
-         "type":"Number",
+         "type":"number",
          "description":"Subscriber ID associated with the send."
       },
       {
@@ -2395,67 +2395,67 @@
    "fields":[
       {
          "field":"LogDate",
-         "type":"Date",
+         "type":"date",
          "description":"The date and time when the log entry was recorded."
       },
       {
          "field":"MobileSubscriptionID",
-         "type":"Number",
+         "type":"number",
          "description":"A unique identifier for the mobile subscription."
       },
       {
          "field":"SubscriptionDefinitionID",
-         "type":"Text",
+         "type":"text",
          "description":"The definition ID of the SMS subscription."
       },
       {
          "field":"MobileNumber",
-         "type":"Text",
+         "type":"text",
          "description":"The mobile number associated with the subscription."
       },
       {
          "field":"OptOutStatusID",
-         "type":"Number",
+         "type":"number",
          "description":"The status ID indicating the opt-out status of the subscription."
       },
       {
          "field":"OptOutMethodID",
-         "type":"Number",
+         "type":"number",
          "description":"An identifier for the method used for opting out."
       },
       {
          "field":"OptOutDate",
-         "type":"Date",
+         "type":"date",
          "description":"The date when the opt-out occurred."
       },
       {
          "field":"OptInStatusID",
-         "type":"Number",
+         "type":"number",
          "description":"The status ID indicating the opt-in status of the subscription."
       },
       {
          "field":"OptInMethodID",
-         "type":"Number",
+         "type":"number",
          "description":"An identifier for the method used for opting in."
       },
       {
          "field":"OptInDate",
-         "type":"Date",
+         "type":"date",
          "description":"The date when the opt-in occurred."
       },
       {
          "field":"Source",
-         "type":"Number",
+         "type":"number",
          "description":"The source identifier for the SMS subscription."
       },
       {
          "field":"CreatedDate",
-         "type":"Date",
+         "type":"date",
          "description":"The date when the subscription record was created."
       },
       {
          "field":"ModifiedDate",
-         "type":"Date",
+         "type":"date",
          "description":"The date when the subscription record was last modified."
       }
    ]
@@ -2467,172 +2467,172 @@
    "fields":[
       {
          "field":"MobileMessageTrackingId",
-         "type":"Number",
+         "type":"number",
          "description":"Unique identifier for the mobile message tracking."
       },
       {
          "field":"EID",
-         "type":"Number",
+         "type":"number",
          "description":"Enterprise ID associated with the message."
       },
       {
          "field":"MID",
-         "type":"Number",
+         "type":"number",
          "description":"Member ID associated with the message."
       },
       {
          "field":"Mobile",
-         "type":"Text",
+         "type":"text",
          "description":"The mobile number to which the message was sent."
       },
       {
          "field":"MessageID",
-         "type":"Number",
+         "type":"number",
          "description":"The unique identifier of the message."
       },
       {
          "field":"MessageTypeID",
-         "type":"Number",
+         "type":"number",
          "description":"The ID indicating the type of message sent."
       },
       {
          "field":"KeywordID",
-         "type":"Text",
+         "type":"text",
          "description":"The ID associated with the keyword in the message."
       },
       {
          "field":"CodeID",
-         "type":"Text",
+         "type":"text",
          "description":"The ID of the code used in the message."
       },
       {
          "field":"ConversationID",
-         "type":"Number",
+         "type":"number",
          "description":"The ID representing the conversation to which the message belongs."
       },
       {
          "field":"CampaignID",
-         "type":"Number",
+         "type":"number",
          "description":"The campaign ID associated with the message."
       },
       {
          "field":"Sent",
-         "type":"Number",
+         "type":"number",
          "description":"The count of sent messages."
       },
       {
          "field":"Delivered",
-         "type":"Number",
+         "type":"number",
          "description":"The count of delivered messages."
       },
       {
          "field":"Undelivered",
-         "type":"Number",
+         "type":"number",
          "description":"The count of undelivered messages."
       },
       {
          "field":"Unsub",
-         "type":"Number",
+         "type":"number",
          "description":"The count of unsubscribe actions."
       },
       {
          "field":"OptIn",
-         "type":"Number",
+         "type":"number",
          "description":"The count of opt-in actions."
       },
       {
          "field":"OptOut",
-         "type":"Number",
+         "type":"number",
          "description":"The count of opt-out actions."
       },
       {
          "field":"Outbound",
-         "type":"Number",
+         "type":"number",
          "description":"The count of outbound messages."
       },
       {
          "field":"Inbound",
-         "type":"Number",
+         "type":"number",
          "description":"The count of inbound messages."
       },
       {
          "field":"CreateDateTime",
-         "type":"Date",
+         "type":"date",
          "description":"The date and time when the record was created."
       },
       {
          "field":"ModifiedDateTime",
-         "type":"Date",
+         "type":"date",
          "description":"The date and time when the record was last modified."
       },
       {
          "field":"ActionDateTime",
-         "type":"Date",
+         "type":"date",
          "description":"The date and time of the message action."
       },
       {
          "field":"MessageText",
-         "type":"Text",
+         "type":"text",
          "description":"The text content of the SMS message."
       },
       {
          "field":"IsTest",
-         "type":"Text",
+         "type":"text",
          "description":"Indicates if the message was a test."
       },
       {
          "field":"MobileMessageRecurrenceID",
-         "type":"Number",
+         "type":"number",
          "description":"Identifier for the recurrence of the mobile message."
       },
       {
          "field":"ResponseToMobileMessageTrackingID",
-         "type":"Number",
+         "type":"number",
          "description":"The tracking ID of the message this is a response to."
       },
       {
          "field":"IsValid",
-         "type":"Text",
+         "type":"text",
          "description":"Indicates whether the message is valid."
       },
       {
          "field":"InvalidationCode",
-         "type":"Number",
+         "type":"number",
          "description":"The code indicating why a message was invalidated."
       },
       {
          "field":"SendID",
-         "type":"Number",
+         "type":"number",
          "description":"The unique identifier for the send action."
       },
       {
          "field":"SendSplitID",
-         "type":"Number",
+         "type":"number",
          "description":"The ID for the send split."
       },
       {
          "field":"SendSegmentID",
-         "type":"Number",
+         "type":"number",
          "description":"The ID for the segment of the send."
       },
       {
          "field":"SendJobID",
-         "type":"Number",
+         "type":"number",
          "description":"The job ID for the send."
       },
       {
          "field":"SendGroupID",
-         "type":"Number",
+         "type":"number",
          "description":"The group ID for the send."
       },
       {
          "field":"SendPersonID",
-         "type":"Number",
+         "type":"number",
          "description":"The personal ID associated with the send."
       },
       {
          "field":"SubscriberId",
-         "type":"Number",
+         "type":"number",
          "description":"The subscriber ID associated with the message."
       }
    ]
@@ -2644,12 +2644,12 @@
    "fields":[
       {
          "field":"PushJobID",
-         "type":"Text",
+         "type":"text",
          "description":"Unique identifier for the push job, typically a UUID."
       },
       {
          "field":"PushTriggeredSendRequestID",
-         "type":"Text",
+         "type":"text",
          "description":"Unique identifier for the triggered send request of the push notification."
       },
       {
@@ -2664,17 +2664,17 @@
       },
       {
          "field":"DeviceId",
-         "type":"Text",
+         "type":"text",
          "description":"Unique identifier for the device receiving the push notification."
       },
       {
          "field":"AppId",
-         "type":"Text",
+         "type":"text",
          "description":"Unique identifier for the application through which the push notification is sent."
       },
       {
          "field":"LogDate",
-         "type":"Date",
+         "type":"date",
          "description":"Date and time when the log entry was created. Default value is the current date and time (GETDATE())."
       }
    ]

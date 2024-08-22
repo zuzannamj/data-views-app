@@ -37,7 +37,7 @@
             },
             {
                "field":"SubscriberKey",
-               "type":"text",
+               "type":"text(254)",
                "description":"The subscriber's external unique identifier."
             },
             {
@@ -47,17 +47,17 @@
             },
             {
                "field":"Domain",
-               "type":"text",
+               "type":"text(128)",
                "description":"The domain associated with the subscriber's email address."
             },
             {
                "field":"TriggererSendDefinitionObjectID",
-               "type":"text",
+               "type":"text(36)",
                "description":"Identifies the triggered send definition associated with the send."
             },
             {
                "field":"TriggeredSendCustomerKey",
-               "type":"text",
+               "type":"text(36)",
                "description":"The unique identifier for the triggered send definition."
             }
          ]
@@ -99,7 +99,7 @@
             },
             {
                "field":"SubscriberKey",
-               "type":"text",
+               "type":"text(254)",
                "description":"The subscriber's external unique identifier."
             },
             {
@@ -109,7 +109,7 @@
             },
             {
                "field":"Domain",
-               "type":"text",
+               "type":"text(128)",
                "description":"The domain associated with the subscriber's email address."
             },
             {
@@ -119,12 +119,12 @@
             },
                         {
                "field":"TriggererSendDefinitionObjectID",
-               "type":"text",
+               "type":"text(36)",
                "description":"Identifies the triggered send definition associated with the send."
             },
             {
                "field":"TriggeredSendCustomerKey",
-               "type":"text",
+               "type":"text(36)",
                "description":"The unique identifier for the triggered send definition."
             }
          ]
@@ -166,7 +166,7 @@
             },
             {
                "field":"SubscriberKey",
-               "type":"text",
+               "type":"text(254)",
                "description":"The subscriber key for the affected subscriber."
             },
             {
@@ -176,22 +176,22 @@
             },
             {
                "field":"Domain",
-               "type":"text",
+               "type":"text(128)",
                "description":"The domain at which the click occurred."
             },
             {
                "field":"URL",
-               "type":"text",
+               "type":"text(900)",
                "description":"The URL for the link clicked. No AMPscript or variables are populated in this column, for example, www.example.com?%%attribute%%."
             },
             {
                "field":"LinkName",
-               "type":"text",
+               "type":"text(1024)",
                "description":"The link name assigned in the email send."
             },
             {
                "field":"LinkContent",
-               "type":"text",
+               "type":"text(max)",
                "description":"The link content assigned in the email send. AMPscript and variables are populated in this column, such as www.example.com?12345."
             },
             {
@@ -201,12 +201,12 @@
             },
             {
                "field":"TriggererSendDefinitionObjectID",
-               "type":"text",
+               "type":"text(36)",
                "description":"The object ID for the triggered send definition."
             },
             {
                "field":"TriggeredSendCustomerKey",
-               "type":"text",
+               "type":"text(36)",
                "description":"The customer key for the triggered send."
             }
          ]
@@ -248,7 +248,7 @@
             },
             {
                "field":"SubscriberKey",
-               "type":"text",
+               "type":"text(254)",
                "description":"The subscriber's external unique identifier."
             },
             {
@@ -258,7 +258,7 @@
             },
             {
                "field":"Domain",
-               "type":"text",
+               "type":"text(128)",
                "description":"The domain associated with the subscriber's email address."
             },
             {
@@ -268,7 +268,7 @@
             },
             {
                "field":"BounceCategory",
-               "type":"text",
+               "type":"text(50)",
                "description":"The category of the bounce."
             },
             {
@@ -278,7 +278,7 @@
             },
             {
                "field":"BounceSubcategory",
-               "type":"text",
+               "type":"text(50)",
                "description":"The subcategory of the bounce."
             },
             {
@@ -288,17 +288,17 @@
             },
             {
                "field":"BounceType",
-               "type":"text",
+               "type":"text(50)",
                "description":"The type of bounce that occurred."
             },
             {
                "field":"SMTPBounceReason",
-               "type":"text",
+               "type":"text(4000)",
                "description":"The reason for the bounce relayed by the mail system."
             },
             {
                "field":"SMTPMessage",
-               "type":"text",
+               "type":"text(4000)",
                "description":"The message regarding the bounce from the mail system."
             },
             {
@@ -313,12 +313,12 @@
             },
             {
                "field":"TriggererSendDefinitionObjectID",
-               "type":"text",
+               "type":"text(36)",
                "description":"The object ID for the triggered send definition."
             },
             {
                "field":"TriggeredSendCustomerKey",
-               "type":"text",
+               "type":"text(36)",
                "description":"The customer key for the triggered send."
             }
          ]
@@ -360,7 +360,7 @@
             },
             {
                "field":"SubscriberKey",
-               "type":"text",
+               "type":"text(254)",
                "description":"The subscriber key for the affected subscriber."
             },
             {
@@ -375,7 +375,7 @@
             },
             {
                "field":"Domain",
-               "type":"text",
+               "type":"text(128)",
                "description":"The domain at which the unsubscribe occurred."
             }
          ]
@@ -417,7 +417,7 @@
             },
             {
                "field":"SubscriberKey",
-               "type":"text",
+               "type":"text(254)",
                "description":"The subscriber key for the affected subscriber."
             },
             {
@@ -432,7 +432,7 @@
             },
             {
                "field":"Domain",
-               "type":"text",
+               "type":"text(128)",
                "description":"The domain at which the complaint occurred."
             }
          ]
@@ -521,7 +521,7 @@
             },
             {
                "field":"UnsubReason",
-               "type":"text",
+               "type":"text(100)",
                "description":"The reason listed is a custom value configured by your administrator."
             },
             {
@@ -531,7 +531,7 @@
             },
             {
                "field":"SubscriberKey",
-               "type":"text",
+               "type":"text(254)",
                "description":"A potential alternate identifier for subscribers. Defaults to the value of Email Address."
             }
          ]
@@ -684,17 +684,17 @@
          "fields":[
             {
                "field":"VersionID",
-               "type":"text",
+               "type":"text(36)",
                "description":"The unique identifier for the version of the journey"
             },
             {
                "field":"JourneyID",
-               "type":"text",
+               "type":"text(36)",
                "description":"The unique identifier for the journey. There are one or more VersionID’s associated to a JourneyID."
             },
             {
                "field":"JourneyName",
-               "type":"text",
+               "type":"text(200)",
                "description":"The name of the journey"
             },
             {
@@ -719,7 +719,7 @@
             },
             {
                "field":"JourneyStatus",
-               "type":"text",
+               "type":"text(100)",
                "description":"The current running mode of the journey. Possible values are Draft, Running, Finishing, and Stopped."
             }
          ]
@@ -731,32 +731,32 @@
          "fields":[
             {
                "field":"VersionID",
-               "type":"text",
+               "type":"text(36)",
                "description":"The unique identifier for the version of the journey"
             },
             {
                "field":"ActivityID",
-               "type":"text",
+               "type":"text(36)",
                "description":"The unique identifier for the activity. There are one or more ActivityID’s associated to a VersionID."
             },
             {
                "field":"ActivityName",
-               "type":"text",
+               "type":"text(200)",
                "description":"The name of the activity"
             },
             {
                "field":"ActivityExternalKey",
-               "type":"text",
+               "type":"text(200)",
                "description":"The external key associated with the activity"
             },
             {
                "field":"JourneyActivityObjectID",
-               "type":"text",
+               "type":"text(36)",
                "description":"Use this unique identifier to join to email tracking system data views to identify a journey email’s Triggered Send Definition."
             },
             {
                "field":"ActivityType",
-               "type":"text",
+               "type":"text(512)",
                "description":"The type of activity"
             }
          ]
@@ -1772,7 +1772,7 @@
          "fields":[
             {
                "field":"_MobileNumber",
-               "type":"Text",
+               "type":"Text(15)",
                "description":""
             },
             {
@@ -1792,7 +1792,7 @@
             },
             {
                "field":"_SourceObjectId",
-               "type":"Text",
+               "type":"Text(200)",
                "description":""
             },
             {
@@ -1802,7 +1802,7 @@
             },
             {
                "field":"_Channel",
-               "type":"Text",
+               "type":"Text(20)",
                "description":""
             },
             {
@@ -1812,7 +1812,7 @@
             },
             {
                "field":"_CountryCode",
-               "type":"Text",
+               "type":"Text(2)",
                "description":""
             },
             {
@@ -1837,27 +1837,27 @@
             },
             {
                "field":"_City",
-               "type":"Text",
+               "type":"Text(200)",
                "description":""
             },
             {
                "field":"_State",
-               "type":"Text",
+               "type":"Text(200)",
                "description":""
             },
             {
                "field":"_ZipCode",
-               "type":"Text",
+               "type":"Text(20)",
                "description":""
             },
             {
                "field":"_FirstName",
-               "type":"Text",
+               "type":"Text(100)",
                "description":""
             },
             {
                "field":"_LastName",
-               "type":"Text",
+               "type":"Text(100)",
                "description":""
             },
             {
@@ -1879,12 +1879,12 @@
          "fields":[
             {
                "field":"_MobileNumber",
-               "type":"Text",
+               "type":"Text(15)",
                "description":""
             },
             {
                "field":"_SubscriptionDefinitionID",
-               "type":"Text",
+               "type":"Text(200)",
                "description":""
             },
             {
@@ -1925,6 +1925,11 @@
             {
                "field":"_CreatedDate",
                "type":"Date",
+               "description":""
+            },
+            {
+               "field":"_SourceObjectId",
+               "type":"Text(200)",
                "description":""
             },
             {

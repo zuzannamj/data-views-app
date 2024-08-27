@@ -1,6 +1,619 @@
 {
    "data":[
       {
+         "family":"SendLog Templates",
+         "name":"SendLog",
+         "about":"Use send logging in Email Studio to obtain run-time information about email send attributes for use in reports and data extracts. Send logging gives you access to data not available via standard tracking functions.",
+         "fields":[
+            {
+               "field":"JobID",
+               "type":"number",
+               "description":"A unique identifier for the job."
+            },
+            {
+               "field":"ListID",
+               "type":"number",
+               "description":"The identifier for the list used in the send."
+            },
+            {
+               "field":"BatchID",
+               "type":"number",
+               "description":"The batch number associated with the send."
+            },
+            {
+               "field":"SubID",
+               "type":"number",
+               "description":"Subscriber ID associated with the send."
+            },
+            {
+               "field":"TriggeredSendID",
+               "type":"Text(36)",
+               "description":"The unique ID of the triggered send."
+            },
+            {
+               "field":"ErrorCode",
+               "type":"Text(36)",
+               "description":"The error code associated with the send, if any."
+            }
+         ]
+      },
+      {
+         "family":"SendLog Templates",
+         "name":"SMSSendLog",
+         "about":"Use SMS Send Logging to capture detailed information about SMS message sends, including recipient data and message content. This feature allows for enhanced analysis and reporting, providing insights into SMS campaigns beyond standard tracking metrics.",
+         "fields":[
+            {
+               "field":"SMSJobID",
+               "type":"Text(36)",
+               "description":"A unique 36-character identifier for the SMS job."
+            },
+            {
+               "field":"SMSTriggeredSendID",
+               "type":"Text(36)",
+               "description":"A 36-character unique identifier for the triggered SMS send."
+            },
+            {
+               "field":"SMSBatchID",
+               "type":"LongNumber",
+               "description":"The batch number associated with the SMS send."
+            },
+            {
+               "field":"SubID",
+               "type":"LongNumber",
+               "description":"The subscriber ID associated with the SMS send."
+            }
+         ]
+      },
+      {
+         "family":"SendLog Templates",
+         "name":"SMSSubscriptionLog",
+         "about":"Used for creating a Data Extension for the _SMSSubscriptionLog view, which tracks SMS subscription data including opt-in and opt-out information.",
+         "fields":[
+            {
+               "field":"LogDate",
+               "type":"date",
+               "description":"The date and time when the log entry was recorded."
+            },
+            {
+               "field":"MobileSubscriptionID",
+               "type":"number",
+               "description":"A unique identifier for the mobile subscription."
+            },
+            {
+               "field":"SubscriptionDefinitionID",
+               "type":"text",
+               "description":"The definition ID of the SMS subscription."
+            },
+            {
+               "field":"MobileNumber",
+               "type":"text",
+               "description":"The mobile number associated with the subscription."
+            },
+            {
+               "field":"OptOutStatusID",
+               "type":"number",
+               "description":"The status ID indicating the opt-out status of the subscription."
+            },
+            {
+               "field":"OptOutMethodID",
+               "type":"number",
+               "description":"An identifier for the method used for opting out."
+            },
+            {
+               "field":"OptOutDate",
+               "type":"date",
+               "description":"The date when the opt-out occurred."
+            },
+            {
+               "field":"OptInStatusID",
+               "type":"number",
+               "description":"The status ID indicating the opt-in status of the subscription."
+            },
+            {
+               "field":"OptInMethodID",
+               "type":"number",
+               "description":"An identifier for the method used for opting in."
+            },
+            {
+               "field":"OptInDate",
+               "type":"date",
+               "description":"The date when the opt-in occurred."
+            },
+            {
+               "field":"Source",
+               "type":"number",
+               "description":"The source identifier for the SMS subscription."
+            },
+            {
+               "field":"CreatedDate",
+               "type":"date",
+               "description":"The date when the subscription record was created."
+            },
+            {
+               "field":"ModifiedDate",
+               "type":"date",
+               "description":"The date when the subscription record was last modified."
+            }
+         ]
+      },
+      {
+         "family":"SendLog Templates",
+         "name":"SMSMessageTracking",
+         "about":"Used for creating a Data Extension for the _SMSMessageTracking view, which provides detailed tracking information for SMS messages.",
+         "fields":[
+            {
+               "field":"MobileMessageTrackingId",
+               "type":"number",
+               "description":"Unique identifier for the mobile message tracking."
+            },
+            {
+               "field":"EID",
+               "type":"number",
+               "description":"Enterprise ID associated with the message."
+            },
+            {
+               "field":"MID",
+               "type":"number",
+               "description":"Member ID associated with the message."
+            },
+            {
+               "field":"Mobile",
+               "type":"text",
+               "description":"The mobile number to which the message was sent."
+            },
+            {
+               "field":"MessageID",
+               "type":"number",
+               "description":"The unique identifier of the message."
+            },
+            {
+               "field":"MessageTypeID",
+               "type":"number",
+               "description":"The ID indicating the type of message sent."
+            },
+            {
+               "field":"KeywordID",
+               "type":"text",
+               "description":"The ID associated with the keyword in the message."
+            },
+            {
+               "field":"CodeID",
+               "type":"text",
+               "description":"The ID of the code used in the message."
+            },
+            {
+               "field":"ConversationID",
+               "type":"number",
+               "description":"The ID representing the conversation to which the message belongs."
+            },
+            {
+               "field":"CampaignID",
+               "type":"number",
+               "description":"The campaign ID associated with the message."
+            },
+            {
+               "field":"Sent",
+               "type":"number",
+               "description":"The count of sent messages."
+            },
+            {
+               "field":"Delivered",
+               "type":"number",
+               "description":"The count of delivered messages."
+            },
+            {
+               "field":"Undelivered",
+               "type":"number",
+               "description":"The count of undelivered messages."
+            },
+            {
+               "field":"Unsub",
+               "type":"number",
+               "description":"The count of unsubscribe actions."
+            },
+            {
+               "field":"OptIn",
+               "type":"number",
+               "description":"The count of opt-in actions."
+            },
+            {
+               "field":"OptOut",
+               "type":"number",
+               "description":"The count of opt-out actions."
+            },
+            {
+               "field":"Outbound",
+               "type":"number",
+               "description":"The count of outbound messages."
+            },
+            {
+               "field":"Inbound",
+               "type":"number",
+               "description":"The count of inbound messages."
+            },
+            {
+               "field":"CreateDateTime",
+               "type":"date",
+               "description":"The date and time when the record was created."
+            },
+            {
+               "field":"ModifiedDateTime",
+               "type":"date",
+               "description":"The date and time when the record was last modified."
+            },
+            {
+               "field":"ActionDateTime",
+               "type":"date",
+               "description":"The date and time of the message action."
+            },
+            {
+               "field":"MessageText",
+               "type":"text",
+               "description":"The text content of the SMS message."
+            },
+            {
+               "field":"IsTest",
+               "type":"text",
+               "description":"Indicates if the message was a test."
+            },
+            {
+               "field":"MobileMessageRecurrenceID",
+               "type":"number",
+               "description":"Identifier for the recurrence of the mobile message."
+            },
+            {
+               "field":"ResponseToMobileMessageTrackingID",
+               "type":"number",
+               "description":"The tracking ID of the message this is a response to."
+            },
+            {
+               "field":"IsValid",
+               "type":"text",
+               "description":"Indicates whether the message is valid."
+            },
+            {
+               "field":"InvalidationCode",
+               "type":"number",
+               "description":"The code indicating why a message was invalidated."
+            },
+            {
+               "field":"SendID",
+               "type":"number",
+               "description":"The unique identifier for the send action."
+            },
+            {
+               "field":"SendSplitID",
+               "type":"number",
+               "description":"The ID for the send split."
+            },
+            {
+               "field":"SendSegmentID",
+               "type":"number",
+               "description":"The ID for the segment of the send."
+            },
+            {
+               "field":"SendJobID",
+               "type":"number",
+               "description":"The job ID for the send."
+            },
+            {
+               "field":"SendGroupID",
+               "type":"number",
+               "description":"The group ID for the send."
+            },
+            {
+               "field":"SendPersonID",
+               "type":"number",
+               "description":"The personal ID associated with the send."
+            },
+            {
+               "field":"SubscriberId",
+               "type":"number",
+               "description":"The subscriber ID associated with the message."
+            }
+         ]
+      },
+      {
+         "family":"SendLog Templates",
+         "name":"PushSendLog",
+         "about":"Push Send Log Data Extension Template used for capturing and analyzing data related to push notifications sent through the platform.",
+         "fields":[
+            {
+               "field":"PushJobID",
+               "type":"text",
+               "description":"Unique identifier for the push job, typically a UUID."
+            },
+            {
+               "field":"PushTriggeredSendRequestID",
+               "type":"text",
+               "description":"Unique identifier for the triggered send request of the push notification."
+            },
+            {
+               "field":"PushBatchID",
+               "type":"LongNumber",
+               "description":"Numeric identifier representing the batch in which the push notification was sent."
+            },
+            {
+               "field":"SubID",
+               "type":"LongNumber",
+               "description":"Subscriber ID associated with the push notification."
+            },
+            {
+               "field":"DeviceId",
+               "type":"text",
+               "description":"Unique identifier for the device receiving the push notification."
+            },
+            {
+               "field":"AppId",
+               "type":"text",
+               "description":"Unique identifier for the application through which the push notification is sent."
+            },
+            {
+               "field":"LogDate",
+               "type":"date",
+               "description":"Date and time when the log entry was created. Default value is the current date and time (GETDATE())."
+            }
+         ]
+      },
+      {
+         "family": "Synchronized Data Extensions",
+         "name": "Contact_Salesforce",
+         "about": "Data Extension synchronized from Salesforce Contact object, part of Marketing Cloud Connector",
+         "fields": [
+           {
+             "field": "_ContactKey",
+             "type": "Text(254)",
+             "description": "Unique key identifying the contact in Marketing Cloud, often linked to Subscriber Key."
+           },
+           {
+             "field": "AccountId",
+             "type": "Text(18)",
+             "description": "ID of the account that is the parent of this contact. Represents a relationship with the Account object."
+           },
+           {
+             "field": "CreatedById",
+             "type": "Text(18)",
+             "description": "ID of the user who created this contact."
+           },
+           {
+             "field": "Email",
+             "type": "EmailAddress(80)",
+             "description": "The contact’s email address."
+           },
+           {
+             "field": "FirstName",
+             "type": "Text(40)",
+             "description": "The contact’s first name, up to 40 characters."
+           },
+           {
+             "field": "HasOptedOutOfEmail",
+             "type": "Boolean",
+             "description": "Indicates whether the contact has opted out of receiving email communications."
+           },
+           {
+             "field": "Id",
+             "type": "Text(18)",
+             "description": "Unique identifier for the Salesforce Contact record."
+           },
+           {
+             "field": "IsEmailBounced",
+             "type": "Boolean",
+             "description": "Indicates whether the email sent to this contact bounced (true) or not (false)."
+           },
+           {
+             "field": "LastModifiedById",
+             "type": "Text(18)",
+             "description": "ID of the user who last modified this contact."
+           },
+           {
+             "field": "LastName",
+             "type": "Text(80)",
+             "description": "Required. Last name of the contact, up to 80 characters."
+           },
+           {
+             "field": "MailingCity",
+             "type": "Text(40)",
+             "description": "Mailing address city."
+           },
+           {
+             "field": "MobilePhone",
+             "type": "Phone(50)",
+             "description": "The contact’s mobile phone number."
+           }
+         ]
+       },
+       {
+         "family": "Synchronized Data Extensions",
+         "name": "Lead_Salesforce",
+         "about": "Data Extension synchronized from Salesforce Lead object, part of Marketing Cloud Connector",
+         "fields": [
+           {
+             "field": "_ContactKey",
+             "type": "Text(254)",
+             "description": ""
+           },
+           {
+             "field": "ConvertedAccountId",
+             "type": "Text(18)",
+             "description": "Object reference ID that points to the account into which the lead converted. This is a relationship field referring to the Account object."
+           },
+           {
+             "field": "ConvertedContactId",
+             "type": "Text(18)",
+             "description": "Object reference ID that points to the contact into which the lead converted. This is a relationship field referring to the Contact object."
+           },
+           {
+             "field": "ConvertedOpportunityId",
+             "type": "Text(18)",
+             "description": "Object reference ID that points to the opportunity into which the lead has been converted. This is a relationship field referring to the Opportunity object."
+           },
+           {
+             "field": "Email",
+             "type": "EmailAddress(80)",
+             "description": "The lead’s email address."
+           },
+           {
+             "field": "CreatedById",
+             "type": "Text(18)",
+             "description": ""
+           },
+           {
+             "field": "FirstName",
+             "type": "Text(40)",
+             "description": "The lead’s first name, up to 40 characters."
+           },
+           {
+             "field": "HasOptedOutOfEmail",
+             "type": "Boolean",
+             "description": "Indicates whether the lead doesn’t want to receive email from Salesforce (true) or does (false)."
+           },
+           {
+             "field": "Id",
+             "type": "Text(18)",
+             "description": "Salesforce Lead ID"
+           },
+           {
+             "field": "IsEmailBounced",
+             "type": "Boolean",
+             "description": "Indicates if an email sent to the lead has bounced."
+           },
+           {
+             "field": "LastModifiedById",
+             "type": "Text(18)",
+             "description": ""
+           },
+           {
+             "field": "LastName",
+             "type": "Text(80)",
+             "description": "The lead’s last name, up to 80 characters."
+           },
+           {
+             "field": "MobilePhone",
+             "type": "Phone(50)",
+             "description": "The lead’s mobile phone number."
+           }
+         ]
+       },
+       {
+         "family": "Synchronized Data Extensions",
+         "name": "User_Salesforce",
+         "about": "Data Extension synchronized from Salesforce User object, part of Marketing Cloud Connector",
+         "fields": [
+           {
+             "field": "_ContactKey",
+             "type": "Text(254)",
+             "description": "Unique identifier for the contact, used to associate records across data extensions."
+           },
+           {
+             "field": "Email",
+             "type": "EmailAddress(80)",
+             "description": "Primary email address of the user."
+           },
+           {
+             "field": "CreatedById",
+             "type": "Text(18)",
+             "description": "ID of the user who created this record in Salesforce."
+           },
+           {
+             "field": "FirstName",
+             "type": "Text(40)",
+             "description": "First name of the Salesforce user."
+           },
+           {
+             "field": "LastName",
+             "type": "Text(80)",
+             "description": "Last name of the Salesforce user."
+           },
+           {
+             "field": "Id",
+             "type": "Text(18)",
+             "description": "Salesforce User ID."
+           },
+           {
+             "field": "UserRoleId",
+             "type": "Text(18)",
+             "description": "ID of the role assigned to the user in Salesforce."
+           },
+           {
+             "field": "IsActive",
+             "type": "Boolean",
+             "description": "Indicates whether the user is active (true) or inactive (false)."
+           },
+           {
+             "field": "CreatedDate",
+             "type": "Date",
+             "description": "Date when the user record was created in Salesforce."
+           },
+           {
+             "field": "LastLoginDate",
+             "type": "Date",
+             "description": "The date and time the user last logged in."
+           },
+           {
+             "field": "LastModifiedDate",
+             "type": "Date",
+             "description": "Date when the user record was last modified in Salesforce."
+           },
+           {
+             "field": "LastModifiedById",
+             "type": "Text(18)",
+             "description": "ID of the user who last modified this record in Salesforce."
+           }
+         ]
+       },
+       {
+         "family": "Synchronized Data Extensions",
+         "name": "Account_Salesforce",
+         "about": "Data Extension synchronized from Salesforce Account object, part of Marketing Cloud Connector",
+         "fields": [
+           {
+             "field": "_ContactKey",
+             "type": "Text(254)",
+             "description": "Unique identifier for the contact associated with the Account record."
+           },
+           {
+             "field": "CreatedById",
+             "type": "Text(18)",
+             "description": "ID of the Salesforce user who created the record."
+           },
+           {
+             "field": "Id",
+             "type": "Text(18)",
+             "description": "Unique identifier for the Account record in Salesforce."
+           },
+           {
+             "field": "IsDeleted",
+             "type": "Boolean",
+             "description": "Indicates whether the record has been deleted (true) or not (false)."
+           },
+           {
+             "field": "LastModifiedById",
+             "type": "Text(18)",
+             "description": "ID of the Salesforce user who last modified the record."
+           },
+           {
+             "field": "MasterRecordId",
+             "type": "Text(18)",
+             "description": "ID of the master record retained after a merge operation. Null if not applicable."
+           },
+           {
+             "field": "OwnerId",
+             "type": "Text(18)",
+             "description": "ID of the Salesforce user who currently owns the Account record."
+           },
+           {
+             "field": "ParentId",
+             "type": "Text(18)",
+             "description": "ID of the parent Account record, if any."
+           },
+           {
+             "field": "RecordTypeId",
+             "type": "Text(18)",
+             "description": "ID of the record type assigned to this Account record."
+           }
+         ]
+       },
+      {
          "family":"Email",
          "name":"_Sent",
          "about":"View subscribers who were sent emails from your account by querying the _Sent data view. Records dating back six months from the day the query runs are available.",
@@ -117,7 +730,7 @@
                "type":"boolean",
                "description":"Indicates whether the email open event is unique."
             },
-                        {
+            {
                "field":"TriggererSendDefinitionObjectID",
                "type":"text(36)",
                "description":"Identifies the triggered send definition associated with the send."
@@ -211,7 +824,7 @@
             }
          ]
       },
-            {
+      {
          "family":"Email",
          "name":"_Bounce",
          "about":"View bounce data for emails from your account by querying the _bounce data view. Records dating back six months from the day the query runs are available.",
@@ -306,7 +919,7 @@
                "type":"number",
                "description":"The error code for the bounce from the mail system."
             },
-           {
+            {
                "field":"IsUnique",
                "type":"boolean",
                "description":"Whether the event is unique or repeated."
@@ -437,7 +1050,7 @@
             }
          ]
       },
-            {
+      {
          "family":"Email",
          "name":"_FTAF",
          "about":"Query this data view to view behavioral information related to email messages from your Marketing Cloud account that were forwarded to friends. View behavioral information related to email messages from your account that were forwarded to friends (FTAF) by querying the _FTAF data view. Records dating back six months from the day the query runs are available.",
@@ -775,7 +1388,8 @@
                "field":"AccountUserID",
                "type":"number",
                "description":"The ID number for the account user that performed the job"
-            },{
+            },
+            {
                "field":"JobID",
                "type":"number",
                "description":"The job ID number for the email send"
@@ -1950,87 +2564,87 @@
          ]
       },
       {
-   "family":"Mobile Connect",
-   "name":"_ChatMessagingSubscription",
-   "about":"This is an unofficial WhatsApp Data View",
-   "fields":[
-      {
-         "field":"_MobileNumber",
-         "type":"Text(254)",
-         "description":""
+         "family":"Mobile Connect",
+         "name":"_ChatMessagingSubscription",
+         "about":"This is an unofficial WhatsApp Data View",
+         "fields":[
+            {
+               "field":"_MobileNumber",
+               "type":"Text(254)",
+               "description":""
+            },
+            {
+               "field":"_ChannelId",
+               "type":"Text(50)",
+               "description":""
+            },
+            {
+               "field":"_ChannelType",
+               "type":"Text(20)",
+               "description":""
+            },
+            {
+               "field":"_OptOutStatusID",
+               "type":"text",
+               "description":""
+            },
+            {
+               "field":"_OptOutMethodID",
+               "type":"text",
+               "description":""
+            },
+            {
+               "field":"_OptOutDate",
+               "type":"date",
+               "description":""
+            },
+            {
+               "field":"_OptinStatusID",
+               "type":"text",
+               "description":""
+            },
+            {
+               "field":"_OptinMethodID",
+               "type":"text",
+               "description":""
+            },
+            {
+               "field":"_OptinDate",
+               "type":"date",
+               "description":""
+            },
+            {
+               "field":"_Source",
+               "type":"text",
+               "description":""
+            },
+            {
+               "field":"_SourceObjectId",
+               "type":"Text(200)",
+               "description":""
+            },
+            {
+               "field":"_CreatedDate",
+               "type":"date",
+               "description":""
+            },
+            {
+               "field":"_CreatedBy",
+               "type":"text",
+               "description":""
+            },
+            {
+               "field":"_ModifiedDate",
+               "type":"date",
+               "description":""
+            },
+            {
+               "field":"_ModifiedBy",
+               "type":"text",
+               "description":""
+            }
+         ]
       },
-      {
-         "field":"_ChannelId",
-         "type":"Text(50)",
-         "description":""
-      },
-      {
-         "field":"_ChannelType",
-         "type":"Text(20)",
-         "description":""
-      },
-      {
-         "field":"_OptOutStatusID",
-         "type":"text",
-         "description":""
-      },
-      {
-         "field":"_OptOutMethodID",
-         "type":"text",
-         "description":""
-      },
-      {
-         "field":"_OptOutDate",
-         "type":"date",
-         "description":""
-      },
-      {
-         "field":"_OptinStatusID",
-         "type":"text",
-         "description":""
-      },
-      {
-         "field":"_OptinMethodID",
-         "type":"text",
-         "description":""
-      },
-      {
-         "field":"_OptinDate",
-         "type":"date",
-         "description":""
-      },
-      {
-         "field":"_Source",
-         "type":"text",
-         "description":""
-      },
-      {
-         "field":"_SourceObjectId",
-         "type":"Text(200)",
-         "description":""
-      },
-      {
-         "field":"_CreatedDate",
-         "type":"date",
-         "description":""
-      },
-      {
-         "field":"_CreatedBy",
-         "type":"text",
-         "description":""
-      },
-      {
-         "field":"_ModifiedDate",
-         "type":"date",
-         "description":""
-      },
-      {
-         "field":"_ModifiedBy",
-         "type":"text",
-         "description":""
-      }
-   ]
-},
       {
          "family":"Mobile Push",
          "name":"_PushAddress",
@@ -2323,361 +2937,6 @@
                "description":"Date and time record created (in Central Standard Time). Date the customer started following LINE account."
             }
          ]
-      }       ,
-      {
-   "family":"SendLog Templates",
-   "name":"SendLog",
-   "about":"Use send logging in Email Studio to obtain run-time information about email send attributes for use in reports and data extracts. Send logging gives you access to data not available via standard tracking functions.",
-   "fields":[
-      {
-         "field":"JobID",
-         "type":"number",
-         "description":"A unique identifier for the job."
-      },
-      {
-         "field":"ListID",
-         "type":"number",
-         "description":"The identifier for the list used in the send."
-      },
-      {
-         "field":"BatchID",
-         "type":"number",
-         "description":"The batch number associated with the send."
-      },
-      {
-         "field":"SubID",
-         "type":"number",
-         "description":"Subscriber ID associated with the send."
-      },
-      {
-         "field":"TriggeredSendID",
-         "type":"Text(36)",
-         "description":"The unique ID of the triggered send."
-      },
-      {
-         "field":"ErrorCode",
-         "type":"Text(36)",
-         "description":"The error code associated with the send, if any."
       }
-   ]
-},
-      {
-   "family":"SendLog Templates",
-   "name":"SMSSendLog",
-   "about":"Use SMS Send Logging to capture detailed information about SMS message sends, including recipient data and message content. This feature allows for enhanced analysis and reporting, providing insights into SMS campaigns beyond standard tracking metrics.",
-   "fields":[
-      {
-         "field":"SMSJobID",
-         "type":"Text(36)",
-         "description":"A unique 36-character identifier for the SMS job."
-      },
-      {
-         "field":"SMSTriggeredSendID",
-         "type":"Text(36)",
-         "description":"A 36-character unique identifier for the triggered SMS send."
-      },
-      {
-         "field":"SMSBatchID",
-         "type":"LongNumber",
-         "description":"The batch number associated with the SMS send."
-      },
-      {
-         "field":"SubID",
-         "type":"LongNumber",
-         "description":"The subscriber ID associated with the SMS send."
-      }
-   ]
-},
-      {
-   "family":"SendLog Templates",
-   "name":"SMSSubscriptionLog",
-   "about":"Used for creating a Data Extension for the _SMSSubscriptionLog view, which tracks SMS subscription data including opt-in and opt-out information.",
-   "fields":[
-      {
-         "field":"LogDate",
-         "type":"date",
-         "description":"The date and time when the log entry was recorded."
-      },
-      {
-         "field":"MobileSubscriptionID",
-         "type":"number",
-         "description":"A unique identifier for the mobile subscription."
-      },
-      {
-         "field":"SubscriptionDefinitionID",
-         "type":"text",
-         "description":"The definition ID of the SMS subscription."
-      },
-      {
-         "field":"MobileNumber",
-         "type":"text",
-         "description":"The mobile number associated with the subscription."
-      },
-      {
-         "field":"OptOutStatusID",
-         "type":"number",
-         "description":"The status ID indicating the opt-out status of the subscription."
-      },
-      {
-         "field":"OptOutMethodID",
-         "type":"number",
-         "description":"An identifier for the method used for opting out."
-      },
-      {
-         "field":"OptOutDate",
-         "type":"date",
-         "description":"The date when the opt-out occurred."
-      },
-      {
-         "field":"OptInStatusID",
-         "type":"number",
-         "description":"The status ID indicating the opt-in status of the subscription."
-      },
-      {
-         "field":"OptInMethodID",
-         "type":"number",
-         "description":"An identifier for the method used for opting in."
-      },
-      {
-         "field":"OptInDate",
-         "type":"date",
-         "description":"The date when the opt-in occurred."
-      },
-      {
-         "field":"Source",
-         "type":"number",
-         "description":"The source identifier for the SMS subscription."
-      },
-      {
-         "field":"CreatedDate",
-         "type":"date",
-         "description":"The date when the subscription record was created."
-      },
-      {
-         "field":"ModifiedDate",
-         "type":"date",
-         "description":"The date when the subscription record was last modified."
-      }
-   ]
-},
-{
-   "family":"SendLog Templates",
-   "name":"SMSMessageTracking",
-   "about":"Used for creating a Data Extension for the _SMSMessageTracking view, which provides detailed tracking information for SMS messages.",
-   "fields":[
-      {
-         "field":"MobileMessageTrackingId",
-         "type":"number",
-         "description":"Unique identifier for the mobile message tracking."
-      },
-      {
-         "field":"EID",
-         "type":"number",
-         "description":"Enterprise ID associated with the message."
-      },
-      {
-         "field":"MID",
-         "type":"number",
-         "description":"Member ID associated with the message."
-      },
-      {
-         "field":"Mobile",
-         "type":"text",
-         "description":"The mobile number to which the message was sent."
-      },
-      {
-         "field":"MessageID",
-         "type":"number",
-         "description":"The unique identifier of the message."
-      },
-      {
-         "field":"MessageTypeID",
-         "type":"number",
-         "description":"The ID indicating the type of message sent."
-      },
-      {
-         "field":"KeywordID",
-         "type":"text",
-         "description":"The ID associated with the keyword in the message."
-      },
-      {
-         "field":"CodeID",
-         "type":"text",
-         "description":"The ID of the code used in the message."
-      },
-      {
-         "field":"ConversationID",
-         "type":"number",
-         "description":"The ID representing the conversation to which the message belongs."
-      },
-      {
-         "field":"CampaignID",
-         "type":"number",
-         "description":"The campaign ID associated with the message."
-      },
-      {
-         "field":"Sent",
-         "type":"number",
-         "description":"The count of sent messages."
-      },
-      {
-         "field":"Delivered",
-         "type":"number",
-         "description":"The count of delivered messages."
-      },
-      {
-         "field":"Undelivered",
-         "type":"number",
-         "description":"The count of undelivered messages."
-      },
-      {
-         "field":"Unsub",
-         "type":"number",
-         "description":"The count of unsubscribe actions."
-      },
-      {
-         "field":"OptIn",
-         "type":"number",
-         "description":"The count of opt-in actions."
-      },
-      {
-         "field":"OptOut",
-         "type":"number",
-         "description":"The count of opt-out actions."
-      },
-      {
-         "field":"Outbound",
-         "type":"number",
-         "description":"The count of outbound messages."
-      },
-      {
-         "field":"Inbound",
-         "type":"number",
-         "description":"The count of inbound messages."
-      },
-      {
-         "field":"CreateDateTime",
-         "type":"date",
-         "description":"The date and time when the record was created."
-      },
-      {
-         "field":"ModifiedDateTime",
-         "type":"date",
-         "description":"The date and time when the record was last modified."
-      },
-      {
-         "field":"ActionDateTime",
-         "type":"date",
-         "description":"The date and time of the message action."
-      },
-      {
-         "field":"MessageText",
-         "type":"text",
-         "description":"The text content of the SMS message."
-      },
-      {
-         "field":"IsTest",
-         "type":"text",
-         "description":"Indicates if the message was a test."
-      },
-      {
-         "field":"MobileMessageRecurrenceID",
-         "type":"number",
-         "description":"Identifier for the recurrence of the mobile message."
-      },
-      {
-         "field":"ResponseToMobileMessageTrackingID",
-         "type":"number",
-         "description":"The tracking ID of the message this is a response to."
-      },
-      {
-         "field":"IsValid",
-         "type":"text",
-         "description":"Indicates whether the message is valid."
-      },
-      {
-         "field":"InvalidationCode",
-         "type":"number",
-         "description":"The code indicating why a message was invalidated."
-      },
-      {
-         "field":"SendID",
-         "type":"number",
-         "description":"The unique identifier for the send action."
-      },
-      {
-         "field":"SendSplitID",
-         "type":"number",
-         "description":"The ID for the send split."
-      },
-      {
-         "field":"SendSegmentID",
-         "type":"number",
-         "description":"The ID for the segment of the send."
-      },
-      {
-         "field":"SendJobID",
-         "type":"number",
-         "description":"The job ID for the send."
-      },
-      {
-         "field":"SendGroupID",
-         "type":"number",
-         "description":"The group ID for the send."
-      },
-      {
-         "field":"SendPersonID",
-         "type":"number",
-         "description":"The personal ID associated with the send."
-      },
-      {
-         "field":"SubscriberId",
-         "type":"number",
-         "description":"The subscriber ID associated with the message."
-      }
-   ]
-},
-{
-   "family":"SendLog Templates",
-   "name":"PushSendLog",
-   "about":"Push Send Log Data Extension Template used for capturing and analyzing data related to push notifications sent through the platform.",
-   "fields":[
-      {
-         "field":"PushJobID",
-         "type":"text",
-         "description":"Unique identifier for the push job, typically a UUID."
-      },
-      {
-         "field":"PushTriggeredSendRequestID",
-         "type":"text",
-         "description":"Unique identifier for the triggered send request of the push notification."
-      },
-      {
-         "field":"PushBatchID",
-         "type":"LongNumber",
-         "description":"Numeric identifier representing the batch in which the push notification was sent."
-      },
-      {
-         "field":"SubID",
-         "type":"LongNumber",
-         "description":"Subscriber ID associated with the push notification."
-      },
-      {
-         "field":"DeviceId",
-         "type":"text",
-         "description":"Unique identifier for the device receiving the push notification."
-      },
-      {
-         "field":"AppId",
-         "type":"text",
-         "description":"Unique identifier for the application through which the push notification is sent."
-      },
-      {
-         "field":"LogDate",
-         "type":"date",
-         "description":"Date and time when the log entry was created. Default value is the current date and time (GETDATE())."
-      }
-   ]
-}
    ]
 }

@@ -358,12 +358,12 @@
       {
          "family": "Synchronized Data Extensions",
          "name": "Contact_Salesforce",
-         "about": "Data Extension synchronized from Salesforce Contact object, part of Marketing Cloud Connector",
+         "about": "Data Extension synchronized from Salesforce Contact object, part of Marketing Cloud Connect",
          "fields": [
            {
              "field": "_ContactKey",
              "type": "Text(254)",
-             "description": "Unique key identifying the contact in Marketing Cloud, often linked to Subscriber Key."
+             "description": "Unique key identifying the contact in Marketing Cloud."
            },
            {
              "field": "AccountId",
@@ -425,12 +425,12 @@
        {
          "family": "Synchronized Data Extensions",
          "name": "Lead_Salesforce",
-         "about": "Data Extension synchronized from Salesforce Lead object, part of Marketing Cloud Connector",
+         "about": "Data Extension synchronized from Salesforce Lead object, part of Marketing Cloud Connect.",
          "fields": [
            {
              "field": "_ContactKey",
              "type": "Text(254)",
-             "description": ""
+             "description": "Unique key identifying the contact in Marketing Cloud."
            },
            {
              "field": "ConvertedAccountId",
@@ -470,7 +470,7 @@
            {
              "field": "Id",
              "type": "Text(18)",
-             "description": "Salesforce Lead ID"
+             "description": "Unique identifier for the Salesforce Lead record"
            },
            {
              "field": "IsEmailBounced",
@@ -497,12 +497,12 @@
        {
          "family": "Synchronized Data Extensions",
          "name": "User_Salesforce",
-         "about": "Data Extension synchronized from Salesforce User object, part of Marketing Cloud Connector",
+         "about": "Data Extension synchronized from Salesforce User object, part of Marketing Cloud Connect.",
          "fields": [
            {
              "field": "_ContactKey",
              "type": "Text(254)",
-             "description": "Unique identifier for the contact, used to associate records across data extensions."
+             "description": "Unique key identifying the contact in Marketing Cloud."
            },
            {
              "field": "Email",
@@ -527,7 +527,7 @@
            {
              "field": "Id",
              "type": "Text(18)",
-             "description": "Salesforce User ID."
+             "description": "Unique identifier for the Salesforce User record"
            },
            {
              "field": "UserRoleId",
@@ -564,12 +564,12 @@
        {
          "family": "Synchronized Data Extensions",
          "name": "Account_Salesforce",
-         "about": "Data Extension synchronized from Salesforce Account object, part of Marketing Cloud Connector",
+         "about": "Data Extension synchronized from Salesforce Account object, part of Marketing Cloud Connect.",
          "fields": [
            {
              "field": "_ContactKey",
              "type": "Text(254)",
-             "description": "Unique identifier for the contact associated with the Account record."
+             "description": "Unique key identifying the contact in Marketing Cloud."
            },
            {
              "field": "CreatedById",
@@ -579,7 +579,7 @@
            {
              "field": "Id",
              "type": "Text(18)",
-             "description": "Unique identifier for the Account record in Salesforce."
+             "description": "Unique identifier for the Salesforce Account record"
            },
            {
              "field": "IsDeleted",

@@ -1150,6 +1150,73 @@
          ]
       },
       {
+  "family": "Email",
+  "name": "_ReconcilableDispositionView",
+  "about": "View reconciliation disposition data for emails and messages sent from your account. Data is retained for seven days and can be used to reconcile message delivery status across external systems.",
+  "fields": [
+    {
+      "field": "JobId",
+      "type": "text(100)",
+      "description": "Unique identifier for the job.",
+      "nullable": "No"
+    },
+    {
+      "field": "Channel",
+      "type": "number",
+      "description": "Channel identifier. Values: 0 = Email, 1 = SMS.",
+      "nullable": "No"
+    },
+    {
+      "field": "Disposition",
+      "type": "number",
+      "description": "Disposition status for the subscriber. Values: 0 = Queued, 1 = Sent, 2 = NotSent.",
+      "nullable": "No"
+    },
+    {
+      "field": "MessageKey",
+      "type": "text(100)",
+      "description": "Message key used to reconcile message disposition between Marketing Cloud Engagement and external systems.",
+      "nullable": "No"
+    },
+    {
+      "field": "SubscriberKey",
+      "type": "text(100)",
+      "description": "Key that uniquely identifies the recipient within the MID.",
+      "nullable": "Yes"
+    },
+    {
+      "field": "SubscriberId",
+      "type": "number",
+      "description": "Unique subscriber ID for the recipient. This value can be NULL if the intended subscriber was invalid.",
+      "nullable": "Yes"
+    },
+    {
+      "field": "ErrorCodeId",
+      "type": "number",
+      "description": "Error code ID returned when the message wasn’t sent to the subscriber.",
+      "nullable": "Yes"
+    },
+    {
+      "field": "ErrorDescription",
+      "type": "text(256)",
+      "description": "Description of the error returned when the message wasn’t sent to the subscriber.",
+      "nullable": "Yes"
+    },
+    {
+      "field": "ErrorName",
+      "type": "text(256)",
+      "description": "Name of the error returned when the message wasn’t sent to the subscriber.",
+      "nullable": "No"
+    },
+    {
+      "field": "StartTime",
+      "type": "date",
+      "description": "Timestamp when processing of the message began. For data extension-based sends, this represents when the job was scheduled. For API-based sends, this represents when the request was received.",
+      "nullable": "No"
+    }
+  ]
+},
+      {
          "family":"Subscribers",
          "name":"_EnterpriseAttribute",
          "about":"Query this data view in Automation Studio to view subscribers in your Enterprise Marketing Cloud account and their profile attributes. View subscribers in your Enterprise account and their profile attributes by querying the _EnterpriseAttribute data view. This data view is for Enterprise 2.0 clients only. When profile attributes are created in Enterprise 2.0 accounts, new columns are added to the _EnterpriseAttribute table. Data view queries in Enterprise 2.0 accounts can return results from profile attribute columns in addition to the columns listed here. This data view is only available in the Parent account and can't be used in a business unit.",
